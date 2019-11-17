@@ -1,0 +1,59 @@
+// Grid for Hotel Main / Full page
+
+main.hotelsMain {
+  display: grid;
+  row-gap: 20px;
+  grid-template-areas:
+    "picker picker picker picker"
+    "slider slider slider slider"
+    "sideBar content content content";
+
+  section:nth-child(1) {
+    background-color: yellow;
+    grid-area: picker;
+    justify-self: center;
+  }
+  section:nth-child(2) {
+    background-color: blue;
+    grid-area: slider;
+    justify-self: center;
+  }
+  section:nth-child(4) {
+    grid-area: content;
+    div.hotel-content-container {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-template-areas: "hotel-gallery hotel-data";
+      div.hotel-gallery {
+        grid-area: hotel-gallery;
+        border: 1px solid green;
+      }
+      div.hotel-data {
+        grid-area: hotel-data;
+        display: grid;
+        grid-template-areas:
+          "hotel-name"
+          "hotel-address-and-city"
+          "hotel-custom-ranking"
+          "hotel-features-and-prices";
+        div.hotel-name {
+          grid-area: hotel-name;
+        }
+        div.hotel-address-and-city {
+          grid-area: hotel-address-and-city;
+        }
+        div.hotel-custom-ranking {
+          grid-area: hotel-custom-ranking;
+        }
+        div.hotel-features-and-prices {
+          grid-area: hotel-features-and-prices;
+          display: grid;
+          grid-template-columns: 40% 40% 20%;
+          grid-template-areas: "hotel-features show-interest prices-and-booking";
+        }
+      }
+    }
+  }
+}
+
+// Grid for Hotel Content / Data container

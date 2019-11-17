@@ -1,0 +1,89 @@
+main.hotelsMain {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+      grid-template-areas: "picker picker picker picker" "slider slider slider slider" "sideBar content content content";
+}
+
+main.hotelsMain section:nth-child(1) {
+  background-color: yellow;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: picker;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main.hotelsMain section:nth-child(2) {
+  background-color: blue;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: slider;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main.hotelsMain section:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: content;
+}
+
+main.hotelsMain section:nth-child(4) div.hotel-content-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+      grid-template-areas: "hotel-gallery hotel-data";
+}
+
+main.hotelsMain section:nth-child(4) div.hotel-content-container div.hotel-gallery {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hotel-gallery;
+  border: 1px solid green;
+}
+
+main.hotelsMain section:nth-child(4) div.hotel-content-container div.hotel-data {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: hotel-data;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "hotel-name" "hotel-address-and-city" "hotel-custom-ranking" "hotel-features-and-prices";
+}
+
+main.hotelsMain section:nth-child(4) div.hotel-content-container div.hotel-data div.hotel-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hotel-name;
+}
+
+main.hotelsMain section:nth-child(4) div.hotel-content-container div.hotel-data div.hotel-address-and-city {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: hotel-address-and-city;
+}
+
+main.hotelsMain section:nth-child(4) div.hotel-content-container div.hotel-data div.hotel-custom-ranking {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: hotel-custom-ranking;
+}
+
+main.hotelsMain section:nth-child(4) div.hotel-content-container div.hotel-data div.hotel-features-and-prices {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: hotel-features-and-prices;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 40% 20%;
+      grid-template-columns: 40% 40% 20%;
+      grid-template-areas: "hotel-features show-interest prices-and-booking";
+}
+
+/* Defining color variables */
+/*# sourceMappingURL=hotels.css.map */

@@ -1,0 +1,30 @@
+$Torquoise: #01d4ab;
+$Aqua: #2dd8c0;
+$indigo: #4240b0;
+$RoyalBlue: #14049e;
+$NavyBlue: #05022f;
+$sky: #93ced7;
+$offwhite: #ececec;
+$white: white;
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: column;
+  nav {
+    ul {
+      list-style: none;
+      a {
+        color: $NavyBlue;
+        font-family: "Eina02Light";
+        font-size: 1.5vh;
+      }
+      a:hover {
+        color: $Aqua;
+        text-decoration: none;
+      }
+      a:active {
+        color: $indigo;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul a {
+  color: #05022f;
+  font-family: "Eina02Light";
+  font-size: 1.5vh;
+}
+
+header nav ul a:hover {
+  color: #2dd8c0;
+  text-decoration: none;
+}
+
+header nav ul a:active {
+  color: #4240b0;
+}
+/*# sourceMappingURL=NavBar.css.map */

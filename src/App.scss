@@ -1,0 +1,222 @@
+/* Defining color variables */
+$Torquoise: #01d4ab;
+$Aqua: #2dd8c0;
+$indigo: #4240b0;
+$RoyalBlue: #14049e;
+$NavyBlue: #05022f;
+$sky: #93ced7;
+$offwhite: #ececec;
+$white: white;
+
+/* App Body*/
+
+/* grids*/
+body {
+  font-size: 16px !important;
+}
+/* */
+
+/* Navigation*/
+
+/* Importing fonts and declaration*/
+
+/*+++++++++++++++++++++++++  Eina01 +++++++++++++++++++++++++*/
+@font-face {
+  font-family: Eina01Bold;
+  src: url(./fonts/Eina01-Bold.ttf);
+}
+
+@font-face {
+  font-family: Eina01BoldItalic;
+  src: url(./fonts/Eina01-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina01Light;
+  src: url(./fonts/Eina01-Light.ttf);
+}
+
+@font-face {
+  font-family: Eina01LightItalic;
+  src: url(./fonts/Eina01-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina01Regular;
+  src: url(./fonts/Eina01-Regular.ttf);
+}
+
+@font-face {
+  font-family: Eina01RegularItalic;
+  src: url(./fonts/Eina01-RegularItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina01SemiBold;
+  src: url(./fonts/Eina01-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Eina01SemiboldItalic;
+  src: url(./fonts/Eina01-SemiboldItalic.ttf);
+}
+
+/*+++++++++++++++++++++++++  Eina02 +++++++++++++++++++++++++*/
+
+@font-face {
+  font-family: Eina02Bold;
+  src: url(./fonts/Eina02-Bold.ttf);
+}
+
+@font-face {
+  font-family: Eina02BoldItalic;
+  src: url(./fonts/Eina02-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina02Light;
+  src: url(./fonts/Eina02-Light.ttf);
+}
+
+@font-face {
+  font-family: Eina02LightItalic;
+  src: url(./fonts/Eina02-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina02Regular;
+  src: url(./fonts/Eina02-Regular.ttf);
+}
+
+@font-face {
+  font-family: Eina02RegularItalic;
+  src: url(./fonts/Eina02-RegularItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina02SemiBold;
+  src: url(./fonts/Eina02-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Eina02SemiboldItalic;
+  src: url(./fonts/Eina02-SemiboldItalic.ttf);
+}
+
+/*+++++++++++++++++++++++++  Eina03 +++++++++++++++++++++++++*/
+
+@font-face {
+  font-family: Eina03Bold;
+  src: url(./fonts/Eina03-Bold.ttf);
+}
+
+@font-face {
+  font-family: Eina03BoldItalic;
+  src: url(./fonts/Eina03-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina03Light;
+  src: url(./fonts/Eina03-Light.ttf);
+}
+
+@font-face {
+  font-family: Eina03LightItalic;
+  src: url(./fonts/Eina03-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina03Regular;
+  src: url(./fonts/Eina03-Regular.ttf);
+}
+
+@font-face {
+  font-family: Eina03SemiBold;
+  src: url(./fonts/Eina03-SemiBold.ttf);
+}
+
+/*+++++++++++++++++++++++++  Eina04 +++++++++++++++++++++++++*/
+
+@font-face {
+  font-family: Eina04BoldItalic;
+  src: url(./fonts/Eina04-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Eina04Bold_0;
+  src: url(./fonts/Eina04-Bold_0.ttf);
+}
+
+@font-face {
+  font-family: Eina04Light;
+  src: url(./fonts/Eina04-Light.ttf);
+}
+
+@font-face {
+  font-family: Eina04SemiBold;
+  src: url(./fonts/Eina04-SemiBold.ttf);
+}
+
+/* 
+
+main {
+  background: 
+  // top, transparent red  linear-gradient(rgba(66, 64, 176, 0.25), rgba(66, 64, 176, 0.25)),
+    // bottom, image url(../src/images/lahore_login.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  height: 100vh;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  section {
+    color: white;
+    display: grid !important;
+    grid-template-rows: 30vh 5vh 10vh;
+    grid-template-areas:
+      "welcome"
+      " toggle"
+      "forms";
+  }
+  div {
+    grid-area: welcome;
+    font-family: Eina03Bold;
+    display: grid;
+    grid-template-rows: 15vh 1fr;
+    grid-row-gap: 2vh;
+    grid-template-areas:
+      "heading"
+      "subheading";
+    padding-left: 5vh;
+
+    h1 {
+      font-size: 3vh;
+      grid-area: heading;
+      align-self: end;
+    }
+    h2 {
+      font-size: 1.8vh;
+      font-family: Eina03Light;
+      grid-area: subheading;
+    }
+  }
+
+  nav {
+    grid-area: toggle;
+    justify-self: center;
+
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: $Torquoise;
+    }
+  }
+  section {
+    grid-area: forms;
+    justify-self: center;
+    justify-self: center;
+  }
+}
+*/
