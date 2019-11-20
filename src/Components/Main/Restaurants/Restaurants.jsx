@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import Slider from "../../Common/Slider";
 
 class Restaurants extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        <div> Slider</div>
+        <Slider
+          title="THE BEST RESTAURANTS IN TOWN"
+          subtitle="Select the desired filters and find out your best restaurant"
+        />
         <div> Dinner in Lahore</div>
         <div> Lunch in Lahore</div>
         <div> Fine Dining in Lahore</div>

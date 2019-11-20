@@ -55,7 +55,10 @@ class Hotels extends Component {
       <React.Fragment>
         <main className="hotelsMain">
           <Picker />
-          <Slider />
+          <Slider
+            title="THE BEST BEDS, MAGIC SLEEP"
+            subtitle="Select the desired filters and find out your best hotel"
+          />
           <SideBar
             sideBar1={this.state.hotelFeatures}
             sideBar2={this.state.roomFeatures}
