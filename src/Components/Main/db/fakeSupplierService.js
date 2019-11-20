@@ -1,425 +1,533 @@
 let suppliers = [
   {
+    // eslint-disable-next-line no-sparse-arrays
     hotelsData: [
       {
         _id: "1b21ca3eeb7f6fbccd471815",
-        hotelName: "Avari International Hotels",
+        name: "Seaview Lodge Guest House",
         address: {
-          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
-          city: "Lahore",
-          province: "Punjab",
-          postcode: "54000"
+          streetAddress:
+            "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
+          city: "Karachi ",
+          province: "Sindh",
+          postcode: "75500"
         },
-        hotelTelephone: "+924236366366",
-        hotelWebsite: "http://www.avari.com/",
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 248,
-          starRatings: 5,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Studio Bedroom",
-            hotelThirdOffer: "Detached House",
-            hotelFourthOffer: "Terraced House"
-          },
-          pricesPerNight: {
-            singleRoom: 150,
-            doubleRoom: 500
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Internet",
-            hotelSecondFacility: "TV Lounge",
-            hotelThirdFacility: "Swimming Pool"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Air Conditioning",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: ["Good Breakfast", "Restaurant", "Swimming Pool"],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
         },
-        bookmarked: true
+
+        reviews: 500,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 250,
+          doubleRoom: 500
+        }
       },
       {
-        _id: "1v21ca3eeb7f6fbccd471815",
-        hotelName: "The Nishat Hotel (Gulberg)",
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "The Motel Royal Fantasy",
         address: {
-          streetAddress: " 9-A / Mian Mahmood Kasuri Road, Gulberg III",
-          city: "Peshawar",
-          province: "Khyber Pakhtunkhawa",
-          postcode: "54660"
-        },
-        hotelTelephone: "+924002357653",
-        hotelWebsite: "https://nishatgroupshotels.com/",
-        featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 12,
-          starRatings: 4,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Studio Bedroom",
-            hotelThirdOffer: "Detached House",
-            hotelFourthOffer: "Terraced House"
-          },
-          pricesPerNight: {
-            singleRoom: 1000,
-            doubleRoom: 2000
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Internet",
-            hotelSecondFacility: "TV Lounge",
-            hotelThirdFacility: "Free Parking"
-          },
-          roomFeatures: {
-            firstRoomFeature: "Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
-        },
-        bookmarked: false
-      },
-      {
-        _id: "1b21ca3eeb7f6fbccd471415",
-        hotelName: "Park Lane Hotel",
-        address: {
-          streetAddress: " 70-71 Calvary Ground, Commercial Area Cantt",
-          city: "Multan",
-          province: "Punjab",
-          postcode: "54660"
-        },
-        hotelTelephone: "+923344065456",
-        hotelWebsite: "https://parklane.pk/",
-        featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 78,
-          starRatings: 2,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Studio Bedroom",
-            hotelThirdOffer: "Detached House",
-            hotelFourthOffer: "Semi-detached House"
-          },
-          pricesPerNight: {
-            singleRoom: 350,
-            doubleRoom: 600
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Internet",
-            hotelSecondFacility: "Free Parking",
-            hotelThirdFacility: "Aiport Transportation"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Accessible rooms"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
-        },
-        bookmarked: false
-      },
-      {
-        _id: "1451ca3eeb7f6fbccd471815",
-        hotelName: "Grand Millennium Hotel",
-        address: {
-          streetAddress: "9-A Davis Road",
+          streetAddress: "C-20 block 04 Clifton Near Chinese Consulate, ",
           city: "Karachi",
           province: "Sindh",
-          postcode: "54000"
+          postcode: "75000"
         },
-        hotelTelephone: "+924236301313",
-        hotelWebsite: "https://millenniumhotel.pk/",
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 19,
-          starRatings: 3,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Business bedroom",
-            hotelThirdOffer: "Student Accomodation",
-            hotelFourthOffer: "Semi-detached House"
-          },
-          pricesPerNight: {
-            singleRoom: 220,
-            doubleRoom: 400
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Breakfast",
-            hotelSecondFacility: "Fitness Centre with Gym / Workout Room",
-            hotelThirdFacility: "Free Parking"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
         },
-        bookmarked: false
+
+        reviews: 100,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 666,
+          doubleRoom: 500
+        }
       },
       {
-        _id: "8100ca3eeb6f6fccce471814",
-        hotelName: "Tourist Inn",
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Ramada by Wyndham Karachi Creek",
         address: {
-          streetAddress: "2 Nabha Road, Opposite Custom House",
-          city: "Lahore",
-          province: "Punjab",
-          postcode: "54000"
+          streetAddress: "Khayaban-e-Suhrawardy",
+          city: "Islamabad",
+          province: "Federal Capital",
+          postcode: "44000"
         },
-        hotelTelephone: "+924236301313",
-        hotelWebsite: "https://millenniumhotel.pk/",
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 19,
-          starRatings: 3,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Business bedroom",
-            hotelThirdOffer: "Student Accomodation",
-            hotelFourthOffer: "Semi-detached House"
-          },
-          pricesPerNight: {
-            singleRoom: 400,
-            doubleRoom: 700
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Breakfast",
-            hotelSecondFacility: "Fitness Centre with Gym / Workout Room",
-            hotelThirdFacility: "Free Parking"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: ["Room Service", "Meeting Rooms", "Swimming Pool"],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
         },
-        bookmarked: false
+
+        reviews: 80,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 788,
+          doubleRoom: 500
+        }
       },
       {
-        _id: "7800ca3eeb6f6fccce471814",
-        hotelName: "Quick Continental Hotel",
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Prime DHA Guest House",
         address: {
-          streetAddress: "11 Shadman Chowk, Main Jail Road ",
-          city: "Rawalpindi",
-          province: "Punjab",
-          postcode: "54000"
+          streetAddress: "Karimabad District Hunza",
+          city: "Hunza",
+          province: "Khyber Paktunkhawa",
+          postcode: "00992"
         },
-        hotelTelephone: "+923222898222",
-        hotelWebsite: "https://quick-continental-hotel.business.site/",
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 79,
-          starRatings: 5,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Deluxe bedroom",
-            hotelThirdOffer: "Student Accomodation",
-            hotelFourthOffer: "Semi-detached House"
-          },
-          pricesPerNight: {
-            singleRoom: 500,
-            doubleRoom: 800
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Breakfast",
-            hotelSecondFacility: "Fitness Centre with Gym / Workout Room",
-            hotelThirdFacility: "Free Parking"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Free Breakfast",
+            "Meeting Rooms",
+            "Business Centre with Internet Access"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
         },
-        bookmarked: false
+
+        reviews: 247,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 150,
+          doubleRoom: 500
+        }
       },
       {
-        _id: "2600ca3eeb6f6fccce471814",
-        hotelName: "Hotel Premier Inn",
-        address: {
-          streetAddress: "79 R1, Main Boulevard, Johar Town",
-          city: "Sialkot",
-          province: "Punjab",
-          postcode: "54000"
-        },
-        hotelTelephone: "+924236301313",
-        hotelWebsite: "https://www.premierinn.com/gb/en/home.html",
-        featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 20,
-          starRatings: 4,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Deluxe bedroom",
-            hotelThirdOffer: "Student Accomodation",
-            hotelFourthOffer: "Semi-detached House"
-          },
-          pricesPerNight: {
-            singleRoom: 350,
-            doubleRoom: 600
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Breakfast",
-            hotelSecondFacility: "Fitness Centre with Gym / Workout Room",
-            hotelThirdFacility: "Free Parking"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
-        },
-        bookmarked: false
-      },
-      {
-        _id: "1844ca3eeb6f6fccce471814",
-        hotelName: "Savoey Hotel",
-        address: {
-          streetAddress: "273-A/3, Gurumanget Road, Gulberg III",
-          city: "Gujrat",
-          province: "Punjab",
-          postcode: "54000"
-        },
-        hotelTelephone: "+9242111587777",
-        hotelWebsite: "http://www.savoeyhotellahore.com/",
-        featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 50,
-          starRatings: 4,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Three Bedroom",
-            hotelThirdOffer: "Penthouse",
-            hotelFourthOffer: "Semi-detached House"
-          },
-          pricesPerNight: {
-            singleRoom: 500,
-            doubleRoom: 800
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Breakfast",
-            hotelSecondFacility: "Fitness Centre with Gym / Workout Room",
-            hotelThirdFacility: "Swimming Pool"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
-        },
-        bookmarked: false
-      },
-      {
-        _id: "1600ca3eeb6f6fccce471814",
-        hotelName: "The Residency Hotel",
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Zifan Hotel & Suites",
         address: {
           streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
           city: "Lahore",
           province: "Punjab",
           postcode: "54000"
         },
-        hotelTelephone: "+9242111395395",
-        hotelWebsite: "https://rh.com.pk/",
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 45,
-          starRatings: 2,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Three Bedroom",
-            hotelThirdOffer: "Penthouse",
-            hotelFourthOffer: "Terraced House"
-          },
-          pricesPerNight: {
-            singleRoom: 100,
-            doubleRoom: 200
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Breakfast",
-            hotelSecondFacility: "Fitness Centre with Gym / Workout Room",
-            hotelThirdFacility: "Swimming Pool"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Air Conditioning"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: ["Good Breakfast", "TV Lounge", "Swimming Pool"],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
         },
-        bookmarked: false
+
+        reviews: 248,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 540,
+          doubleRoom: 500
+        }
       },
       {
-        _id: "1700ca3eeb6f6fccce471814",
-        hotelName: "Heritage Luxury Suites",
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Beach Luxury Hotel",
         address: {
-          streetAddress: "100-c2, Gulberg III",
-          city: "Mianwali",
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
           province: "Punjab",
-          postcode: "54660"
+          postcode: "54000"
         },
-        hotelTelephone: "+924235715985 ",
-        hotelWebsite: "https://www.heritageluxurysuites.com/",
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelFilterProperties: {
-          reviews: 400,
-          starRatings: 2,
-          bedrooms: {
-            hotelFirstOffer: "One Bedroom",
-            hotelSecondOffer: "Two Bedrooms",
-            hotelthirdOffer: "Studio Bedroom",
-            hotelThirdOffer: "Penthouse",
-            hotelFourthOffer: "Terraced House"
-          },
-          pricesPerNight: {
-            singleRoom: 500,
-            doubleRoom: 900
-          },
-          hotelFacilities: {
-            hotelFirstFacility: "Free Breakfast",
-            hotelSecondFacility: "TV Lounge",
-            hotelThirdFacility: "Swimming Pool"
-          },
-          roomFeatures: {
-            firstRoomFeature: " Non-Smoking Rooms",
-            secondRoomFeature: "Family Rooms",
-            thirdRoomFeature: "Refrigarator",
-            fourthRoomFeature: "Fitness Center"
-          },
-          checkInAvailablity: "08/05/2018",
-          checkOutAvailablity: "18/05/2018"
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
         },
-        bookmarked: false
+
+        reviews: 10,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 752,
+          doubleRoom: 500
+        }
+      },
+      {
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Karachi Marriott Hotel",
+        address: {
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
+          province: "Punjab",
+          postcode: "54000"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Free Internet",
+            "Restaurant",
+            "Business Centre with Internet Access"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+
+        reviews: 44,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 420,
+          doubleRoom: 500
+        }
+      },
+      {
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "The Nishat Hotel Johar Town",
+        address: {
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
+          province: "Punjab",
+          postcode: "54000"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Room Service",
+            "Facilities for disabled guests",
+            "Swimming Pool"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+
+        reviews: 468,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 635,
+          doubleRoom: 500
+        }
+      },
+      {
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Four Points by Sheraton Lahore",
+        address: {
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
+          province: "Punjab",
+          postcode: "54000"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Room Service",
+            "Facilities for disabled guests",
+            "Swimming Pool"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+
+        reviews: 22,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 852,
+          doubleRoom: 500
+        }
+      },
+      {
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Avari International Hotels",
+        address: {
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
+          province: "Punjab",
+          postcode: "54000"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Free Internet",
+            "Facilities for disabled guests",
+            "Airport Shuttle"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+
+        reviews: 11,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 456,
+          doubleRoom: 500
+        }
+      },
+      {
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Avari International Hotels",
+        address: {
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
+          province: "Punjab",
+          postcode: "54000"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Good Breakfast",
+            "Airport Transportation",
+            "Airport Shuttle"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+
+        reviews: 54,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 333,
+          doubleRoom: 500
+        }
+      },
+      {
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Movenpick Hotel Karachi",
+        address: {
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
+          province: "Punjab",
+          postcode: "54000"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Room Service",
+            "Airport Transportation",
+            "Business Centre with Internet Access"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+
+        reviews: 300,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 286,
+          doubleRoom: 500
+        }
+      },
+      {
+        _id: "1b21ca3eeb7f6fbccd471815",
+        name: "Avari International Hotels",
+        address: {
+          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
+          city: "Lahore",
+          province: "Punjab",
+          postcode: "54000"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: [
+            "Room Service",
+            "Airport Transportation",
+            "Airport Shuttle"
+          ],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+
+        reviews: 70,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 900,
+          doubleRoom: 500
+        }
       }
     ]
   },
@@ -448,7 +556,7 @@ let suppliers = [
         },
         features: {
           acceptCreditCards: true,
-          hotelSecondFacility: "TV Lounge",
+          hotelSecondFacility: "Airport Transportation",
           deliverySerice: true,
           parkingAvailable: true,
           television: true
@@ -477,7 +585,7 @@ let suppliers = [
         },
         features: {
           acceptCreditCards: true,
-          hotelSecondFacility: "TV Lounge",
+          hotelSecondFacility: "Facilities for disabled guests",
           deliverySerice: true,
           parkingAvailable: true,
           television: true
@@ -558,7 +666,7 @@ export function getThingstoDo() {
   return thingsToDo;
 }
 
-export function freeWiFiHotels() {
+/* export function freeWiFiHotels() {
   let freeWiFi = hotels.filter(hotel => {
     return hotel.freeWifi === true;
   });
@@ -585,5 +693,4 @@ export function fourStarHotels() {
   });
   return fourStars;
 }
-
-console.log(fourStarHotels());
+ */

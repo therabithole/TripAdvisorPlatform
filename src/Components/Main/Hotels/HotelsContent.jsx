@@ -25,6 +25,7 @@ class HotelsContent extends Component {
     hotels: [],
     gethotelFeatures: [],
     getRoomFeatures: [],
+
     pageSize: 5,
     currentPage: 1
   };
@@ -32,14 +33,15 @@ class HotelsContent extends Component {
   componentDidMount() {
     this.setState({
       hotels: getHotels(),
+
       getHotelFeatures: getHotelFeatures(),
       getRoomFeatures: getRoomFeatures()
     });
   }
 
   handleBooking = hotel => {
-    const selectedHotel = hotel.hotelName;
-    const selectedPrice = hotel.hotelFilterProperties.pricesPerNight.singleRoom;
+    const selectedHotel = hotel.name;
+    const selectedPrice = hotel.pricesPerNight.singleRoom;
     const result = selectedHotel + " Booked for " + selectedPrice;
     console.log(result);
   };
@@ -56,12 +58,16 @@ class HotelsContent extends Component {
     this.setState({ currentPage: page });
   };
 
-  handleGenreSelect = genre => {
-    console.log("genre", genre);
+  handleSideBarItemSelect = sideBarItem => {
+    console.log("genre", sideBarItem);
   };
   render() {
     const { length: count } = this.state.hotels;
     const { pageSize, currentPage, hotels: allHotels } = this.state;
+
+    //*******/ FILTERED PROBLEM
+    // const filtered = //
+    ///////////////////////////////////
 
     const hotels = paginate(allHotels, currentPage, pageSize);
     return (
@@ -70,9 +76,9 @@ class HotelsContent extends Component {
           <div> Ay!, You're seeing {count} hotels below </div> <br></br>
           {hotels.map(hotel => (
             <div className="hotel-content-container">
-              <div className="hotel-gallery"> {hotel.featuredPicture} </div>
+              <div className="hotel-gallery"> {hotel.length} </div>
               <div className="hotel-data">
-                <div className="hotel-name">{hotel.hotelName}</div>
+                <div className="hotel-name">{hotel.name}</div>
                 <div className="hotel-address-and-city">
                   <span>{hotel.address.streetAddress}</span>
                   <span>, </span>
@@ -85,22 +91,16 @@ class HotelsContent extends Component {
                       Featured Offerings
                     </div>
                     <div className="hotel-features-content-1">
-                      {hotel.hotelFilterProperties.bedrooms.hotelFirstOffer}
+                      {hotel.hotelOptions.amenities[0]}
                     </div>
                     <div className="hotel-features-content-2">
-                      {
-                        hotel.hotelFilterProperties.hotelFacilities
-                          .hotelFirstOffer
-                      }
+                      {hotel.hotelOptions.amenities[1]}
                     </div>
                     <div className="hotel-features-content-3">
-                      {
-                        hotel.hotelFilterProperties.hotelFacilities
-                          .hotelSecondFacility
-                      }
+                      {hotel.hotelOptions.amenities[2]}
                     </div>
                     <div className="hotel-features-content-4">
-                      Excellent, 5.0 Reviews
+                      {hotel.reviews} Reviews
                     </div>
                   </div>
 
@@ -113,7 +113,7 @@ class HotelsContent extends Component {
                     </div>
                     <div className="visit-hotel-website">
                       <a
-                        href={hotel.hotelWebsite}
+                        href={hotel.website}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -128,9 +128,7 @@ class HotelsContent extends Component {
                   <div className="prices-and-booking">
                     <div className="price-per-night">
                       <span> Rs. </span>
-                      <span>
-                        {hotel.hotelFilterProperties.pricesPerNight.singleRoom}
-                      </span>
+                      <span>{hotel.pricesPerNight.singleRoom}</span>
                       <span> / night</span>
                     </div>
                     <div>

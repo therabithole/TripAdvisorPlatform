@@ -6,8 +6,8 @@ const SideBar = props => {
     sideBar2,
     textProperty,
     valueProperty,
-
-    onItemSelect
+    onSideBarItemSelect,
+    selectedSideBarItem
   } = props;
   return (
     <React.Fragment>
@@ -15,9 +15,13 @@ const SideBar = props => {
         <ul>
           {sideBar1.map(item => (
             <li
-              onClick={() => onItemSelect(item)}
               key={item[valueProperty]}
-              className={"list-group-item"}
+              className={
+                item === selectedSideBarItem
+                  ? "list-group-item active"
+                  : "list-group-item"
+              }
+              onClick={() => onSideBarItemSelect(item)}
             >
               {item[textProperty]}
             </li>
@@ -27,9 +31,13 @@ const SideBar = props => {
         <ul>
           {sideBar2.map(item => (
             <li
-              onClick={() => onItemSelect(item)}
               key={item[valueProperty]}
-              className="list-group-item"
+              className={
+                item === selectedSideBarItem
+                  ? "list-group-item active"
+                  : "list-group-item"
+              }
+              onClick={() => onSideBarItemSelect(item)}
             >
               {item[textProperty]}
             </li>

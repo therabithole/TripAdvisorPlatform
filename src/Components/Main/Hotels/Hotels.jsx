@@ -6,63 +6,61 @@ import "./styles/hotels.css";
 // import Pagination from "./../../globalComponents/common/pagination";
 // import { paginate } from "./../../../utils/paginate";
 // import ListGroup from "./../../globalComponents/common/listGroup";
+import SideBar from "../../Common/SideBar";
+import Slider from "../../Common/Slider";
+import Picker from "../../Common/Picker";
 
 // Hotel components
-import HotelPicker from "./HotelPicker";
-import HotelSlider from "./HotelSlider";
 import HotelsContent from "./HotelsContent";
-import SideBar from "./SideBar";
+
 // Hotel Database : Hotels List
+import { getHotels } from "../db/fakeSupplierService";
 
-// Hotel Database: Filtering / SideBar Data
-
+// SideBar Database values:
 import { getHotelFeatures } from "../db/hotelFeatures";
 import { getRoomFeatures } from "../db/roomFeatures";
 
-import { getHotels } from "../db/fakeSupplierService";
-
 // WORK
 class Hotels extends Component {
-  state = { hotels: [], hotelFeatures: [], roomFeatures: [] };
+  // setting and initialising the empty state
+  state = {
+    hotels: [],
+    hotelFeatures: [],
+    roomFeatures: []
+  };
+
+  // Adding Custom titles - COMPONENT DID MOUNT
 
   componentDidMount() {
     const hotelFeatures = [
-      { _id: "", name: "All Property Features" },
+      { _id: "", name: "All Hotel Features" },
       ...getHotelFeatures()
     ];
-
     const roomFeatures = [
       { _id: "", name: "All Room Features" },
       ...getRoomFeatures()
     ];
-    this.setState({
-      hotelFeatures,
-      roomFeatures,
-      hotels: getHotels()
-    });
+
+    // setting STATE of Data for sidebars and Main Content : - COMPONENT DID MOUNT
+    this.setState({ hotels: getHotels(), hotelFeatures, roomFeatures });
   }
 
-  handleItemSelect = hotel => {
-    console.log("Event is handling property feature here...", hotel);
-  };
-
-  handleFilterSelection = () => {
-    console.log("handling filter");
+  handleSideBarItemSelect = sideBarItem => {
+    // WHAT IS THIS?
+    this.setState({ selectedSideBarItem: sideBarItem });
   };
 
   render() {
     return (
       <React.Fragment>
         <main className="hotelsMain">
-          <HotelPicker />
-          <HotelSlider />
+          <Picker />
+          <Slider />
           <SideBar
             sideBar1={this.state.hotelFeatures}
             sideBar2={this.state.roomFeatures}
-            onSelectingFilter={this.handleFilterSelection}
-            onItemSelect={this.handleItemSelect}
-            //  textProperty="name" defaultProps used
-            // valueProperty="id" defaultProps used
+            selectedSideBarItem={this.state.selectedSideBarItem}
+            onSideBarItemSelect={this.handleSideBarItemSelect}
           />
 
           <HotelsContent />
@@ -73,3 +71,6 @@ class Hotels extends Component {
 }
 
 export default Hotels;
+
+//  textProperty="name" defaultProps used
+// valueProperty="id" defaultProps used

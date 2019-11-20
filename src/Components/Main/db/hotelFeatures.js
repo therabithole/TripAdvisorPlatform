@@ -1,4 +1,4 @@
-export const propertyFeatures = [
+export const hotelFeatures = [
   { _id: "5g21ca3eeb7f6fbccd473456", name: "Free Parking" },
   { _id: "5g41ca3eeb7f6fbccd122345", name: "Free Breakfast" },
   { _id: "5g11ca3eeb7f6fbccd423911", name: "Room Service" },
@@ -31,5 +31,5 @@ export const propertyFeatures = [
 ];
 
 export function getHotelFeatures() {
-  return propertyFeatures.filter(propFeatures => propFeatures);
+  return hotelFeatures.filter(propFeatures => propFeatures);
 }

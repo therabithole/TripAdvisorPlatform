@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class HotelSlider extends Component {
+class Slider extends Component {
   state = {};
   render() {
     return (
@@ -14,4 +14,4 @@ class HotelSlider extends Component {
   }
 }
 
-export default HotelSlider;
+export default Slider;
