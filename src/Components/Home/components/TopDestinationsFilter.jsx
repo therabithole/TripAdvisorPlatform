@@ -1,14 +1,29 @@
 import React, { Component } from "react";
+
+import { getHotels } from "../../db/fakeSupplierService";
+import TopDestinationsKPK from "./TopDestinationsKPK";
+
 class TopDestinationsFilter extends Component {
-  state = {};
+  state = {
+    hotels: [],
+    topSelectedHotels: []
+  };
+
+  componentDidMount() {
+    this.setState({
+      hotels: getHotels()
+    });
+  }
+
   render() {
     return (
       <section>
         <h1> TOP DESTINATIONS</h1>
-        <p>
+        <div>
           Discover the ultimate travel-experiences and back-pack adventures
           across Punjab and Khyber Pakhtunkhawa.
-        </p>
+          <TopDestinationsKPK />
+        </div>
       </section>
     );
   }

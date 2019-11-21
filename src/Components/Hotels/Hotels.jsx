@@ -6,9 +6,9 @@ import "./styles/hotels.css";
 // import Pagination from "./../../globalComponents/common/pagination";
 // import { paginate } from "./../../../utils/paginate";
 // import ListGroup from "./../../globalComponents/common/listGroup";
-import SideBar from "../../Common/SideBar";
-import Slider from "../../Common/Slider";
-import Picker from "../../Common/Picker";
+import SideBar from "./../Common/SideBar";
+import Slider from "./../Common/Slider";
+import Picker from "./../Common/Picker";
 
 // Hotel components
 import HotelsContent from "./HotelsContent";
@@ -55,6 +55,7 @@ class Hotels extends Component {
       <React.Fragment>
         <main className="hotelsMain">
           <Picker />
+
           <Slider
             title="THE BEST BEDS, MAGIC SLEEP"
             subtitle="Select the desired filters and find out your best hotel"
@@ -65,7 +66,6 @@ class Hotels extends Component {
             selectedSideBarItem={this.state.selectedSideBarItem}
             onSideBarItemSelect={this.handleSideBarItemSelect}
           />
-
           <HotelsContent />
         </main>
       </React.Fragment>

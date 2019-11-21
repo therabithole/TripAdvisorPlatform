@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Slider from "../../Common/Slider";
+
+import Slider from "./../Common/Slider";
 
 class Restaurants extends Component {
   state = {};

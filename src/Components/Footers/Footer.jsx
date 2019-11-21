@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-class HomeFooter extends Component {
+class Footer extends Component {
   state = {};
   render() {
     return <section> Home Footer</section>;
   }
 }
 
-export default HomeFooter;
+export default Footer;

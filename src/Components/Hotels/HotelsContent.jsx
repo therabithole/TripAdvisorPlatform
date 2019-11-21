@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 
 // common widgets:
-// import Like from "./../../globalComponents/common/Like";
-// import Pagination from "./../../globalComponents/common/pagination";
-// import { paginate } from "./../../../utils/paginate";
-// import ListGroup from "./../../globalComponents/common/listGroup";
-import Bookmark from "./../../Common/Bookmark";
-import Chat from "./../../Common/Chat";
-import Pagination from "./../../Common/Pagination";
 
-import { paginate } from "./../../Common/paginate";
+import Bookmark from "./../Common/Bookmark";
+import Chat from "./../Common/Chat";
+import Pagination from "./../Common/Pagination";
+
+import { paginate } from "./../Common/paginate";
 
 // Hotel Database : Hotels List
-
 import { getHotels } from "../db/fakeSupplierService";
 // Hotel Database: Filtering Hotels List
 

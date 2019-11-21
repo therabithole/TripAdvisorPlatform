@@ -7,17 +7,17 @@ import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "./Components/NavBar/NavBar";
 
 //Frontend
-import HomePage from "./Components/Main/Home/HomePage";
-import Hotels from "./Components/Main/Hotels/Hotels";
-import Restaurants from "./Components/Main/Restaurants/Restaurants";
-import ThingsToDo from "./Components/Main/Things to do/ThingstoDo";
+import HomePage from "./Components/Home/HomePage";
+import Hotels from "./Components/Hotels/Hotels";
+import Restaurants from "./Components/Restaurants/Restaurants";
+import ThingsToDo from "./Components/Things to do/ThingstoDo";
 
 // User_Backend
-import Login from "./Components/Main/Login/Login";
-import Register from "./Components/Main/Register/Register";
+import Login from "./Components/Login/Login";
+import Register from "./Components/Register/Register";
 
 //Supplier Backend
-import SupplierLogin from "./Components/Main/SupplierLogin/SupplierLogin";
+import SupplierLogin from "./Components/SupplierLogin/SupplierLogin";
 import SupplierRegister from "./Components/SupplierView/Pages/Register/SupplierRegister";
 
 //    <Route path="/hotels" component={Hotels} />

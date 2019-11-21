@@ -30,7 +30,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 500,
         starRatings: 5,
         bookmarked: true,
@@ -42,10 +44,50 @@ let suppliers = [
         }
       },
       {
+        _id: "2c37xb3gkq1f6fbccd471617",
+        name: "Arcadian Riverside Adventure Resort",
+        address: {
+          streetAddress: "Chilas Rd, Khanian, ",
+          city: "Mansehra",
+          province: "Khyber Pakhtunkhwa",
+          postcode: "21300"
+        },
+        telephone: "+924236366366",
+        website: "http://www.avari.com/",
+        featuredPicture: "AvariMain",
+        hotelOptions: {
+          bedrooms: [
+            "One Bedroom",
+            "Two Bedrooms",
+            "Studio Bedroom",
+            "Detached House",
+            "Terraced House"
+          ],
+          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"],
+          roomFeatures: [
+            " Non-Smoking Rooms",
+            "Family Rooms",
+            "Air Conditioning"
+          ]
+        },
+        adminSettings: {
+          topselectedHotel: false
+        },
+        reviews: 269,
+        starRatings: 5,
+        bookmarked: true,
+        checkInAvailablity: "08/05/2018",
+        checkOutAvailablity: "18/05/2018",
+        pricesPerNight: {
+          singleRoom: 150,
+          doubleRoom: 200
+        }
+      },
+      {
         _id: "1b21ca3eeb7f6fbccd471815",
         name: "The Motel Royal Fantasy",
         address: {
-          streetAddress: "C-20 block 04 Clifton Near Chinese Consulate, ",
+          streetAddress: "C-20 block 04 Clifton Near Chinese Consulate ",
           city: "Karachi",
           province: "Sindh",
           postcode: "75000"
@@ -68,7 +110,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 100,
         starRatings: 5,
         bookmarked: true,
@@ -81,11 +125,11 @@ let suppliers = [
       },
       {
         _id: "1b21ca3eeb7f6fbccd471815",
-        name: "Ramada by Wyndham Karachi Creek",
+        name: "Ramada by Wyndham",
         address: {
           streetAddress: "Khayaban-e-Suhrawardy",
           city: "Islamabad",
-          province: "Federal Capital",
+          province: "Khyber Paktunkhawa",
           postcode: "44000"
         },
         telephone: "+924236366366",
@@ -106,7 +150,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 80,
         starRatings: 5,
         bookmarked: true,
@@ -121,7 +167,7 @@ let suppliers = [
         _id: "1b21ca3eeb7f6fbccd471815",
         name: "Prime DHA Guest House",
         address: {
-          streetAddress: "Karimabad District Hunza",
+          streetAddress: "Karimabad District",
           city: "Hunza",
           province: "Khyber Paktunkhawa",
           postcode: "00992"
@@ -148,7 +194,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 247,
         starRatings: 5,
         bookmarked: true,
@@ -186,7 +234,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 248,
         starRatings: 5,
         bookmarked: true,
@@ -224,7 +274,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 10,
         starRatings: 5,
         bookmarked: true,
@@ -266,7 +318,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 44,
         starRatings: 5,
         bookmarked: true,
@@ -308,7 +362,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 468,
         starRatings: 5,
         bookmarked: true,
@@ -350,7 +406,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 22,
         starRatings: 5,
         bookmarked: true,
@@ -392,7 +450,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: false
+        },
         reviews: 11,
         starRatings: 5,
         bookmarked: true,
@@ -434,7 +494,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: true
+        },
         reviews: 54,
         starRatings: 5,
         bookmarked: true,
@@ -447,12 +509,12 @@ let suppliers = [
       },
       {
         _id: "1b21ca3eeb7f6fbccd471815",
-        name: "Movenpick Hotel Karachi",
+        name: "Anarkali Hotel & Restaurant",
         address: {
-          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
-          city: "Lahore",
+          streetAddress: "Plaza #24, Block A, Civic Center, Bahria Town Ph. 4",
+          city: "Rawalpindi",
           province: "Punjab",
-          postcode: "54000"
+          postcode: "46000"
         },
         telephone: "+924236366366",
         website: "http://www.avari.com/",
@@ -476,7 +538,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: true
+        },
         reviews: 300,
         starRatings: 5,
         bookmarked: true,
@@ -489,12 +553,12 @@ let suppliers = [
       },
       {
         _id: "1b21ca3eeb7f6fbccd471815",
-        name: "Avari International Hotels",
+        name: "Hotel Akbar International",
         address: {
-          streetAddress: "39-A Gulberg-V Off, Zafar Ali Road",
-          city: "Lahore",
+          streetAddress: "G255 Liaqat Road",
+          city: "Rawalpindi ",
           province: "Punjab",
-          postcode: "54000"
+          postcode: "46000"
         },
         telephone: "+924236366366",
         website: "http://www.avari.com/",
@@ -518,7 +582,9 @@ let suppliers = [
             "Air Conditioning"
           ]
         },
-
+        adminSettings: {
+          topselectedHotel: true
+        },
         reviews: 70,
         starRatings: 5,
         bookmarked: true,
@@ -666,31 +732,51 @@ export function getThingstoDo() {
   return thingsToDo;
 }
 
-/* export function freeWiFiHotels() {
+export function getTopSelectedHotels() {
+  let topSelectedHotels = hotels.filter(hotel => {
+    return hotel.adminSettings.topselectedHotel === true;
+  });
+  return topSelectedHotels;
+}
+
+export function getNorthernAreasHotels() {
+  let northernAreasHotels = hotels.filter(hotel => {
+    return hotel.address.province === "Khyber Paktunkhawa";
+  });
+  return northernAreasHotels;
+}
+
+export function getGilgitBaltistanHotels() {
+  let gilGitBaltistanHotels = hotels.filter(hotel => {
+    return hotel.address.province === "Gilgit Baltistan";
+  });
+  return gilGitBaltistanHotels;
+}
+
+export function getFreeWiFiHotels() {
   let freeWiFi = hotels.filter(hotel => {
     return hotel.freeWifi === true;
   });
   return freeWiFi;
 }
 
-export function freeParkingHotels() {
+export function getFreeParkingHotels() {
   let freeParking = hotels.filter(hotel => {
     return hotel.freeParking === true;
   });
   return freeParking;
 }
 
-export function fiveStarHotels() {
+export function getFiveStarHotels() {
   let fiveStars = hotels.filter(hotel => {
     return hotel.starRatings === 5;
   });
   return fiveStars;
 }
 
-export function fourStarHotels() {
+export function getFourStarHotels() {
   let fourStars = hotels.filter(hotel => {
     return hotel.starRatings === 4;
   });
   return fourStars;
 }
- */
