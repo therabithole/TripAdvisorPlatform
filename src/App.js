@@ -6,19 +6,19 @@ import "bootstrap/dist/css/bootstrap.css";
 // Navigation
 import NavBar from "./Components/NavBar/NavBar";
 
-//Frontend
+// Pages
 import HomePage from "./Components/Home/HomePage";
 import Hotels from "./Components/Hotels/Hotels";
 import Restaurants from "./Components/Restaurants/Restaurants";
 import ThingsToDo from "./Components/Things to do/ThingstoDo";
 
-// User_Backend
-import Login from "./Components/Login/Login";
-import Register from "./Components/Register/Register";
+// Logins
+import UserLogin from "./Components/Logins/UserLogin";
+import SupplierLogin from "./Components/Logins/SupplierLogin";
 
-//Supplier Backend
-import SupplierLogin from "./Components/SupplierLogin/SupplierLogin";
-import SupplierRegister from "./Components/SupplierView/Pages/Register/SupplierRegister";
+// Registers
+import UserRegister from "./Components/Register/UserRegister";
+import SupplierRegister from "./Components/Register/SupplierRegister";
 
 //    <Route path="/hotels" component={Hotels} />
 import "./App.css";
@@ -37,8 +37,8 @@ function App() {
         />
         <Route path="/restaurants" component={Restaurants} />
         <Route path="/Attractions" component={ThingsToDo} />
-        <Route path="/users/login" component={Login} />
-        <Route path="/users/register" component={Register} />
+        <Route path="/users/login" component={UserLogin} />
+        <Route path="/users/register" component={UserRegister} />
         <Route path="/" component={HomePage} />
       </Switch>
     </React.Fragment>

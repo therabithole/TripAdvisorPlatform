@@ -1,34 +1,38 @@
 import React, { Component } from "react";
 class SupplierLoginForm extends Component {
   state = {};
+
+  formDefaultBehavior = e => {
+    e.preventDefault();
+  };
   render() {
     return (
-      <form>
+      <form onSubmit={this.formDefaultBehavior}>
         {/* you didnt used onchange event handler for every input field and dont have functionality for submit button (do it first) */}
-        <div class="form-group">
-          <label htmlFor="">Email address</label>
+        <div className="form-group">
+          <label htmlFor="login-email">Email address</label>
           <input
             type="email"
             className="form-control"
-            id=""
+            id="login-email"
             aria-describedby="emailHelp"
             placeholder="Enter email"
           />
-          <small class="form-text text-muted">
+          <small className="form-text text-muted">
             We'll never share your email with anyone else.
           </small>
         </div>
-        <div class="form-group">
-          <label htmlFor="">Password</label>
+        <div className="form-group">
+          <label htmlFor="login-password">Password</label>
           <input
             type="password"
             className="form-control"
-            id=""
+            id="login-password"
             placeholder="Password"
           />
         </div>
 
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
