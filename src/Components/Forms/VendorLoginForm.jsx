@@ -8,7 +8,7 @@ class VendorLoginForm extends Component {
     /* 9 */ errors: {}
   };
 
-  schema = {
+  /* 13 */ schema = {
     vendorEmail: Joi.string()
       .required()
       .label("Email"),
@@ -18,9 +18,11 @@ class VendorLoginForm extends Component {
   };
 
   validate = () => {
+    /* below  line is 13*/
     const options = {
       abortEarly: false
     };
+    /* below line is 13*/
     const { error } = Joi.validate(this.state.account, this.schema, options);
 
     if (!error) return null;
@@ -86,7 +88,11 @@ class VendorLoginForm extends Component {
           placeholder="Password"
           /* 11 */ error={errors.vendorPassword}
         />
-        <button type="submit" className="btn btn-primary">
+        <button
+          disabled={this.validate()}
+          type="submit"
+          className="btn btn-primary"
+        >
           Submit
         </button>
       </form>
