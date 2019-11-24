@@ -53,9 +53,7 @@ class VendorLoginForm extends Component {
 
   handlingForm = e => {
     e.preventDefault();
-
     const errors = this.validateForm();
-
     this.setState({ errors: errors || {} });
     if (errors) return;
   };
@@ -96,33 +94,3 @@ class VendorLoginForm extends Component {
 }
 
 export default VendorLoginForm;
-
-/* Code before extracting reusable input*/
-/* 
-<div className="form-group">
-          <label htmlFor="supplierUsername">Email address</label>
-          <input
-            autoFocus
-            type="email"
-            className="form-control"
-            id="supplierUsername"
-            name="supplierUsername" // we used name property to reference e.current.target.value relatively using bracket notation //
-            value={account.supplierUsername}
-            onChange={this.handleInputChange}
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          />  </div>
-      */
-
-/* <div className="form-group">
-          <label htmlFor="supplierPassword">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="supplierPassword"
-            name="supplierPassword" // we used name property to reference e.current.target.value relatively using bracket notation //
-            value={account.supplierPassword}
-            onChange={this.handleInputChange}
-            placeholder="Password"
-          />
-        </div>*/
