@@ -1,26 +1,26 @@
 import React, { Component } from "react";
 const ReusableInput = ({
-  name,
-  labelling,
+  name /* 8*/,
+  label /* 8*/,
+  value /* 8*/,
+  onChange /* 8*/,
   placeholder,
-  value,
-  type,
-  onChange,
-  error
+  error /*11 */,
+  type
 }) => {
   return (
     <div className="form-group">
-      <label htmlFor={name}> {labelling} </label>
+      <label htmlFor={name}> {label} </label>
       <input
-        name={name}
-        id={name}
-        value={value}
-        onChange={onChange}
-        type={type}
+        name={name} // props.name /* 8 */
+        id={name} // props.name /* 8 */
+        value={value} // props.value /* 8 */
+        onChange={onChange} // props.onChange /* 8 */
+        type={type} // props.name /* 8 */
         className="form-control"
-        placeholder={placeholder}
+        placeholder={placeholder} // props.placeholder /* 8 */
       />
-      {error && <div className="alert alert-danger">{error} </div>}
+      {error && <div className="alert alert-danger">{error} </div>} {/* 11 */}
     </div>
   );
 };
