@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import supplierIcon from "../db/images/supplierIcon.svg";
-import SupplierLoginForm from "../Forms/SupplierLoginForm";
+import vendorIcon from "../db/images/vendorIcon.svg";
+import VendorLoginForm from "../Forms/VendorLoginForm";
 
-class SupplierLogin extends Component {
+class VendorLogin extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
         <section>
-          <img src={supplierIcon} alt="works" height="80px" />
+          <img src={vendorIcon} alt="works" height="80px" />
           <h1> Welcome to Supplier Panel</h1>
           <h2> Sign-in your store account to continue</h2>
         </section>
-        <SupplierLoginForm />
+        <VendorLoginForm />
       </React.Fragment>
     );
   }
 }
 
-export default SupplierLogin;
+export default VendorLogin;

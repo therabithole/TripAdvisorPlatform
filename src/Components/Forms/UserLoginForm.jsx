@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import ReusableInput from "./common/ReusableInput";
 class UserLoginForm extends Component {
   state = {
-    account: {
-      userEmail: "",
-      userPassword: ""
-    }
+    account: { userEmail: "", userPassword: "" },
+    errors: { userEmail: "", userPassword: "" }
   };
 
   handleInputChange = ({ currentTarget: input }) => {
@@ -20,19 +18,22 @@ class UserLoginForm extends Component {
     return (
       <form>
         <ReusableInput
-          identifier="userEmail"
+          name="userEmail"
           value={account.userEmail}
           labelling="Email address: "
-          onChange={this.handleInputChange}
+          type="text"
           placeholder="Email address"
+          onChange={this.handleInputChange}
         />
         <ReusableInput
-          identifier="userPassword"
+          name="userPassword"
           value={account.userPassword}
           labelling="Password: "
-          onChange={this.handleInputChange}
+          type="password"
           placeholder="Password"
+          onChange={this.handleInputChange}
         />
+
         <button type="submit" className="btn btn-primary">
           Submit
         </button>

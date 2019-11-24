@@ -1,23 +1,26 @@
 import React, { Component } from "react";
 const ReusableInput = ({
-  identifier,
+  name,
   labelling,
   placeholder,
   value,
-  onChange
+  type,
+  onChange,
+  error
 }) => {
   return (
     <div className="form-group">
-      <label htmlFor={identifier}> {labelling} </label>
+      <label htmlFor={name}> {labelling} </label>
       <input
+        name={name}
+        id={name}
         value={value}
         onChange={onChange}
-        id={identifier}
-        type="text"
+        type={type}
         className="form-control"
-        name={identifier}
         placeholder={placeholder}
       />
+      {error && <div className="alert alert-danger">{error} </div>}
     </div>
   );
 };

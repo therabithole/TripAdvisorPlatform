@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-class SupplierRegisterForm extends Component {
+class VendorRegisterForm extends Component {
   state = {};
   render() {
     return <div> Register Me</div>;
   }
 }
 
-export default SupplierRegisterForm;
+export default VendorRegisterForm;

@@ -37,20 +37,14 @@ class NavBar extends Component {
         <nav>
           <ul className="user-menu">
             <li>
-              <a href="/users/login"> Login</a>
-            </li>
-            <li>
-              <a href="/users/register"> Register</a>
+              <a href="/users"> Users</a>
             </li>
           </ul>
         </nav>
-        <nav className="supplier-menu">
+        <nav className="vendor-menu">
           <ul>
             <li>
-              <a href="/suppliers/login"> Supplier Login</a>
-            </li>
-            <li>
-              <a href="/suppliers/register"> Supplier Register</a>
+              <a href="/vendors"> Vendors</a>
             </li>
           </ul>
         </nav>

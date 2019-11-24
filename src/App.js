@@ -14,23 +14,26 @@ import ThingsToDo from "./Components/Things to do/ThingstoDo";
 
 // Logins
 import UserLogin from "./Components/Logins/UserLogin";
-import SupplierLogin from "./Components/Logins/SupplierLogin";
+import VendorLogin from "./Components/Logins/VendorLogin";
 
 // Registers
 import UserRegister from "./Components/Register/UserRegister";
-import SupplierRegister from "./Components/Register/SupplierRegister";
+import VendorRegister from "./Components/Register/VendorRegister";
 
+import Vendors from "./Components/Vendors/Vendors";
 //    <Route path="/hotels" component={Hotels} />
 import "./App.css";
 import "./fonts.css";
+import Users from "./Components/Users/Users";
 
 function App() {
   return (
     <React.Fragment>
       <NavBar />
       <Switch>
-        <Route path="/suppliers/login" component={SupplierLogin} />
-        <Route path="/suppliers/register" component={SupplierRegister} />
+        <Route path="/vendors/login" component={VendorLogin} />
+        <Route path="/vendors/register" component={VendorRegister} />
+        <Route path="/vendors" component={Vendors} />
         <Route
           path="/hotels"
           render={props => <Hotels sortBy="Best Value" {...props} />}
@@ -39,6 +42,7 @@ function App() {
         <Route path="/Attractions" component={ThingsToDo} />
         <Route path="/users/login" component={UserLogin} />
         <Route path="/users/register" component={UserRegister} />
+        <Route path="/Users" component={Users} />
         <Route path="/" component={HomePage} />
       </Switch>
     </React.Fragment>

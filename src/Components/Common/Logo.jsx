@@ -1,10 +1,10 @@
 import React, { Component } from "react";
+import Sitelogo from "../db/images/travel_logo.png";
 
-import logo from "../../Database Services/images/travel_logo.svg";
 class Logo extends Component {
   state = {};
   render() {
-    return <img src={logo} alt="logo_imag" />;
+    return <img src={Sitelogo} height="60px" alt="site-logo" />;
   }
 }
 
