@@ -27,7 +27,7 @@ class VendorLoginForm extends Component {
 
   handleInputChange = ({ currentTarget: input }) => {
     const errors = { ...this.state.errors };
-    const errorMessage = this.validateInputFields();
+    const errorMessage = this.validateInputFields(input);
     if (errorMessage) errors[input.name] = errorMessage;
     else delete errors[input.name];
 
