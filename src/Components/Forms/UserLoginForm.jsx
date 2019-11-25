@@ -1,42 +1,38 @@
 import React, { Component } from "react";
-import ReusableInput from "./common/ReusableInput";
-class UserLoginForm extends Component {
+import Joi from "joi-browser";
+import Form from "./common/Form";
+class UserLoginForm extends Form {
   state = {
     data: { userEmail: "", userPassword: "" },
-    errors: { userEmail: "", userPassword: "" }
+    errors: {}
   };
 
-  handleInputChange = ({ currentTarget: input }) => {
-    const data = { ...this.state.data };
-    data[input.name] = input.value;
-    console.log(data);
-    this.setState({ data });
+  /* 13 */ schema = {
+    userEmail: Joi.string()
+      .required()
+      .email()
+      .label("User Email"),
+    userPassword: Joi.string()
+      .required()
+      .label("Password")
+  };
+
+  onSubmit = () => {
+    /* 3*/ console.log(" Handle Submitted");
   };
 
   render() {
-    const { data } = this.state;
     return (
-      <form>
-        <ReusableInput
-          name="userEmail"
-          value={data.userEmail}
-          labelling="Email address: "
-          type="text"
-          placeholder="Email address"
-          onChange={this.handleInputChange}
-        />
-        <ReusableInput
-          name="userPassword"
-          value={data.userPassword}
-          labelling="Password: "
-          type="password"
-          placeholder="Password"
-          onChange={this.handleInputChange}
-        />
+      <form onSubmit={this.handleSubmit}>
+        {this.renderInput("userEmail", "User Email: ", "Enter your email")}
+        {this.renderInput(
+          "userPassword",
+          "Password: ",
+          "Enter your password",
+          "password"
+        )}
 
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+        {this.FormButton("Login User")}
       </form>
     );
   }
