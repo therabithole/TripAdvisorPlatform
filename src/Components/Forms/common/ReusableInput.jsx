@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 const ReusableInput = ({
-  name /* 8*/,
-  label /* 8*/,
-  value /* 8*/,
-  onChange /* 8*/,
-  placeholder,
-  error /*11 */,
-  type
+  /* type,  19, */
+  name /* 8 */,
+  label /* 8  */,
+  /* 19  value,  8*/
+  /* 19  onChange,  8*/
+  /*19 placeholder, */
+  error,
+  /*11*/
+  ...rest
 }) => {
   return (
     <div className="form-group">
@@ -14,11 +16,12 @@ const ReusableInput = ({
       <input
         name={name} // props.name /* 8 */
         id={name} // props.name /* 8 */
-        value={value} // props.value /* 8 */
-        onChange={onChange} // props.onChange /* 8 */
-        type={type} // props.name /* 8 */
+        // 19> type={type} // props.name /* 8 */
+        //  19> value={value} // props.value /* 8 */
+        //  19> onChange={onChange} // props.onChange /* 8 */
+        // 19 > placeholder={placeholder} // props.placeholder /* 8 */
+        /* 19*/ {...rest}
         className="form-control"
-        placeholder={placeholder} // props.placeholder /* 8 */
       />
       {error && <div className="alert alert-danger">{error} </div>} {/* 11 */}
     </div>

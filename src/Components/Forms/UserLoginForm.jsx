@@ -2,24 +2,24 @@ import React, { Component } from "react";
 import ReusableInput from "./common/ReusableInput";
 class UserLoginForm extends Component {
   state = {
-    account: { userEmail: "", userPassword: "" },
+    data: { userEmail: "", userPassword: "" },
     errors: { userEmail: "", userPassword: "" }
   };
 
   handleInputChange = ({ currentTarget: input }) => {
-    const account = { ...this.state.account };
-    account[input.name] = input.value;
-    console.log(account);
-    this.setState({ account });
+    const data = { ...this.state.data };
+    data[input.name] = input.value;
+    console.log(data);
+    this.setState({ data });
   };
 
   render() {
-    const { account } = this.state;
+    const { data } = this.state;
     return (
       <form>
         <ReusableInput
           name="userEmail"
-          value={account.userEmail}
+          value={data.userEmail}
           labelling="Email address: "
           type="text"
           placeholder="Email address"
@@ -27,7 +27,7 @@ class UserLoginForm extends Component {
         />
         <ReusableInput
           name="userPassword"
-          value={account.userPassword}
+          value={data.userPassword}
           labelling="Password: "
           type="password"
           placeholder="Password"
