@@ -55,7 +55,7 @@ class HotelsContent extends Component {
   };
 
   handleSideBarItemSelect = sideBarItem => {
-    console.log("genre", sideBarItem);
+    this.setState({ selectedSideBarItem: sideBarItem });
   };
   render() {
     const { length: count } = this.state.hotels;

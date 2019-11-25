@@ -15,13 +15,13 @@ const SideBar = props => {
         <ul>
           {sideBar1.map(item => (
             <li
+              onClick={() => onSideBarItemSelect(item)}
               key={item[valueProperty]}
               className={
                 item === selectedSideBarItem
                   ? "list-group-item active"
                   : "list-group-item"
               }
-              onClick={() => onSideBarItemSelect(item)}
             >
               {item[textProperty]}
             </li>
@@ -31,13 +31,13 @@ const SideBar = props => {
         <ul>
           {sideBar2.map(item => (
             <li
+              onClick={() => onSideBarItemSelect(item)}
               key={item[valueProperty]}
               className={
                 item === selectedSideBarItem
                   ? "list-group-item active"
                   : "list-group-item"
               }
-              onClick={() => onSideBarItemSelect(item)}
             >
               {item[textProperty]}
             </li>
