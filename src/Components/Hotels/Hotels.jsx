@@ -22,12 +22,12 @@ import { getRoomFeatures } from "../db/roomFeatures";
 
 // WORK
 class Hotels extends Component {
-  // setting and initialising the empty state
   state = {
     hotels: [],
     hotelFeatures: [],
     roomFeatures: []
   };
+  // setting and initialising the empty state
 
   // Adding Custom titles - COMPONENT DID MOUNT
 
@@ -55,7 +55,6 @@ class Hotels extends Component {
       <React.Fragment>
         <main className="hotelsMain">
           <Picker />
-
           <Slider
             title="THE BEST BEDS, MAGIC SLEEP"
             subtitle="Select the desired filters and find out your best hotel"
@@ -66,7 +65,7 @@ class Hotels extends Component {
             selectedSideBarItem={this.state.selectedSideBarItem}
             onSideBarItemSelect={this.handleSideBarItemSelect}
           />
-          <HotelsContent />
+          <HotelsContent selectedSideBarItem={this.state.selectedSideBarItem} />
         </main>
       </React.Fragment>
     );

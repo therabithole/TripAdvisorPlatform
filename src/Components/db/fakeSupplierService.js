@@ -780,3 +780,16 @@ export function getFourStarHotels() {
   });
   return fourStars;
 }
+
+export function getHotel(id) {
+  return hotels.find(h => h._id === id);
+}
+
+export function saveHotel(hotel) {
+  let hotelInDb = hotels.find(h => h._id === hotel._id) || {};
+  hotelInDb.name = hotel.name;
+  hotelInDb.telephone = hotel.telephone;
+  hotelInDb.website = hotel.website;
+
+  hotels.push(hotelInDb);
+}

@@ -17,14 +17,17 @@ import { getHotelFeatures } from "../db/hotelFeatures";
 
 // WORK
 class HotelsContent extends Component {
-  state = {
-    hotels: [],
-    gethotelFeatures: [],
-    getRoomFeatures: [],
+  constructor(props) {
+    super(props);
+    this.state = {
+      hotels: [],
+      gethotelFeatures: [],
+      getRoomFeatures: [],
 
-    pageSize: 5,
-    currentPage: 1
-  };
+      pageSize: 5,
+      currentPage: 1
+    };
+  }
 
   componentDidMount() {
     this.setState({
@@ -33,6 +36,8 @@ class HotelsContent extends Component {
       getHotelFeatures: getHotelFeatures(),
       getRoomFeatures: getRoomFeatures()
     });
+
+    console.log(this.props, "props");
   }
 
   handleBooking = hotel => {
@@ -54,17 +59,17 @@ class HotelsContent extends Component {
     this.setState({ currentPage: page });
   };
 
-  handleSideBarItemSelect = sideBarItem => {
-    this.setState({ selectedSideBarItem: sideBarItem });
-  };
   render() {
     const { length: count } = this.state.hotels;
-    const { pageSize, currentPage, hotels: allHotels } = this.state;
 
-    //*******/ FILTERED PROBLEM
-    // const filtered = //
-    ///////////////////////////////////
-
+    const {
+      pageSize,
+      currentPage,
+      hotels: allHotels
+      /* selectedHotel */
+    } = this.state;
+    //FILETERED /// PROBLELM
+    // const filteredHotels  = selectedHotel ? allHotels.filter ( h => h.id === selectedHotel.id) : allHotels
     const hotels = paginate(allHotels, currentPage, pageSize);
     return (
       <React.Fragment>
