@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Joi from "joi-browser";
 import Form from "./common/Form";
+
+import './regFormData.css'
 class UserRegisterForm extends Form {
   state = {
     data: {
@@ -27,6 +29,7 @@ class UserRegisterForm extends Form {
 
   render() {
     return (
+      <div className="regFormdata">
       <form onSubmit={this.handleSubmit}>
         {this.renderInput("userName", "User Name: ", "Enter a unique username")}
         {this.renderInput(
@@ -40,9 +43,9 @@ class UserRegisterForm extends Form {
           "Enter your password",
           "password"
         )}
-
         {this.FormButton("Register User")}
       </form>
+    </div>
     );
   }
 }
