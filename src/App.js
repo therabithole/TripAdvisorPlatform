@@ -15,18 +15,16 @@ import ThingsToDo from "./Components/Things to do/ThingstoDo";
 // Logins
 import UserLogin from "./Components/Logins/UserLogin";
 import VendorLogin from "./Components/Logins/VendorLogin";
-
 // Registers
 import UserRegister from "./Components/Register/UserRegister";
 import VendorRegister from "./Components/Register/VendorRegister";
-
 import Vendors from "./Components/Vendors/Vendors";
 //    <Route path="/hotels" component={Hotels} />
 import "./App.css";
 import "./fonts.css";
 import Users from "./Components/Users/Users";
-
-function App() {
+function App()
+ {
   return (
     <React.Fragment>
       <NavBar />
