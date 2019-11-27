@@ -1,9 +1,11 @@
 import React from "react";
+import ReusableSideBarList from "./ReusableSideBarList";
 
 const SideBar = props => {
   const {
     sideBar1,
     sideBar2,
+    onFilterSelect,
     textProperty,
     valueProperty,
     onSideBarItemSelect,
@@ -12,6 +14,8 @@ const SideBar = props => {
   return (
     <React.Fragment>
       <aside>
+        <ReusableSideBarList text={sideBar1} FilterSelect={onFilterSelect} />
+        <ReusableSideBarList text={sideBar2} />
         <ul>
           {sideBar1.map(item => (
             <li

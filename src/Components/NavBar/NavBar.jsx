@@ -22,6 +22,10 @@ class NavBar extends Component {
             <li>
               <a href="/restaurants"> Restaurants</a>
             </li>
+
+            <li>
+              <a href="/things-to-do"> Things to Do</a>
+            </li>
           </ul>
         </nav>
         <nav>

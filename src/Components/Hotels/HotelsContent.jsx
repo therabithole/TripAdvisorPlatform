@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Hotels from "./Hotels";
 // common widgets:
 
 import Bookmark from "./../Common/Bookmark";
@@ -17,27 +17,21 @@ import { getHotelFeatures } from "../db/hotelFeatures";
 
 // WORK
 class HotelsContent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hotels: [],
-      gethotelFeatures: [],
-      getRoomFeatures: [],
-
-      pageSize: 5,
-      currentPage: 1
-    };
-  }
+  state = {
+    hotels: [],
+    gethotelFeatures: [],
+    getRoomFeatures: [],
+    selectedHotel: [],
+    pageSize: 5,
+    currentPage: 1
+  };
 
   componentDidMount() {
     this.setState({
       hotels: getHotels(),
-
       getHotelFeatures: getHotelFeatures(),
       getRoomFeatures: getRoomFeatures()
     });
-
-    console.log(this.props, "props");
   }
 
   handleBooking = hotel => {
@@ -59,22 +53,25 @@ class HotelsContent extends Component {
     this.setState({ currentPage: page });
   };
 
+  reference = selectedFilter => {
+    console.log(selectedFilter, "selectedFilter");
+  };
+
   render() {
     const { length: count } = this.state.hotels;
 
-    const {
-      pageSize,
-      currentPage,
-      hotels: allHotels
-      /* selectedHotel */
-    } = this.state;
-    //FILETERED /// PROBLELM
-    // const filteredHotels  = selectedHotel ? allHotels.filter ( h => h.id === selectedHotel.id) : allHotels
+    const { pageSize, currentPage, hotels: allHotels } = this.state;
+
+    /* const filteredHotels = selectedHotel
+      ? allHotels.filter(h => h.name === selectedHotel.name)
+      : allHotels; */
+
     const hotels = paginate(allHotels, currentPage, pageSize);
     return (
       <React.Fragment>
         <section className="hotel-content-wrapper">
-          <div> Ay!, You're seeing {count} hotels below </div> <br></br>
+          <div>Ay!, You're seeing {count} hotels below</div>
+          <br></br>
           {hotels.map(hotel => (
             <div className="hotel-content-container">
               <div className="hotel-gallery"> {hotel.length} </div>
@@ -124,6 +121,7 @@ class HotelsContent extends Component {
                     <Bookmark
                       bookmarked={hotel.bookmarked}
                       onClick={() => this.handleBookmark(hotel)}
+                      type={"hotel"}
                     />
                   </div>
                   <div className="prices-and-booking">

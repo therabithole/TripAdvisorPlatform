@@ -25,7 +25,10 @@ class Hotels extends Component {
   state = {
     hotels: [],
     hotelFeatures: [],
-    roomFeatures: []
+    roomFeatures: [],
+    selectedHotel: [],
+    pageSize: 5,
+    currentPage: 1
   };
   // setting and initialising the empty state
 
@@ -47,7 +50,7 @@ class Hotels extends Component {
 
   handleSideBarItemSelect = sideBarItem => {
     // WHAT IS THIS?
-    this.setState({ selectedSideBarItem: sideBarItem });
+    console.log(sideBarItem);
   };
 
   render() {
@@ -65,7 +68,7 @@ class Hotels extends Component {
             selectedSideBarItem={this.state.selectedSideBarItem}
             onSideBarItemSelect={this.handleSideBarItemSelect}
           />
-          <HotelsContent selectedSideBarItem={this.state.selectedSideBarItem} />
+          <HotelsContent />
         </main>
       </React.Fragment>
     );

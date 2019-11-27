@@ -600,8 +600,8 @@ let suppliers = [
   {
     restaurantsData: [
       {
-        _id: "1v21ca3eeb7f6fbccd421415",
-        restaurantName: "Andaaz Restaurant",
+        _id: "1321ca3eeb7f6fbccd421415",
+        name: "HGE",
         telephone: "+92 300 0263229",
         website: "https://andaazrestaurant.com/",
         foodDetails: {
@@ -626,11 +626,12 @@ let suppliers = [
           deliverySerice: true,
           parkingAvailable: true,
           television: true
-        }
+        },
+        bookmarked: true
       },
       {
-        _id: "1v21ca3eeb7f6fbccd421415",
-        restaurantName: "Andaaz Restaurant",
+        _id: "1341ca3eeb7f6fbccd421415",
+        name: "YRE",
         telephone: "+92 300 0263229",
         website: "https://andaazrestaurant.com/",
         foodDetails: {
@@ -651,40 +652,132 @@ let suppliers = [
         },
         features: {
           acceptCreditCards: true,
-          hotelSecondFacility: "Facilities for disabled guests",
+          hotelSecondFacility: "Airport Transportation",
           deliverySerice: true,
           parkingAvailable: true,
           television: true
-        }
+        },
+        bookmarked: true
       },
       {
-        _id: "1v51cb3eeb7f4fbccd811412",
-        restaurantName: "The Urban Cafe Yoglicious",
-        telephone: "+92 42 35872216",
-        website: "https://www.facebook.com/TheUrbanCafeYoglicious",
+        _id: "1341va3eeb7f6fbccd421415",
+        name: "ERF",
+        telephone: "+92 300 0263229",
+        website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Cafe", "French", "International", "Chinese"],
-          meals: ["breakfast", "Brunch"],
+          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
+          meals: ["breakfast"],
           dishes: [
-            "Salad",
+            "Beef",
             "Fish",
             "Burger",
-            "Fried Rice",
-            "Toasts",
-            "Ribs",
+            "Lamb",
+            "Daal",
+            "Chicken",
             "Omlete",
             "Shawarma",
-            "Sandwiches"
+            "Chicken Karahi"
           ],
           dietaryRestrictions: "Halal"
         },
         features: {
           acceptCreditCards: true,
-          freeWifi: true,
+          hotelSecondFacility: "Airport Transportation",
           deliverySerice: true,
           parkingAvailable: true,
           television: true
-        }
+        },
+        bookmarked: true
+      },
+      {
+        _id: "1341va3eeb7f6bbccd421415",
+        name: "ABC",
+        telephone: "+92 300 0263229",
+        website: "https://andaazrestaurant.com/",
+        foodDetails: {
+          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
+          meals: ["breakfast"],
+          dishes: [
+            "Beef",
+            "Fish",
+            "Burger",
+            "Lamb",
+            "Daal",
+            "Chicken",
+            "Omlete",
+            "Shawarma",
+            "Chicken Karahi"
+          ],
+          dietaryRestrictions: "Halal"
+        },
+        features: {
+          acceptCreditCards: true,
+          hotelSecondFacility: "Airport Transportation",
+          deliverySerice: true,
+          parkingAvailable: true,
+          television: true
+        },
+        bookmarked: true
+      },
+      {
+        _id: "1341va3eeb7f6bbcxd421415",
+        name: "WFV",
+        telephone: "+92 300 0263229",
+        website: "https://andaazrestaurant.com/",
+        foodDetails: {
+          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
+          meals: ["breakfast"],
+          dishes: [
+            "Beef",
+            "Fish",
+            "Burger",
+            "Lamb",
+            "Daal",
+            "Chicken",
+            "Omlete",
+            "Shawarma",
+            "Chicken Karahi"
+          ],
+          dietaryRestrictions: "Halal"
+        },
+        features: {
+          acceptCreditCards: true,
+          hotelSecondFacility: "Airport Transportation",
+          deliverySerice: true,
+          parkingAvailable: true,
+          television: true
+        },
+        bookmarked: true
+      },
+      {
+        _id: "1v21ca3eeb7f6fbccd421415",
+        name: "DEF",
+        telephone: "+92 300 0263229",
+        website: "https://andaazrestaurant.com/",
+        foodDetails: {
+          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
+          meals: ["breakfast"],
+          dishes: [
+            "Beef",
+            "Fish",
+            "Burger",
+            "Lamb",
+            "Daal",
+            "Chicken",
+            "Omlete",
+            "Shawarma",
+            "Chicken Karahi"
+          ],
+          dietaryRestrictions: "Halal"
+        },
+        features: {
+          acceptCreditCards: true,
+          hotelSecondFacility: "Airport Transportation",
+          deliverySerice: true,
+          parkingAvailable: true,
+          television: true
+        },
+        bookmarked: true
       }
     ]
   },

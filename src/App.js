@@ -39,7 +39,7 @@ function App() {
           render={props => <Hotels sortBy="Best Value" {...props} />}
         />
         <Route path="/restaurants" component={Restaurants} />
-        <Route path="/Attractions" component={ThingsToDo} />
+        <Route path="/tours" component={ThingsToDo} />
         <Route path="/users/login" component={UserLogin} />
         <Route path="/users/register" component={UserRegister} />
         <Route path="/Users" component={Users} />

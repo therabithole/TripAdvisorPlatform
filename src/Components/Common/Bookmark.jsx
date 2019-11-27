@@ -1,6 +1,7 @@
 import React from "react";
 
 const Bookmark = props => {
+  const { type } = props;
   let classes = "fa fa-heart";
 
   if (!props.bookmarked) classes += "-o";
@@ -12,7 +13,7 @@ const Bookmark = props => {
         style={{ cursor: "pointer" }}
         aria-hidden="true"
       ></i>
-      <span> Bookmark this hotel</span>
+      <span> Bookmark this {type}</span>
     </React.Fragment>
   );
 };

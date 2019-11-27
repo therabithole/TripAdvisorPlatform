@@ -13,6 +13,7 @@ import NorthernAreasFilter from "./components/NorthernAreasFilter";
 
 /* Footer */
 import Footer from "../Footers/Footer";
+import Picker from "../Common/Picker";
 
 class HomePage extends Component {
   state = {
@@ -25,7 +26,9 @@ class HomePage extends Component {
       <React.Fragment>
         <Header />
         <Teasers />
+        <Picker />
         <TopDestinationsFilter />
+        <Picker />
         <NorthernAreasFilter />
         <TopHotels />
         <RestaurantsFilter />
