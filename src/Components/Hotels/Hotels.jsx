@@ -24,8 +24,10 @@ import { getRoomFeatures } from "../db/roomFeatures";
 class Hotels extends Component {
   state = {
     hotels: [],
-    hotelFeatures: [],
-    roomFeatures: [],
+    sidebars: {
+      hotelFeatures: [],
+      roomFeatures: []
+    },
     selectedHotel: [],
     pageSize: 5,
     currentPage: 1
@@ -45,7 +47,10 @@ class Hotels extends Component {
     ];
 
     // setting STATE of Data for sidebars and Main Content : - COMPONENT DID MOUNT
-    this.setState({ hotels: getHotels(), hotelFeatures, roomFeatures });
+    this.setState({
+      hotels: getHotels(),
+      sidebars: { hotelFeatures, roomFeatures }
+    });
   }
 
   handleSideBarItemSelect = sideBarItem => {
@@ -63,8 +68,7 @@ class Hotels extends Component {
             subtitle="Select the desired filters and find out your best hotel"
           />
           <SideBar
-            sideBar1={this.state.hotelFeatures}
-            sideBar2={this.state.roomFeatures}
+            sideBars={this.state.sidebars}
             selectedSideBarItem={this.state.selectedSideBarItem}
             onSideBarItemSelect={this.handleSideBarItemSelect}
           />

@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 
-const ReusableSideBarList = ({ text, value, onFilterSelect }) => {
+const ReusableSideBarList = ({ text, onFilterSelect }) => {
   return (
     <ul>
       {text.map(t => (
-        <li
-          onClick={() => onFilterSelect(t)}
-          key={t._id}
-          className="list-group-item"
-        >
-          {t.name}
+        <li className="list-group-item">
+          {" "}
+          {t.name} {console.log("displaying item", { t })}
         </li>
       ))}
     </ul>

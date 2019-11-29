@@ -18,19 +18,24 @@ import { paginate } from "./../Common/paginate";
 class Restaurants extends Component {
   state = {
     restaurants: [],
-    foodType: [],
-    cuisineList: [],
+    sidebars: { foodType: [], cuisineList: [] },
+
     pageSize: 3,
     currentPage: 1
   };
 
   componentDidMount() {
-    this.setState({
-      restaurants: getRestaurants(),
-      foodType: getFoodType(),
-      cuisineList: getCuisineList()
-    });
-    console.log(getFoodType());
+    const { foodtype, cuisineList } = this.state.sidebars;
+
+    this.setState(
+      {
+        restaurants: getRestaurants(),
+        sidebars: { foodType: getFoodType(), cuisineList: getCuisineList() }
+      },
+      () => {
+        console.log(this.state.sidebars);
+      }
+    );
   }
 
   handleDelete = restaurant => {
@@ -74,8 +79,7 @@ class Restaurants extends Component {
         <section className="restaurant-content-wrapper row">
           <div className="col-2">
             <SideBar
-              sideBar1={this.state.foodType}
-              sideBar2={this.state.cuisineList}
+              sideBars={this.state.sidebars}
               onFilterSelect={this.handleFilterSelect}
             />
           </div>
