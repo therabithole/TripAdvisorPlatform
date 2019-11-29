@@ -53,9 +53,8 @@ class Hotels extends Component {
     });
   }
 
-  handleSideBarItemSelect = sideBarItem => {
-    // WHAT IS THIS?
-    console.log(sideBarItem);
+  handleFilterSelect = filter => {
+    console.log(filter);
   };
 
   render() {
@@ -69,8 +68,7 @@ class Hotels extends Component {
           />
           <SideBar
             sideBars={this.state.sidebars}
-            selectedSideBarItem={this.state.selectedSideBarItem}
-            onSideBarItemSelect={this.handleSideBarItemSelect}
+            onFilterSelect={this.handleFilterSelect}
           />
           <HotelsContent />
         </main>
