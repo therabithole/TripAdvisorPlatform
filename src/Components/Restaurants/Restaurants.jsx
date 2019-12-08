@@ -25,8 +25,6 @@ class Restaurants extends Component {
   };
 
   componentDidMount() {
-    const { foodtype, cuisineList } = this.state.sidebars;
-
     this.setState(
       {
         restaurants: getRestaurants(),
