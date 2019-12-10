@@ -1,14 +1,25 @@
 import React, { Component } from "react";
 
-const ReusableSideBarList = ({ text, handleFilter }) => {
+const ReusableSideBarList = ({
+  data,
+  handleFilter,
+  selectedFilter,
+  id,
+  defValue
+}) => {
   return (
     <ul>
-      {text.map(names => (
+      {data.map(actualData => (
         <li
-          onClick={sidebaritem => handleFilter(names)}
-          className="list-group-item"
+          key={actualData[id]}
+          onClick={() => handleFilter(actualData)}
+          className={
+            actualData === selectedFilter
+              ? "list-group-item active"
+              : "list-group-item"
+          }
         >
-          {names.name}
+          {actualData[defValue]}
         </li>
       ))}
     </ul>

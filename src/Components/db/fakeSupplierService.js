@@ -8,7 +8,7 @@ let suppliers = [
         address: {
           streetAddress:
             "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
-          city: "Karachi ",
+          city: "Lahore",
           province: "Sindh",
           postcode: "75500"
         },
@@ -601,13 +601,20 @@ let suppliers = [
     restaurantsData: [
       {
         _id: "1321ca3eeb7f6fbccd421415",
-        name: "HGE",
+        name: "Haveli Tikka Mast",
         telephone: "+92 300 0263229",
+        address: {
+          streetAddress:
+            "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
+          city: "Lahore",
+          province: "Sindh",
+          postcode: "75500"
+        },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
           cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["breakfast"],
-          dishes: [
+          meals: ["Breakfast"],
+          ingredients: [
             "Beef",
             "Fish",
             "Burger",
@@ -618,7 +625,7 @@ let suppliers = [
             "Shawarma",
             "Chicken Karahi"
           ],
-          dietaryRestrictions: "Halal"
+          dietaryRestrictions: ["Halal"]
         },
         features: {
           acceptCreditCards: true,
@@ -627,17 +634,24 @@ let suppliers = [
           parkingAvailable: true,
           television: true
         },
-        bookmarked: true
+        bookmarked: false
       },
       {
         _id: "1341ca3eeb7f6fbccd421415",
-        name: "YRE",
+        name: "Bukhara",
         telephone: "+92 300 0263229",
+        address: {
+          streetAddress:
+            "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
+          city: "Islamabad ",
+          province: "Sindh",
+          postcode: "75500"
+        },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
           cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["breakfast"],
-          dishes: [
+          meals: ["Breakfast"],
+          ingredients: [
             "Beef",
             "Fish",
             "Burger",
@@ -648,7 +662,7 @@ let suppliers = [
             "Shawarma",
             "Chicken Karahi"
           ],
-          dietaryRestrictions: "Halal"
+          dietaryRestrictions: ["Organic"]
         },
         features: {
           acceptCreditCards: true,
@@ -657,17 +671,24 @@ let suppliers = [
           parkingAvailable: true,
           television: true
         },
-        bookmarked: true
+        bookmarked: false
       },
       {
         _id: "1341va3eeb7f6fbccd421415",
-        name: "ERF",
+        name: "The Lakhnavi",
         telephone: "+92 300 0263229",
+        address: {
+          streetAddress:
+            "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
+          city: "Islamabad ",
+          province: "Sindh",
+          postcode: "75500"
+        },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
           cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["breakfast"],
-          dishes: [
+          meals: ["Breakfast"],
+          ingredients: [
             "Beef",
             "Fish",
             "Burger",
@@ -678,7 +699,7 @@ let suppliers = [
             "Shawarma",
             "Chicken Karahi"
           ],
-          dietaryRestrictions: "Halal"
+          dietaryRestrictions: ["Low Carbs", "Organic"]
         },
         features: {
           acceptCreditCards: true,
@@ -687,17 +708,24 @@ let suppliers = [
           parkingAvailable: true,
           television: true
         },
-        bookmarked: true
+        bookmarked: false
       },
       {
         _id: "1341va3eeb7f6bbccd421415",
-        name: "ABC",
+        name: "Dumpukht",
         telephone: "+92 300 0263229",
+        address: {
+          streetAddress:
+            "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
+          city: "Islamabad ",
+          province: "Sindh",
+          postcode: "75500"
+        },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
           cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["breakfast"],
-          dishes: [
+          meals: ["Breakfast"],
+          ingredients: [
             "Beef",
             "Fish",
             "Burger",
@@ -708,7 +736,7 @@ let suppliers = [
             "Shawarma",
             "Chicken Karahi"
           ],
-          dietaryRestrictions: "Halal"
+          dietaryRestrictions: ["GMO Free", "Sugar Free"]
         },
         features: {
           acceptCreditCards: true,
@@ -717,17 +745,24 @@ let suppliers = [
           parkingAvailable: true,
           television: true
         },
-        bookmarked: true
+        bookmarked: false
       },
       {
         _id: "1341va3eeb7f6bbcxd421415",
-        name: "WFV",
+        name: "Shangrilla",
         telephone: "+92 300 0263229",
+        address: {
+          streetAddress:
+            "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
+          city: "Multan ",
+          province: "Sindh",
+          postcode: "75500"
+        },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
           cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["breakfast"],
-          dishes: [
+          meals: ["Breakfast"],
+          ingredients: [
             "Beef",
             "Fish",
             "Burger",
@@ -738,7 +773,7 @@ let suppliers = [
             "Shawarma",
             "Chicken Karahi"
           ],
-          dietaryRestrictions: "Halal"
+          dietaryRestrictions: ["Halal", "Gluten Free"]
         },
         features: {
           acceptCreditCards: true,
@@ -747,17 +782,24 @@ let suppliers = [
           parkingAvailable: true,
           television: true
         },
-        bookmarked: true
+        bookmarked: false
       },
       {
         _id: "1v21ca3eeb7f6fbccd421415",
-        name: "DEF",
+        name: "Savour Foods",
         telephone: "+92 300 0263229",
+        address: {
+          streetAddress:
+            "C 135/2, Block 2, Near Dr. Ziauddin Hospital, Clifton",
+          city: "Rawalpindi ",
+          province: "Sindh",
+          postcode: "75500"
+        },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["breakfast"],
-          dishes: [
+          cuisine: ["Grill", "Seafood", "Barbecue"],
+          meals: ["Breakfast", "Lunch"],
+          ingredients: [
             "Beef",
             "Fish",
             "Burger",
@@ -768,7 +810,7 @@ let suppliers = [
             "Shawarma",
             "Chicken Karahi"
           ],
-          dietaryRestrictions: "Halal"
+          dietaryRestrictions: ["Halal", "Gluten Free"]
         },
         features: {
           acceptCreditCards: true,
@@ -777,7 +819,7 @@ let suppliers = [
           parkingAvailable: true,
           television: true
         },
-        bookmarked: true
+        bookmarked: false
       }
     ]
   },
@@ -830,6 +872,48 @@ export function getTopSelectedHotels() {
     return hotel.adminSettings.topselectedHotel === true;
   });
   return topSelectedHotels;
+}
+
+// City Restaurants
+
+export function getLahoreRestaurants() {
+  let lahoreRestaurants = restaurants.filter(res => {
+    return res.address.city === "Lahore";
+  });
+  return lahoreRestaurants;
+}
+export function getIslamabadRestaurants() {
+  let lahoreRestaurants = restaurants.filter(res => {
+    return res.address.city === "Islamabad";
+  });
+  return lahoreRestaurants;
+}
+export function getKarachiRestaurants() {
+  let lahoreRestaurants = restaurants.filter(res => {
+    return res.address.city === "Karachi";
+  });
+  return lahoreRestaurants;
+}
+export function getRawalpindiRestaurants() {
+  let lahoreRestaurants = restaurants.filter(res => {
+    return res.address.city === "Rawalpindi";
+  });
+  return lahoreRestaurants;
+}
+// Restaurant Cuisines
+// Afghan
+export function getAfghanRestaurants() {
+  let afghanRestaurants = restaurants.filter(res => {
+    return res.foodDetails.cuisine.includes("Afghan");
+  });
+  return afghanRestaurants;
+}
+
+export function getGermanRestaurants() {
+  let germanRestaurants = restaurants.filter(res => {
+    return res.foodDetails.cuisine.includes("German");
+  });
+  return germanRestaurants;
 }
 
 export function getNorthernAreasHotels() {

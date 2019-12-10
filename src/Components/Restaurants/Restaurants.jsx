@@ -7,8 +7,18 @@ import SideBar from "./../Common/SideBar";
 
 // Restaurant Database : Restaurant List
 import { getRestaurants } from "../db/fakeSupplierService";
+import { getAfghanRestaurants } from "./../db/fakeSupplierService";
+import { getLahoreRestaurants } from "./../db/fakeSupplierService";
+import { getIslamabadRestaurants } from "./../db/fakeSupplierService";
+import { getRawalpindiRestaurants } from "./../db/fakeSupplierService";
+import { getKarachiRestaurants } from "./../db/fakeSupplierService";
+
+// DB: SideBar List
 import { getFoodType } from "../db/foodList";
+import { getFamousFoods } from "../db/foodList";
 import { getCuisineList } from "./../db/cuisineList";
+import { getDietaryRestrictions } from "./../db/dietaryRestrictions";
+import { getPunjabCities } from "./../db/geoLocations";
 
 // common features:
 import Bookmark from "./../Common/Bookmark";
@@ -18,23 +28,71 @@ import { paginate } from "./../Common/paginate";
 class Restaurants extends Component {
   state = {
     restaurants: [],
-    sidebars: { foodType: [], cuisineList: [] },
-
-    pageSize: 3,
+    sidebars: {
+      famousFoods: [],
+      dietaryRestrictions: [],
+      foodType: [],
+      cuisineList: [],
+      locations: []
+    },
+    filters: {
+      restaurantsByCity: {
+        karachiRestaurants: [],
+        lahoreRestaurants: [],
+        islamabadRestaurants: [],
+        rawalpindiRestaurants: []
+      }
+    },
+    pageSize: 4,
     currentPage: 1
   };
 
+  // When the page loads
   componentDidMount() {
     this.setState(
       {
         restaurants: getRestaurants(),
-        sidebars: { foodType: getFoodType(), cuisineList: getCuisineList() }
+        sidebars: {
+          famousFoods: getFamousFoods(),
+          dietaryRestrictions: getDietaryRestrictions(),
+          foodType: getFoodType(),
+          cuisineList: getCuisineList()
+        },
+        locations: getPunjabCities(),
+        filters: {
+          restaurantsByCity: {
+            karachiRestaurants: getKarachiRestaurants(),
+            lahoreRestaurants: getLahoreRestaurants(),
+            islamabadRestaurants: getIslamabadRestaurants(),
+            rawalpindiRestaurants: getRawalpindiRestaurants()
+          }
+        }
       },
       () => {
         console.log(this.state.sidebars);
+        console.log(this.state.restaurants);
       }
     );
   }
+
+  ////////////////////////////////// PAGE ACTIONS //////////////////////////
+
+  //// pagechange - pagination
+
+  handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
+
+  //// sidebar filter
+
+  handleFilterSelect = filter => {
+    console.log(filter);
+    this.setState({ selectedFilter: filter });
+  };
+
+  /////////////////////////////////////// PRODUCT ACTIONS  ///////////////////////////////
+
+  //Deleting Products
 
   handleDelete = restaurant => {
     console.log("Deleted", restaurant);
@@ -45,6 +103,8 @@ class Restaurants extends Component {
     this.setState({ restaurants });
   };
 
+  // Bookmark Product
+
   handleBookmark = restaurant => {
     const restaurants = [...this.state.restaurants];
     const index = restaurants.indexOf(restaurant);
@@ -53,21 +113,35 @@ class Restaurants extends Component {
     this.setState({ restaurants });
   };
 
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
-
-  handleFilterSelect = filter => {
-    console.log(filter);
-  };
+  ///////////////////////////// RENDER (PAGE) METHOD //////////////////////////////////////
 
   render() {
+    // destructuring - 1
     const { length: count } = this.state.restaurants;
-    const { pageSize, currentPage, restaurants: allRestaurants } = this.state;
 
-    if (count === 0) return <p> There are no restaurants in the Database</p>;
+    // destructuring - 2
+    const { pageSize, currentPage } = this.state;
+
+    // conditions
+
+    if (count === 0) return <p> No restaurants in your area</p>;
+
+    // mapping/paginating the restaurant data (this.state.restaurants) according toe page-size, currentpage
+
+    const { restaurants: allRestaurants } = this.state;
+
+    // pagination lesson 13: Filtering implementation before PAGINATION
+
+    const { selectedFilter } = this.state;
+
+    const check = this.state.filters.restaurantsByCity.lahoreRestaurants;
+    // if selected filtered is truthy, we are going to get allRestaurants and filter them
+    console.log("check", check);
+    console.log("kocations", this.state.locations);
+    // const filteredRestaurants = selectedFilter ? allRestaurants.filter( r = > r. )
 
     const restaurants = paginate(allRestaurants, currentPage, pageSize);
+
     return (
       <React.Fragment>
         <Slider
@@ -78,18 +152,27 @@ class Restaurants extends Component {
           <div className="col-2">
             <SideBar
               sideBars={this.state.sidebars}
+              selectedFilter={this.state.selectedFilter}
               onFilterSelect={this.handleFilterSelect}
             />
           </div>
           <div className="col">
             <div>
               Ay!, You're seeing
-              {restaurants.length} restaurants below
+              {this.state.restaurants.length} restaurants{" "}
+              {/* we are NOT using restaurants.length BUT> this.state because that is original array/amount without pagination method*/}
             </div>
             <div>
               {restaurants.map(restaurant => (
                 <div key={restaurant._id}>
                   <li style={{ listStyle: "none" }}> {restaurant.name}</li>
+                  <li style={{ listStyle: "none" }}>
+                    {restaurant.foodDetails.meals}
+                  </li>
+                  <li style={{ listStyle: "none" }}>
+                    {" "}
+                    Visit their website: {restaurant.website}
+                  </li>
                   <Bookmark
                     bookmarked={restaurant.bookmarked}
                     onClick={() => this.handleBookmark(restaurant)}
@@ -114,7 +197,7 @@ class Restaurants extends Component {
       <div> Middle-Eastern Restaurants in Lahore</div>
       <div> Pizza in Lahore</div> */}
             <Pagination
-              itemsCount={this.state.restaurants.length}
+              itemsCount={count} // or {this.state.restaurants.length}
               pageSize={pageSize} /* or count*/
               currentPage={currentPage}
               onPageChange={this.handlePageChange}

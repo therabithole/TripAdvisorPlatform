@@ -1,47 +1,47 @@
 const cuisineList = [
   {
-    _id: "1e58ja3kty8f6fbccd471811",
-    name: "German"
+    id: "1441ca3eeb7f6fbccd421415",
+    name: "Turkish"
   },
   {
-    _id: "2e58ja3kty8f6fbccd471811",
+    id: "1941ca3eeb7f6fbccd421415",
     name: "French"
   },
   {
-    _id: "3e58ja3kty8f6fbccd471811",
+    id: "2341ca3eeb7f6fbccd421415",
     name: "Chinese"
   },
   {
-    _id: "4e58ja3kty8f6fbccd471811",
+    id: "1341ca3eeb7f6fbccd621415",
     name: "Punjabi"
   },
   {
-    _id: "5e58ja3kty8f6fbccd471811",
+    id: "1341ca3eeb7f6fbhcd421415",
     name: "Pashtun"
   },
   {
-    _id: "6e58ja3kty8f6fbccd471811",
+    id: "1341ca3eeb7f6fvccd4214156",
     name: "Persian"
   },
   {
-    _id: "7e58ja3kty8f6fbccd471811",
+    id: "1341ca3eeb7fufbccd421415",
     name: "Sindhi"
   },
   {
-    _id: "8e58ja3kty8f6fbccd471811",
+    id: "1341ca3oeb7f6fbccd421415",
     name: "Balochi"
   },
   {
-    _id: "9e58ja3kty8f6fbccd471811",
-    _name: "Kashmiri"
+    id: "1341ca3teb7f6fbccd421415",
+    name: "Kashmiri"
   },
   {
-    _id: "1b58ja3kty8f6fbccd471811",
+    id: "1341ca3e7b7f6fbccd421415",
     name: "Italian"
   },
   {
-    _id: "1f58ja3kty8f6fbccd471811",
-    name: "Spainish"
+    id: "1341ca3eeb7j6fbccd421415",
+    name: "Greek"
   }
 ];
 

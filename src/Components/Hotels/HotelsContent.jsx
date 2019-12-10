@@ -62,10 +62,6 @@ class HotelsContent extends Component {
 
     const { pageSize, currentPage, hotels: allHotels } = this.state;
 
-    /* const filteredHotels = selectedHotel
-      ? allHotels.filter(h => h.name === selectedHotel.name)
-      : allHotels; */
-
     const hotels = paginate(allHotels, currentPage, pageSize);
     return (
       <React.Fragment>

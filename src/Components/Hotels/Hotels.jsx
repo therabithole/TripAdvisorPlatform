@@ -55,6 +55,7 @@ class Hotels extends Component {
 
   handleFilterSelect = filter => {
     console.log(filter);
+    this.setState({ selectedFilter: filter });
   };
 
   render() {
@@ -69,6 +70,7 @@ class Hotels extends Component {
           <SideBar
             sideBars={this.state.sidebars}
             onFilterSelect={this.handleFilterSelect}
+            selectedFilter={this.state.selectedFilter}
           />
           <HotelsContent />
         </main>

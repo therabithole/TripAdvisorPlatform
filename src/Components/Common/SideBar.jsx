@@ -4,14 +4,19 @@ import ReusableSideBarList from "./ReusableSideBarList";
 const SideBar = props => {
   const { sideBars, onFilterSelect } = props;
   const sideBarList = Object.keys(sideBars);
+  const { id, defValue } = props;
+  const { selectedFilter } = props;
 
   return (
     <React.Fragment>
       <aside>
         {sideBarList.map(sidebaritem => (
           <ReusableSideBarList
-            text={sideBars[sidebaritem]}
+            data={sideBars[sidebaritem]}
             handleFilter={onFilterSelect}
+            selectedFilter={selectedFilter}
+            id={id}
+            defValue={defValue}
           />
         ))}
       </aside>
@@ -20,8 +25,8 @@ const SideBar = props => {
 };
 
 SideBar.defaultProps = {
-  textProperty: "name",
-  valueProperty: "_id"
+  id: "id",
+  defValue: "name"
 };
 
 export default SideBar;
