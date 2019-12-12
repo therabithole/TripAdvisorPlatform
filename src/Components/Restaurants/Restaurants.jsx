@@ -18,6 +18,7 @@ import { getFoodType } from "../db/foodList";
 import { getFamousFoods } from "../db/foodList";
 import { getCuisineList } from "./../db/cuisineList";
 import { getDietaryRestrictions } from "./../db/dietaryRestrictions";
+import { getAllLocations } from "./../db/geoLocations";
 import { getPunjabCities } from "./../db/geoLocations";
 
 // common features:
@@ -56,10 +57,11 @@ class Restaurants extends Component {
           famousFoods: getFamousFoods(),
           dietaryRestrictions: getDietaryRestrictions(),
           foodType: getFoodType(),
-          cuisineList: getCuisineList()
+          cuisineList: getCuisineList(),
+          locations: getAllLocations()
         },
-        locations: getPunjabCities(),
-        filters: {
+        // locations: getPunjabCities(),
+        subData: {
           restaurantsByCity: {
             karachiRestaurants: getKarachiRestaurants(),
             lahoreRestaurants: getLahoreRestaurants(),
@@ -134,10 +136,21 @@ class Restaurants extends Component {
 
     const { selectedFilter } = this.state;
 
-    const check = this.state.filters.restaurantsByCity.lahoreRestaurants;
+    const filtered = selectedFilter
+      ? allRestaurants.filter(restaurantsinDB => {
+          const foodDetailsinDB = restaurantsinDB.foodDetails;
+          const nestedArray = Object.values(foodDetailsinDB);
+          nestedArray.find(values => {
+            values.find(data => {
+              console.log(data.name);
+            });
+          });
+        })
+      : allRestaurants;
+
     // if selected filtered is truthy, we are going to get allRestaurants and filter them
-    console.log("check", check);
-    console.log("kocations", this.state.locations);
+    // console.log("check", check);
+    // console.log("kocations", this.state.locations);
     // const filteredRestaurants = selectedFilter ? allRestaurants.filter( r = > r. )
 
     const restaurants = paginate(allRestaurants, currentPage, pageSize);
@@ -167,7 +180,14 @@ class Restaurants extends Component {
                 <div key={restaurant._id}>
                   <li style={{ listStyle: "none" }}> {restaurant.name}</li>
                   <li style={{ listStyle: "none" }}>
-                    {restaurant.foodDetails.meals}
+                    {restaurant.foodDetails.cuisine.map(m => {
+                      return m.name;
+                    })}
+                  </li>
+                  <li style={{ listStyle: "none" }}>
+                    {restaurant.foodDetails.meals.map(m => {
+                      return m.name;
+                    })}
                   </li>
                   <li style={{ listStyle: "none" }}>
                     {" "}

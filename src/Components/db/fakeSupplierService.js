@@ -612,20 +612,29 @@ let suppliers = [
         },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["Breakfast"],
-          ingredients: [
-            "Beef",
-            "Fish",
-            "Burger",
-            "Lamb",
-            "Daal",
-            "Chicken",
-            "Omlete",
-            "Shawarma",
-            "Chicken Karahi"
+          cuisine: [
+            { id: "1", name: "Balochi" },
+            { id: "2", name: "French" },
+            { id: "3", name: "Italian" },
+            { id: "4", name: "Irish" }
           ],
-          dietaryRestrictions: ["Halal"]
+          meals: [
+            { id: "1", name: "Lunch" },
+            { id: "1", name: "Dinner" }
+          ],
+          ingredients: [
+            { id: "5", name: "Beef" },
+            { id: "1", name: "Fish" },
+            { id: "2", name: "Burger" },
+            { id: "4", name: "Lamb" },
+            { id: "7", name: "Daal" },
+            { id: "9", name: "Omlete" },
+            { id: "3", name: "Shawarma" }
+          ],
+          dietaryRestrictions: [
+            { id: "1", name: "Halal" },
+            { id: "1", name: "Kosher" }
+          ]
         },
         features: {
           acceptCreditCards: true,
@@ -649,20 +658,29 @@ let suppliers = [
         },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["Breakfast"],
-          ingredients: [
-            "Beef",
-            "Fish",
-            "Burger",
-            "Lamb",
-            "Daal",
-            "Chicken",
-            "Omlete",
-            "Shawarma",
-            "Chicken Karahi"
+          cuisine: [
+            { id: "1", name: "Tunisian" },
+            { id: "2", name: "Algerian" },
+            { id: "3", name: "Bahraini" },
+            { id: "4", name: "Mediterranean" }
           ],
-          dietaryRestrictions: ["Organic"]
+          meals: [
+            { id: "1", name: "Tea" },
+            { id: "1", name: "Dinner" }
+          ],
+          ingredients: [
+            { id: "5", name: "Lamb" },
+            { id: "1", name: "Fish" },
+            { id: "2", name: "Burger" },
+            { id: "4", name: "Lamb" },
+            { id: "7", name: "Daal" },
+            { id: "9", name: "Omlete" },
+            { id: "3", name: "Shawarma" }
+          ],
+          dietaryRestrictions: [
+            { id: "1", name: "Halal" },
+            { id: "1", name: "Kosher" }
+          ]
         },
         features: {
           acceptCreditCards: true,
@@ -686,20 +704,29 @@ let suppliers = [
         },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["Breakfast"],
-          ingredients: [
-            "Beef",
-            "Fish",
-            "Burger",
-            "Lamb",
-            "Daal",
-            "Chicken",
-            "Omlete",
-            "Shawarma",
-            "Chicken Karahi"
+          cuisine: [
+            { id: "1", name: "Lebanese" },
+            { id: "2", name: "Omani" },
+            { id: "3", name: "Emirati" },
+            { id: "4", name: "Qatari" }
           ],
-          dietaryRestrictions: ["Low Carbs", "Organic"]
+          meals: [
+            { id: "1", name: "Breakfast" },
+            { id: "1", name: "Dinner" }
+          ],
+          ingredients: [
+            { id: "5", name: "Beef" },
+            { id: "1", name: "Fish" },
+            { id: "2", name: "Burger" },
+            { id: "4", name: "Lamb" },
+            { id: "7", name: "Daal" },
+            { id: "9", name: "Omlete" },
+            { id: "3", name: "Shawarma" }
+          ],
+          dietaryRestrictions: [
+            { id: "1", name: "Halal" },
+            { id: "1", name: "Kosher" }
+          ]
         },
         features: {
           acceptCreditCards: true,
@@ -723,20 +750,29 @@ let suppliers = [
         },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["Breakfast"],
-          ingredients: [
-            "Beef",
-            "Fish",
-            "Burger",
-            "Lamb",
-            "Daal",
-            "Chicken",
-            "Omlete",
-            "Shawarma",
-            "Chicken Karahi"
+          cuisine: [
+            { id: "1", name: "Albanian" },
+            { id: "2", name: "Chinese" },
+            { id: "3", name: "Korean" },
+            { id: "4", name: "Turkish" }
           ],
-          dietaryRestrictions: ["GMO Free", "Sugar Free"]
+          meals: [
+            { id: "1", name: "Breakfast" },
+            { id: "1", name: "Lunch" }
+          ],
+          ingredients: [
+            { id: "5", name: "Beef" },
+            { id: "1", name: "Fish" },
+            { id: "2", name: "Burger" },
+            { id: "4", name: "Lamb" },
+            { id: "7", name: "Daal" },
+            { id: "9", name: "Omlete" },
+            { id: "3", name: "Shawarma" }
+          ],
+          dietaryRestrictions: [
+            { id: "1", name: "Halal" },
+            { id: "1", name: "Kosher" }
+          ]
         },
         features: {
           acceptCreditCards: true,
@@ -760,20 +796,29 @@ let suppliers = [
         },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Afghan", "Grill", "Seafood", "Barbecue"],
-          meals: ["Breakfast"],
-          ingredients: [
-            "Beef",
-            "Fish",
-            "Burger",
-            "Lamb",
-            "Daal",
-            "Chicken",
-            "Omlete",
-            "Shawarma",
-            "Chicken Karahi"
+          cuisine: [
+            { id: "1", name: "Afghan" },
+            { id: "2", name: "Iranian" },
+            { id: "3", name: "Iraqi" },
+            { id: "4", name: "Syrian" }
           ],
-          dietaryRestrictions: ["Halal", "Gluten Free"]
+          meals: [
+            { id: "1", name: "Breakfast" },
+            { id: "1", name: "Tea" }
+          ],
+          ingredients: [
+            { id: "5", name: "Beef" },
+            { id: "1", name: "Fish" },
+            { id: "2", name: "Burger" },
+            { id: "4", name: "Lamb" },
+            { id: "7", name: "Daal" },
+            { id: "9", name: "Omlete" },
+            { id: "3", name: "Shawarma" }
+          ],
+          dietaryRestrictions: [
+            { id: "1", name: "Halal" },
+            { id: "1", name: "Kosher" }
+          ]
         },
         features: {
           acceptCreditCards: true,
@@ -797,20 +842,29 @@ let suppliers = [
         },
         website: "https://andaazrestaurant.com/",
         foodDetails: {
-          cuisine: ["Grill", "Seafood", "Barbecue"],
-          meals: ["Breakfast", "Lunch"],
-          ingredients: [
-            "Beef",
-            "Fish",
-            "Burger",
-            "Lamb",
-            "Daal",
-            "Chicken",
-            "Omlete",
-            "Shawarma",
-            "Chicken Karahi"
+          cuisine: [
+            { id: "1", name: "Sindhi" },
+            { id: "2", name: "Mughal" },
+            { id: "3", name: "Malay" },
+            { id: "4", name: "Punjabi" }
           ],
-          dietaryRestrictions: ["Halal", "Gluten Free"]
+          meals: [
+            { id: "1", name: "Brunch" },
+            { id: "1", name: "Lunch" }
+          ],
+          ingredients: [
+            { id: "5", name: "Beef" },
+            { id: "1", name: "Fish" },
+            { id: "2", name: "Burger" },
+            { id: "4", name: "Lamb" },
+            { id: "7", name: "Daal" },
+            { id: "9", name: "Omlete" },
+            { id: "3", name: "Shawarma" }
+          ],
+          dietaryRestrictions: [
+            { id: "1", name: "Halal" },
+            { id: "1", name: "Gluten Free" }
+          ]
         },
         features: {
           acceptCreditCards: true,
