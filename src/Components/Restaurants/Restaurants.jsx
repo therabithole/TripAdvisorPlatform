@@ -122,14 +122,17 @@ class Restaurants extends Component {
     const { selectedFilter } = this.state;
 
     const filtered = selectedFilter
-      ? allRestaurants.filter(restaurantsinDB => {
-          const foodDetailsinDB = restaurantsinDB.foodDetails;
-          const nestedArray = Object.values(foodDetailsinDB);
+      ? allRestaurants.filter(restaurant => {
+          console.log(restaurant);
 
-          nestedArray.find(values => {
+          //  const foodDetailsinDB = restaurant.foodDetails;
+          restaurant.foodDetails;
+          const nestedArray = Object.values(restaurant.foodDetails);
+          // console.log(nestedArray);
+          const result = nestedArray.find(values => {
             values.find(data => {
               // currently doing false true on console if you uncomment console (using find), do we use filter?
-              //  console.log(data.name === selectedFilter.name);
+              //    console.log(data.name === selectedFilter.name);
             });
           });
         })
