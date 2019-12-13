@@ -125,8 +125,8 @@ class Restaurants extends Component {
       ? allRestaurants.filter(restaurant => {
           console.log(restaurant);
 
-          //  const foodDetailsinDB = restaurant.foodDetails;
-          restaurant.foodDetails;
+          const foodDetailsinDB = restaurant.foodDetails;
+
           const nestedArray = Object.values(restaurant.foodDetails);
           // console.log(nestedArray);
           const result = nestedArray.find(values => {
