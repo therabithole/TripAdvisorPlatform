@@ -14,12 +14,13 @@ import { getRawalpindiRestaurants } from "./../db/fakeSupplierService";
 import { getKarachiRestaurants } from "./../db/fakeSupplierService";
 
 // DB: SideBar List
-import { getFoodType } from "../db/foodList";
-import { getFamousFoods } from "../db/foodList";
-import { getCuisineList } from "./../db/cuisineList";
-import { getDietaryRestrictions } from "./../db/dietaryRestrictions";
-import { getAllLocations } from "./../db/geoLocations";
-import { getPunjabCities } from "./../db/geoLocations";
+import {
+  getIngredientsList,
+  getFamousDishes,
+  getDietaryRestrictions,
+  getMealsList,
+  getCuisineList
+} from "../db/foodList";
 
 // common features:
 import Bookmark from "./../Common/Bookmark";
@@ -30,19 +31,12 @@ class Restaurants extends Component {
   state = {
     restaurants: [],
     sidebars: {
-      famousFoods: [],
+      ingredients: [],
+      famousDishes: [],
       dietaryRestrictions: [],
-      foodType: [],
-      cuisineList: [],
-      locations: []
-    },
-    filters: {
-      restaurantsByCity: {
-        karachiRestaurants: [],
-        lahoreRestaurants: [],
-        islamabadRestaurants: [],
-        rawalpindiRestaurants: []
-      }
+      mealsList: [],
+
+      cuisineList: []
     },
     pageSize: 4,
     currentPage: 1
@@ -54,25 +48,16 @@ class Restaurants extends Component {
       {
         restaurants: getRestaurants(),
         sidebars: {
-          famousFoods: getFamousFoods(),
+          ingredients: getIngredientsList(),
+          famousDishes: getFamousDishes(),
           dietaryRestrictions: getDietaryRestrictions(),
-          foodType: getFoodType(),
-          cuisineList: getCuisineList(),
-          locations: getAllLocations()
-        },
-        // locations: getPunjabCities(),
-        subData: {
-          restaurantsByCity: {
-            karachiRestaurants: getKarachiRestaurants(),
-            lahoreRestaurants: getLahoreRestaurants(),
-            islamabadRestaurants: getIslamabadRestaurants(),
-            rawalpindiRestaurants: getRawalpindiRestaurants()
-          }
+          mealsList: getMealsList(),
+          cuisineList: getCuisineList()
         }
       },
       () => {
-        console.log(this.state.sidebars);
-        console.log(this.state.restaurants);
+        //  console.log(this.state.sidebars);
+        //  console.log(this.state.restaurants);
       }
     );
   }
@@ -140,18 +125,15 @@ class Restaurants extends Component {
       ? allRestaurants.filter(restaurantsinDB => {
           const foodDetailsinDB = restaurantsinDB.foodDetails;
           const nestedArray = Object.values(foodDetailsinDB);
+
           nestedArray.find(values => {
             values.find(data => {
-              console.log(data.name);
+              // currently doing false true on console if you uncomment console (using find), do we use filter?
+              //  console.log(data.name === selectedFilter.name);
             });
           });
         })
       : allRestaurants;
-
-    // if selected filtered is truthy, we are going to get allRestaurants and filter them
-    // console.log("check", check);
-    // console.log("kocations", this.state.locations);
-    // const filteredRestaurants = selectedFilter ? allRestaurants.filter( r = > r. )
 
     const restaurants = paginate(allRestaurants, currentPage, pageSize);
 
@@ -172,7 +154,7 @@ class Restaurants extends Component {
           <div className="col">
             <div>
               Ay!, You're seeing
-              {this.state.restaurants.length} restaurants{" "}
+              {this.state.restaurants.length} restaurants
               {/* we are NOT using restaurants.length BUT> this.state because that is original array/amount without pagination method*/}
             </div>
             <div>
@@ -180,17 +162,18 @@ class Restaurants extends Component {
                 <div key={restaurant._id}>
                   <li style={{ listStyle: "none" }}> {restaurant.name}</li>
                   <li style={{ listStyle: "none" }}>
+                    Cuisines : /
                     {restaurant.foodDetails.cuisine.map(m => {
                       return m.name;
                     })}
                   </li>
                   <li style={{ listStyle: "none" }}>
+                    Meals Offered : /
                     {restaurant.foodDetails.meals.map(m => {
                       return m.name;
                     })}
                   </li>
                   <li style={{ listStyle: "none" }}>
-                    {" "}
                     Visit their website: {restaurant.website}
                   </li>
                   <Bookmark

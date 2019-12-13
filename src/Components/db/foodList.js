@@ -1,53 +1,90 @@
-let ingridentiantsList = [
-  { id: "2551ca3eeb7l9fbccd421415", name: "Fish" },
-  { id: "7551ca3eeb73242vdfg45t43" },
-  { id: "5251ca3eeb7bfghty54y65h4", name: "Chicken" },
-  { id: "4151ca3eeb787i86jg43t4vg", name: "Goat" },
-  { id: "6Y51ca3eeb7gy65u65yuvbgl", name: "Beef" },
-  { id: "9O51ca3eeb75th76uhfg5t56", name: "Daal Mash" },
-  { id: "SD51ca3eeb776jj87o87jhiu", name: "Daal Lobia" },
-  { id: "5651ca3eeb7h5fnhk;421415", name: "Daal Chana" },
-  { id: "2551ca3gh37v4f5u8k421415", name: "Channay" },
-  { id: "2551ca4g537b6fbccd421415", name: "Black Channay" },
-  { id: "2551ca3gh57n7fbccd421415", name: "Baingan" },
-  { id: "2551ca8jy57c2fbccd421415", name: "Palak" },
-  { id: "2551ca4j857z1fbccd421415", name: "Karela" },
-  { id: "2551cag5gs7b7fbccd421415", name: "Bhindi" }
+const cuisineList = [
+  { id: "1", name: "Tunisian" },
+  { id: "2", name: "Algerian" },
+  { id: "3", name: "Bahraini" },
+  { id: "4", name: "Mediterranean" },
+  { id: "5", name: "Lebanese" },
+  { id: "6", name: "Omani" },
+  { id: "7", name: "Emirati" },
+  { id: "8", name: "Qatari" },
+  { id: "9", name: "Turkish" },
+  { id: "10", name: "French" },
+  { id: "11", name: "Chinese" },
+  { id: "12", name: "Punjabi" },
+  { id: "13", name: "Pashtun" },
+  { id: "14", name: "Persian" },
+  { id: "15", name: "Sindhi" },
+  { id: "16", name: "Balochi" },
+  { id: "17", name: "Kashmiri" },
+  { id: "18", name: "Italian" },
+  { id: "19", name: "Greek" }
 ];
 
-let foodType = [
-  { id: "2551cag5gs7f6fbccd421416", name: "vegetables" },
-  { id: "1561cag5gs7f6fbccd421415", name: "lentiles" },
-  { id: "87551cag5gs7f6fbccd421415", name: "meat" },
-  { id: "1ft1cag5gs7f6fbccd421415", name: "dairy" }
+const famousDishes = [
+  { id: "1", name: "Fried Shrimp" },
+  { id: "2", name: "Frid Rice" },
+  { id: "3", name: "Kung Pao Chicken" },
+  { id: "4", name: "Spring Roll" },
+  { id: "5", name: "Dumpling" },
+  { id: "6", name: "Chow Mein" },
+  { id: "7", name: "Sushi" },
+  { id: "8", name: "Udon" },
+  { id: "9", name: "Onigiri" },
+  { id: "10", name: "Soba" },
+  { id: "11", name: "Ramen" },
+  { id: "12", name: "Tempura" },
+  { id: "13", name: "Okonomiyaki" }
 ];
 
-let famousFoods = [
-  { id: "1451cag5gb7f6fbccd421416", name: "Street Food" },
-  { id: "2561cag5gs7b7fbccd421415", name: "Peri Peri" },
-  { id: "87551cag5gs7f6fbhcd421415", name: "Pasta" },
-  { id: "2ct1cag5ls7f6fbccd421415", name: "Noodles" },
-  { id: "4ut1cag5ls7f6fbccd421415", name: "Kids Menu" },
-  { id: "9tt1cag5ls7f6fbccd421415", name: "Juices" },
-  { id: "3vt1cag5ls7f6fbccd421415", name: "Kababs" },
-  { id: "5kt1cag5ls7h7fbccd421415", name: "Fish and Chips" },
-  { id: "7gt1cag5ls7j8fbccd421415", name: "Fast Food" }
+let ingredientsList = [
+  { id: "1", name: "Asparagus" },
+  { id: "2", name: "Spinach" },
+  { id: "3", name: "Okra" },
+  { id: "4", name: "Potato" },
+  { id: "5", name: "Gourd" },
+  { id: "6", name: "Artichoke" },
+  { id: "7", name: "Beef" },
+  { id: "8", name: "Fish" },
+  { id: "9", name: "Chick Peas" },
+  { id: "10", name: "Lamb" },
+  { id: "11", name: "White Lentils" },
+  { id: "12", name: "Red Beans" }
 ];
-export function getFoodType() {
-  return foodType.filter(list => list);
+
+let mealsList = [
+  { id: "1", name: "Breakfast" },
+  { id: "2", name: "Brunch" },
+  { id: "3", name: "Lunch" },
+  { id: "4", name: "Tea" },
+  { id: "5", name: "Dinner" }
+];
+
+const dietaryRestrictions = [
+  { id: "1", name: "Halal" },
+  { id: "8741ca7eeb7e1fbjhd421415", name: "Gluten Free" },
+  { id: "6741ca7eeb7e1fbtgd421415", name: "Kosher Friendly" },
+  { id: "9841ca7eeb7e1fbujd421415", name: "GMO Free" },
+  { id: "6741ca7eeb7e1fbold421415", name: "Low Carbs" },
+  { id: "1641ca7eeb7e1fbbgd421415", name: "Sugar Free" },
+  { id: "1241ca7eeb7e1fbefd421415", name: "Organic" }
+];
+
+export function getIngredientsList() {
+  return ingredientsList.filter(list => list);
 }
 
-export function getFamousFoods() {
-  return famousFoods.filter(list => list);
-}
-export function getIngridentiantsList() {
-  return ingridentiantsList.filter(list => list);
+export function getFamousDishes() {
+  return famousDishes.filter(list => list);
 }
 
-export function getMeat() {
-  return foodType.filter(food => food.name === "meat");
+export function getMealsList() {
+  return mealsList.filter(list => list);
 }
 
-export function getVegatables() {
-  return foodType.filter(food => food.name === "vegetables");
+export function getDietaryRestrictions() {
+  return dietaryRestrictions.filter(list => list);
+}
+
+export function getCuisineList() {
+  return cuisineList.filter(list => list);
 }

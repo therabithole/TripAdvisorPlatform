@@ -623,13 +623,22 @@ let suppliers = [
             { id: "1", name: "Dinner" }
           ],
           ingredients: [
-            { id: "5", name: "Beef" },
-            { id: "1", name: "Fish" },
-            { id: "2", name: "Burger" },
-            { id: "4", name: "Lamb" },
-            { id: "7", name: "Daal" },
-            { id: "9", name: "Omlete" },
-            { id: "3", name: "Shawarma" }
+            { id: "5", name: "Cheese" },
+            { id: "1", name: "Tomato" },
+            { id: "2", name: "Onion" },
+            { id: "4", name: "Pepper" },
+            { id: "7", name: "Egg" },
+            { id: "9", name: "Spinach" },
+            { id: "3", name: "Eggplant" }
+          ],
+          famousDishes: [
+            { id: "5", name: "Sushi" },
+            { id: "1", name: "Udon" },
+            { id: "2", name: "Onigiri" },
+            { id: "4", name: "Soba" },
+            { id: "7", name: "Ramen" },
+            { id: "9", name: "Tempura" },
+            { id: "19", name: "Okonomiyaki" }
           ],
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
@@ -670,12 +679,20 @@ let suppliers = [
           ],
           ingredients: [
             { id: "5", name: "Lamb" },
-            { id: "1", name: "Fish" },
-            { id: "2", name: "Burger" },
-            { id: "4", name: "Lamb" },
-            { id: "7", name: "Daal" },
-            { id: "9", name: "Omlete" },
-            { id: "3", name: "Shawarma" }
+            { id: "1", name: "Carrot" },
+            { id: "2", name: "Eggplant" },
+            { id: "4", name: "Mutton" },
+            { id: "9", name: "Flour" },
+            { id: "3", name: "Cheese" }
+          ],
+          famousDishes: [
+            { id: "5", name: "Sushi" },
+            { id: "1", name: "Udon" },
+            { id: "2", name: "Onigiri" },
+            { id: "4", name: "Soba" },
+            { id: "7", name: "Ramen" },
+            { id: "9", name: "Tempura" },
+            { id: "19", name: "Okonomiyaki" }
           ],
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
@@ -715,13 +732,20 @@ let suppliers = [
             { id: "1", name: "Dinner" }
           ],
           ingredients: [
-            { id: "5", name: "Beef" },
+            { id: "5", name: "Chicken" },
             { id: "1", name: "Fish" },
-            { id: "2", name: "Burger" },
-            { id: "4", name: "Lamb" },
-            { id: "7", name: "Daal" },
-            { id: "9", name: "Omlete" },
-            { id: "3", name: "Shawarma" }
+            { id: "2", name: "Cauliflower" },
+            { id: "9", name: "Egg" },
+            { id: "3", name: "Broccoli" }
+          ],
+          famousDishes: [
+            { id: "5", name: "Sushi" },
+            { id: "1", name: "Udon" },
+            { id: "2", name: "Onigiri" },
+            { id: "4", name: "Soba" },
+            { id: "7", name: "Ramen" },
+            { id: "9", name: "Tempura" },
+            { id: "19", name: "Okonomiyaki" }
           ],
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
@@ -763,11 +787,18 @@ let suppliers = [
           ingredients: [
             { id: "5", name: "Beef" },
             { id: "1", name: "Fish" },
-            { id: "2", name: "Burger" },
+            { id: "2", name: "Chick Peas" },
             { id: "4", name: "Lamb" },
-            { id: "7", name: "Daal" },
-            { id: "9", name: "Omlete" },
-            { id: "3", name: "Shawarma" }
+            { id: "7", name: "White Lentils" },
+            { id: "9", name: "Red Beans" }
+          ],
+          famousDishes: [
+            { id: "5", name: "Fried Shrimp" },
+            { id: "1", name: "Frid Rice" },
+            { id: "2", name: "Kung Pao Chicken" },
+            { id: "4", name: "Spring Roll" },
+            { id: "7", name: "Dumpling" },
+            { id: "9", name: "Chow Mein" }
           ],
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
@@ -807,13 +838,20 @@ let suppliers = [
             { id: "1", name: "Tea" }
           ],
           ingredients: [
-            { id: "5", name: "Beef" },
-            { id: "1", name: "Fish" },
-            { id: "2", name: "Burger" },
-            { id: "4", name: "Lamb" },
-            { id: "7", name: "Daal" },
-            { id: "9", name: "Omlete" },
-            { id: "3", name: "Shawarma" }
+            { id: "5", name: "Okra" },
+            { id: "1", name: "Potato" },
+            { id: "4", name: "Gourd" },
+            { id: "7", name: "Artichoke" },
+            { id: "9", name: "Asparagus" }
+          ],
+          famousDishes: [
+            { id: "5", name: "Sushi" },
+            { id: "1", name: "Udon" },
+            { id: "2", name: "Onigiri" },
+            { id: "4", name: "Soba" },
+            { id: "7", name: "Ramen" },
+            { id: "9", name: "Tempura" },
+            { id: "19", name: "Okonomiyaki" }
           ],
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
@@ -853,13 +891,22 @@ let suppliers = [
             { id: "1", name: "Lunch" }
           ],
           ingredients: [
-            { id: "5", name: "Beef" },
-            { id: "1", name: "Fish" },
-            { id: "2", name: "Burger" },
-            { id: "4", name: "Lamb" },
-            { id: "7", name: "Daal" },
-            { id: "9", name: "Omlete" },
-            { id: "3", name: "Shawarma" }
+            { id: "9", name: "Asparagus" },
+            { id: "1", name: "Yogurt" },
+            { id: "2", name: "Yeast" },
+            { id: "4", name: "Ginger" },
+            { id: "7", name: "Garlic" },
+            { id: "91", name: "Spinach" },
+            { id: "3", name: "Okra" }
+          ],
+          famousDishes: [
+            { id: "5", name: "Sushi" },
+            { id: "1", name: "Udon" },
+            { id: "2", name: "Onigiri" },
+            { id: "4", name: "Soba" },
+            { id: "7", name: "Ramen" },
+            { id: "9", name: "Tempura" },
+            { id: "19", name: "Okonomiyaki" }
           ],
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
