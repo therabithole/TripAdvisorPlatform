@@ -34,33 +34,11 @@ class HotelsContent extends Component {
     });
   }
 
-  handleBooking = hotel => {
-    const selectedHotel = hotel.name;
-    const selectedPrice = hotel.pricesPerNight.singleRoom;
-    const result = selectedHotel + " Booked for " + selectedPrice;
-    console.log(result);
-  };
-
-  handleBookmark = hotel => {
-    const hotels = [...this.state.hotels];
-    const index = hotels.indexOf(hotel);
-    hotels[index] = { ...hotels[index] };
-    hotels[index].bookmarked = !hotels[index].bookmarked;
-    this.setState({ hotels });
-  };
-
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
-
-  reference = selectedFilter => {
-    console.log(selectedFilter, "selectedFilter");
-  };
-
   render() {
     const { length: count } = this.state.hotels;
 
-    const { pageSize, currentPage, hotels: allHotels } = this.state;
+    const { hotels: allHotels } = this.state;
+    const { pageSize, currentPage } = this.state;
 
     const hotels = paginate(allHotels, currentPage, pageSize);
     return (

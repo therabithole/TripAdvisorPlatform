@@ -1,32 +1,11 @@
-import React from "react";
-import ReusableSideBarList from "./ReusableSideBarList";
-
+import React, { Component } from "react";
 const SideBar = props => {
-  const { sideBars, onFilterSelect } = props;
-  const sideBarList = Object.keys(sideBars);
-  const { id, defValue } = props;
-  const { selectedFilter } = props;
-
-  return (
-    <React.Fragment>
-      <aside>
-        {sideBarList.map(sidebaritem => (
-          <ReusableSideBarList
-            data={sideBars[sidebaritem]}
-            handleFilter={onFilterSelect}
-            selectedFilter={selectedFilter}
-            id={id}
-            defValue={defValue}
-          />
-        ))}
-      </aside>
-    </React.Fragment>
-  );
-};
-
-SideBar.defaultProps = {
-  id: "id",
-  defValue: "name"
+  const { data } = props;
+  const { selectedSideBar, handleSelectedSideBar } = props;
+  console.log(data, "data");
+  return <React.Fragment></React.Fragment>;
 };
 
 export default SideBar;
+
+/* <div onClick={() => handleSelectedSideBar(sideBars)}> </div>*/

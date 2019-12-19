@@ -23,8 +23,7 @@ import Vendors from "./Components/Vendors/Vendors";
 import "./App.css";
 import "./fonts.css";
 import Users from "./Components/Users/Users";
-function App()
- {
+function App() {
   return (
     <React.Fragment>
       <NavBar />
@@ -37,7 +36,7 @@ function App()
           render={props => <Hotels sortBy="Best Value" {...props} />}
         />
         <Route path="/restaurants" component={Restaurants} />
-        <Route path="/tours" component={ThingsToDo} />
+        <Route path="/things-to-do" component={ThingsToDo} />
         <Route path="/users/login" component={UserLogin} />
         <Route path="/users/register" component={UserRegister} />
         <Route path="/Users" component={Users} />

@@ -1,4 +1,4 @@
-const cuisineList = [
+const cuisine = [
   { id: "1", name: "Tunisian" },
   { id: "2", name: "Algerian" },
   { id: "3", name: "Bahraini" },
@@ -36,7 +36,7 @@ const famousDishes = [
   { id: "13", name: "Okonomiyaki" }
 ];
 
-let ingredientsList = [
+let ingredients = [
   { id: "1", name: "Asparagus" },
   { id: "2", name: "Spinach" },
   { id: "3", name: "Okra" },
@@ -51,7 +51,7 @@ let ingredientsList = [
   { id: "12", name: "Red Beans" }
 ];
 
-let mealsList = [
+let meals = [
   { id: "1", name: "Breakfast" },
   { id: "2", name: "Brunch" },
   { id: "3", name: "Lunch" },
@@ -69,22 +69,22 @@ const dietaryRestrictions = [
   { id: "1241ca7eeb7e1fbefd421415", name: "Organic" }
 ];
 
-export function getIngredientsList() {
-  return ingredientsList.filter(list => list);
+export function getIngredients() {
+  return ingredients.filter(list => list);
 }
 
 export function getFamousDishes() {
   return famousDishes.filter(list => list);
 }
 
-export function getMealsList() {
-  return mealsList.filter(list => list);
+export function getMeals() {
+  return meals.filter(list => list);
 }
 
 export function getDietaryRestrictions() {
   return dietaryRestrictions.filter(list => list);
 }
 
-export function getCuisineList() {
-  return cuisineList.filter(list => list);
+export function getCuisine() {
+  return cuisine.filter(list => list);
 }

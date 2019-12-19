@@ -3,24 +3,13 @@ import "bootstrap/dist/css/bootstrap.css";
 
 // Common Components
 import Slider from "./../Common/Slider";
-import SideBar from "./../Common/SideBar";
+import SideBars from "../Common/SideBars";
 
 // Restaurant Database : Restaurant List
 import { getRestaurants } from "../db/fakeSupplierService";
-import { getAfghanRestaurants } from "./../db/fakeSupplierService";
-import { getLahoreRestaurants } from "./../db/fakeSupplierService";
-import { getIslamabadRestaurants } from "./../db/fakeSupplierService";
-import { getRawalpindiRestaurants } from "./../db/fakeSupplierService";
-import { getKarachiRestaurants } from "./../db/fakeSupplierService";
 
 // DB: SideBar List
-import {
-  getIngredientsList,
-  getFamousDishes,
-  getDietaryRestrictions,
-  getMealsList,
-  getCuisineList
-} from "../db/foodList";
+import { restaurantSideBar } from "./../db/sideBarService";
 
 // common features:
 import Bookmark from "./../Common/Bookmark";
@@ -30,14 +19,7 @@ import { paginate } from "./../Common/paginate";
 class Restaurants extends Component {
   state = {
     restaurants: [],
-    sidebars: {
-      ingredients: [],
-      famousDishes: [],
-      dietaryRestrictions: [],
-      mealsList: [],
-
-      cuisineList: []
-    },
+    sidebars: [],
     pageSize: 4,
     currentPage: 1
   };
@@ -47,17 +29,11 @@ class Restaurants extends Component {
     this.setState(
       {
         restaurants: getRestaurants(),
-        sidebars: {
-          ingredients: getIngredientsList(),
-          famousDishes: getFamousDishes(),
-          dietaryRestrictions: getDietaryRestrictions(),
-          mealsList: getMealsList(),
-          cuisineList: getCuisineList()
-        }
+        sidebars: restaurantSideBar
       },
       () => {
-        //  console.log(this.state.sidebars);
-        //  console.log(this.state.restaurants);
+        // console.log("Display Sidebar", this.state.sidebars);
+        // console.log("actual data", this.state.restaurants);
       }
     );
   }
@@ -70,11 +46,18 @@ class Restaurants extends Component {
     this.setState({ currentPage: page });
   };
 
-  //// sidebar filter
+  //// Handling sidebars Func()
 
-  handleFilterSelect = filter => {
-    console.log(filter);
-    this.setState({ selectedFilter: filter });
+  handleSelectedSideBar = name => {
+    this.setState({ selectedSideBar: name }, () => {
+      console.log(this.state.selectedSideBar, "Selected Sidebar");
+    });
+  };
+
+  handleSelectedItems = item => {
+    this.setState({ selectedItem: item }, () => {
+      console.log(this.state.selectedItem, "Selected item");
+    });
   };
 
   /////////////////////////////////////// PRODUCT ACTIONS  ///////////////////////////////
@@ -119,24 +102,36 @@ class Restaurants extends Component {
 
     // pagination lesson 13: Filtering implementation before PAGINATION
 
-    const { selectedFilter } = this.state;
+    const { selectedItem } = this.state;
 
-    const filtered = selectedFilter
+    const filtered = selectedItem
       ? allRestaurants.filter(restaurant => {
-          console.log(restaurant);
-
-          const foodDetailsinDB = restaurant.foodDetails;
-
-          const nestedArray = Object.values(restaurant.foodDetails);
-          // console.log(nestedArray);
-          const result = nestedArray.find(values => {
-            values.find(data => {
-              // currently doing false true on console if you uncomment console (using find), do we use filter?
-              //    console.log(data.name === selectedFilter.name);
-            });
-          });
+          const { name, foodDetails } = restaurant;
         })
       : allRestaurants;
+
+    //1
+    const sideBar1 = Object.keys(this.state.sidebars);
+    //  console.log("rendering sidebar names", sideBar1);
+
+    // 2
+
+    const data = this.state.restaurants.map(restaurant => {
+      const { name, foodDetails } = restaurant;
+      return {
+        name,
+        foodDetails
+      };
+    });
+
+    filterMe(sideBar1, data);
+
+    function filterMe(sideBar1, data) {
+      const mapping = data.map(d => d.foodDetails);
+      //  return console.log(mapping);
+    }
+
+    // console.log("DB Res Names and foods in DB", data);
 
     const restaurants = paginate(allRestaurants, currentPage, pageSize);
 
@@ -148,10 +143,19 @@ class Restaurants extends Component {
         />
         <section className="restaurant-content-wrapper row">
           <div className="col-2">
-            <SideBar
+            <SideBars
               sideBars={this.state.sidebars}
-              selectedFilter={this.state.selectedFilter}
-              onFilterSelect={this.handleFilterSelect}
+              selectedSideBar={this.state.selectedSideBar}
+              handleSelectedSideBar={this.handleSelectedSideBar}
+              selectedItem={this.state.selectedItem}
+              handleSelectedItems={this.handleSelectedItems}
+            />
+            <SideBars
+              sideBars={this.state.sidebars}
+              selectedSideBar={this.state.selectedSideBar}
+              handleSelectedSideBar={this.handleSelectedSideBar}
+              selectedItem={this.state.selectedItem}
+              handleSelectedItems={this.handleSelectedItems}
             />
           </div>
           <div className="col">
