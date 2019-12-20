@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.css";
+import "../_Products/node_modules/bootstrap/dist/css/bootstrap.css";
 
 // Common Components
 import Slider from "./../Common/Slider";
-import SideBars from "../Common/SideBars";
+import SideBars from "../_commonFuncs/SideBars";
 
 // Restaurant Database : Restaurant List
 import { getRestaurants } from "../db/fakeSupplierService";

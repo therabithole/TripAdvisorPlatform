@@ -1,88 +1,51 @@
 import React, { Component } from "react";
-import "./styles/hotels.css";
 
-import SideBars from "../Common/SideBars";
-import Slider from "./../Common/Slider";
-import Picker from "./../Common/Picker";
+import Products from "../Products";
 
-// Hotel Database : Hotels List
+/* SideBar  and Data*/
+import SideBars from "../_commonFuncs/SideBars";
+import { hotelSideBar } from "../db/sideBarService";
+
+/* Products Functions */
+import Slider from "../_commonFuncs/Slider";
+import Picker from "../_commonUI/Picker"
+import Bookmark from "../_commonFuncs/Bookmark";
+
+// Pagination Components //
+
+import Pagination from "../Common/Pagination";
+import { paginate } from "../Common/paginate";
+
+// Hotel Data
 import { getHotels } from "../db/fakeSupplierService";
 
-// DB: SideBar List
-import { hotelSideBar } from "./../db/sideBarService";
-// common features:
-import Bookmark from "./../Common/Bookmark";
-import Pagination from "./../Common/Pagination";
-import { paginate } from "./../Common/paginate";
-
-// WORK
-class Hotels extends Component {
+class Hotels extends Products {
   state = {
-    hotels: [],
+    products: [],
     sidebars: [],
     selectedHotel: [],
     pageSize: 5,
     currentPage: 1
   };
-  // setting and initialising the empty state
-
-  // Adding Custom titles - COMPONENT DID MOUNT
-
   componentDidMount() {
     this.setState(
       {
-        hotels: getHotels(),
+        products: getHotels(),
         sidebars: hotelSideBar
       },
       () => {
-        // console.log("Display Sidebar", this.state.sidebars);
-        // console.log("actual data", this.state.restaurants);
+        console.log("Display Sidebar", this.state.sidebars);
+        console.log("actual data", this.state.products);
       }
     );
   }
-  //// pagechange - pagination
-
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
-
-  //// Handling sidebars Func()
-
-  handleSelectedSideBar = name => {
-    this.setState({ selectedSideBar: name }, () => {
-      console.log(this.state.selectedSideBar, "Selected Sidebar");
-    });
-  };
-
-  handleSelectedItems = item => {
-    this.setState({ selectedItem: item }, () => {
-      console.log(this.state.selectedItem, "Selected item");
-    });
-  };
-
-  // setting STATE of Data for sidebars and Main Content : - COMPONENT DID MOUNT
-
-  handleBooking = hotel => {
-    const selectedHotel = hotel.name;
-    const selectedPrice = hotel.pricesPerNight.singleRoom;
-    const result = selectedHotel + " Booked for " + selectedPrice;
-    console.log(result);
-  };
-
-  handleBookmark = hotel => {
-    const hotels = [...this.state.hotels];
-    const index = hotels.indexOf(hotel);
-    hotels[index] = { ...hotels[index] };
-    hotels[index].bookmarked = !hotels[index].bookmarked;
-    this.setState({ hotels });
-  };
 
   render() {
-    const { length: count } = this.state.hotels;
+    const { length: count } = this.state.products;
 
-    const { pageSize, currentPage, hotels: allHotels } = this.state;
+    const { pageSize, currentPage, products: allHotels } = this.state;
 
-    const hotels = paginate(allHotels, currentPage, pageSize);
+    const products = paginate(allHotels, currentPage, pageSize);
 
     return (
       <React.Fragment>
@@ -94,7 +57,7 @@ class Hotels extends Component {
           />
 
           <section className="content-wrapper row">
-            <div className="col-2">
+            <div className="">
               <SideBars
                 sideBars={this.state.sidebars}
                 selectedSideBar={this.state.selectedSideBar}
@@ -103,22 +66,22 @@ class Hotels extends Component {
                 handleSelectedItems={this.handleSelectedItems}
               />
             </div>
-            <div className="col">
+            <div className="">
               <div>
                 Ay!, You're seeing
-                {this.state.hotels.length} Hotels
+                {this.state.products.length} Hotels
                 {/* we are NOT using restaurants.length BUT> this.state because that is original array/amount without pagination method*/}
               </div>
               <div>
-                {hotels.map(hotel => (
+                {products.map(product => (
                   <div className="hotel-content-container">
-                    <div className="hotel-gallery"> {hotel.length} </div>
+                    <div className="hotel-gallery"> {product.length} </div>
                     <div className="hotel-data">
-                      <div className="hotel-name">{hotel.name}</div>
+                      <div className="hotel-name">{product.name}</div>
                       <div className="hotel-address-and-city">
-                        <span>{hotel.address.streetAddress}</span>
+                        <span>{product.address.streetAddress}</span>
                         <span>, </span>
-                        <span> {hotel.address.city}</span>
+                        <span> {product.address.city}</span>
                       </div>
                       <div className="hotel-custom-ranking">custom ranking</div>
                       <div className="hotel-features-and-prices">
@@ -127,16 +90,16 @@ class Hotels extends Component {
                             Featured Offerings
                           </div>
                           <div className="hotel-features-content-1">
-                            {hotel.hotelProperties.amenities[0]}
+                            {product.hotelProperties.amenities[0]}
                           </div>
                           <div className="hotel-features-content-2">
-                            {hotel.hotelProperties.amenities[1]}
+                            {product.hotelProperties.amenities[1]}
                           </div>
                           <div className="hotel-features-content-3">
-                            {hotel.hotelProperties.amenities[2]}
+                            {product.hotelProperties.amenities[2]}
                           </div>
                           <div className="hotel-features-content-4">
-                            {hotel.reviews} Reviews
+                            {product.reviews} Reviews
                           </div>
                         </div>
 
@@ -147,7 +110,7 @@ class Hotels extends Component {
                           <div className="chat-with-the-hotel-management"></div>
                           <div className="visit-hotel-website">
                             <a
-                              href={hotel.website}
+                              href={product.website}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -155,22 +118,22 @@ class Hotels extends Component {
                             </a>
                           </div>
                           <Bookmark
-                            bookmarked={hotel.bookmarked}
-                            onClick={() => this.handleBookmark(hotel)}
+                            bookmarked={product.bookmarked}
+                            onClick={() => this.handleProductBookmark(product)}
                             type={"hotel"}
                           />
                         </div>
                         <div className="prices-and-booking">
                           <div className="price-per-night">
                             <span> Rs. </span>
-                            <span>{hotel.pricesPerNight.singleRoom}</span>
+                            <span>{product.pricesPerNight.singleRoom}</span>
                             <span> / night</span>
                           </div>
                           <div>
                             <button
                               className="btn btn-warning"
                               onClick={() => {
-                                this.handleBooking(hotel);
+                                this.handleProductReservation(product);
                               }}
                             >
                               Book now
@@ -183,6 +146,14 @@ class Hotels extends Component {
                 ))}
               </div>
             </div>
+            <div className="">
+              <Pagination
+                itemsCount={count} // or {this.state.restaurants.length}
+                pageSize={pageSize} /* or count*/
+                currentPage={currentPage}
+                onPageChange={this.handlePageChange}
+              />
+            </div>
           </section>
         </main>
       </React.Fragment>
@@ -192,5 +163,8 @@ class Hotels extends Component {
 
 export default Hotels;
 
-//  textProperty="name" defaultProps used
-// valueProperty="id" defaultProps used
+/* <Picker />
+          <Slider
+            title="THE BEST BEDS, MAGIC SLEEP"
+            subtitle="Select the desired filters and find out your best hotel"
+          />*/
