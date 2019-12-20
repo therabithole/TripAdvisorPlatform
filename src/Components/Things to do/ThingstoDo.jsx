@@ -38,7 +38,6 @@ class Restaurants extends Component {
   }
 
   ////////////////////////////////// PAGE ACTIONS //////////////////////////
-
   //// pagechange - pagination
 
   handlePageChange = page => {
@@ -58,7 +57,6 @@ class Restaurants extends Component {
       console.log(this.state.selectedItem, "Selected item");
     });
   };
-
   /////////////////////////////////////// PRODUCT ACTIONS  ///////////////////////////////
 
   //Deleting Products
@@ -105,7 +103,7 @@ class Restaurants extends Component {
 
     const filtered = selectedItem
       ? allRestaurants.filter(restaurant => {
-          const { name, foodDetails } = restaurant;
+          const { name, restaurantProperties } = restaurant;
         })
       : allRestaurants;
 
@@ -139,13 +137,13 @@ class Restaurants extends Component {
                   <li style={{ listStyle: "none" }}> {restaurant.name}</li>
                   <li style={{ listStyle: "none" }}>
                     Cuisines : /
-                    {restaurant.foodDetails.cuisine.map(m => {
+                    {restaurant.restaurantProperties.cuisine.map(m => {
                       return m.name;
                     })}
                   </li>
                   <li style={{ listStyle: "none" }}>
                     Meals Offered : /
-                    {restaurant.foodDetails.meals.map(m => {
+                    {restaurant.restaurantProperties.meals.map(m => {
                       return m.name;
                     })}
                   </li>

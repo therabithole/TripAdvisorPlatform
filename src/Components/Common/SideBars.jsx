@@ -18,10 +18,11 @@ const SideBars = props => {
           <li
             key={sideBar}
             // sideBar === selectedSideBar
-
+            className={{ listStyle: "none" }}
             onClick={() => handleSelectedSideBar(sideBar)}
           >
             <ul>
+              <div>Filtering {sideBar.name}</div>
               {sideBar.items.map(item => (
                 <li
                   key={item.id}

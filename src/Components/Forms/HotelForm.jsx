@@ -21,7 +21,7 @@ class HotelForm extends Form {
       telephone: "",
       website: "",
       featuredPicture: "",
-      hotelOptions: {
+      hotelProperties: {
         bedrooms: [],
         amenities: [],
         roomFeatures: [],

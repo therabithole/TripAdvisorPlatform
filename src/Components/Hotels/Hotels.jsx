@@ -9,7 +9,7 @@ import Picker from "./../Common/Picker";
 import { getHotels } from "../db/fakeSupplierService";
 
 // DB: SideBar List
-import { restaurantSideBar } from "./../db/sideBarService";
+import { hotelSideBar } from "./../db/sideBarService";
 // common features:
 import Bookmark from "./../Common/Bookmark";
 import Pagination from "./../Common/Pagination";
@@ -32,7 +32,7 @@ class Hotels extends Component {
     this.setState(
       {
         hotels: getHotels(),
-        sidebars: restaurantSideBar
+        sidebars: hotelSideBar
       },
       () => {
         // console.log("Display Sidebar", this.state.sidebars);
@@ -106,7 +106,7 @@ class Hotels extends Component {
             <div className="col">
               <div>
                 Ay!, You're seeing
-                {this.state.hotels.length} restaurants
+                {this.state.hotels.length} Hotels
                 {/* we are NOT using restaurants.length BUT> this.state because that is original array/amount without pagination method*/}
               </div>
               <div>
@@ -127,13 +127,13 @@ class Hotels extends Component {
                             Featured Offerings
                           </div>
                           <div className="hotel-features-content-1">
-                            {hotel.hotelOptions.amenities[0]}
+                            {hotel.hotelProperties.amenities[0]}
                           </div>
                           <div className="hotel-features-content-2">
-                            {hotel.hotelOptions.amenities[1]}
+                            {hotel.hotelProperties.amenities[1]}
                           </div>
                           <div className="hotel-features-content-3">
-                            {hotel.hotelOptions.amenities[2]}
+                            {hotel.hotelProperties.amenities[2]}
                           </div>
                           <div className="hotel-features-content-4">
                             {hotel.reviews} Reviews

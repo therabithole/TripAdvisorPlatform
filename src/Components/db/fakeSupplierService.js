@@ -15,18 +15,19 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: ["Good Breakfast", "Restaurant", "Swimming Pool"],
-          roomFeatures: [
+          amenities: [
+            "Breakfast",
+            "Restaurant",
+            "Swimming Pool",
             " Non-Smoking Rooms",
-            "Family Rooms",
             "Air Conditioning"
           ]
         },
@@ -55,18 +56,20 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
+          amenities: [
+            "Free Breakfast",
+            "Restaurant",
+            "Swimming Pool",
+            "Non-Smoking Rooms",
+
             "Air Conditioning"
           ]
         },
@@ -95,20 +98,15 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
-          ]
+          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"]
         },
         adminSettings: {
           topselectedHotel: false
@@ -135,20 +133,15 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: ["Room Service", "Meeting Rooms", "Swimming Pool"],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
-          ]
+          amenities: ["Room Service", "Meeting Rooms", "Swimming Pool"]
         },
         adminSettings: {
           topselectedHotel: false
@@ -175,8 +168,8 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
@@ -187,11 +180,6 @@ let suppliers = [
             "Free Breakfast",
             "Meeting Rooms",
             "Business Centre with Internet Access"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
           ]
         },
         adminSettings: {
@@ -219,20 +207,15 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: ["Good Breakfast", "TV Lounge", "Swimming Pool"],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
-          ]
+          amenities: ["Breakfast", "TV Lounge", "Swimming Pool"]
         },
         adminSettings: {
           topselectedHotel: false
@@ -259,20 +242,15 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
-          ]
+          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"]
         },
         adminSettings: {
           topselectedHotel: false
@@ -299,8 +277,8 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
@@ -311,11 +289,6 @@ let suppliers = [
             "Free Internet",
             "Restaurant",
             "Business Centre with Internet Access"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
           ]
         },
         adminSettings: {
@@ -343,8 +316,8 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
@@ -355,11 +328,6 @@ let suppliers = [
             "Room Service",
             "Facilities for disabled guests",
             "Swimming Pool"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
           ]
         },
         adminSettings: {
@@ -387,8 +355,8 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
@@ -399,11 +367,6 @@ let suppliers = [
             "Room Service",
             "Facilities for disabled guests",
             "Swimming Pool"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
           ]
         },
         adminSettings: {
@@ -431,24 +394,15 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: [
-            "Free Internet",
-            "Facilities for disabled guests",
-            "Airport Shuttle"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
-          ]
+          amenities: ["Free Internet", "Facilities for disabled guests"]
         },
         adminSettings: {
           topselectedHotel: false
@@ -475,24 +429,15 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: [
-            "Good Breakfast",
-            "Airport Transportation",
-            "Airport Shuttle"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
-          ]
+          amenities: ["Good Breakfast", "Airport Transportation"]
         },
         adminSettings: {
           topselectedHotel: true
@@ -519,8 +464,8 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
@@ -531,11 +476,6 @@ let suppliers = [
             "Room Service",
             "Airport Transportation",
             "Business Centre with Internet Access"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
           ]
         },
         adminSettings: {
@@ -563,24 +503,15 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelOptions: {
-          bedrooms: [
+        hotelProperties: {
+          roomType: [
             "One Bedroom",
             "Two Bedrooms",
             "Studio Bedroom",
             "Detached House",
             "Terraced House"
           ],
-          amenities: [
-            "Room Service",
-            "Airport Transportation",
-            "Airport Shuttle"
-          ],
-          roomFeatures: [
-            " Non-Smoking Rooms",
-            "Family Rooms",
-            "Air Conditioning"
-          ]
+          amenities: ["Room Service", "Airport Transportation", "Taxi Service"]
         },
         adminSettings: {
           topselectedHotel: true
@@ -611,7 +542,7 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        foodDetails: {
+        restaurantProperties: {
           cuisine: [
             { id: "1", name: "Balochi" },
             { id: "2", name: "French" },
@@ -666,7 +597,7 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        foodDetails: {
+        restaurantProperties: {
           cuisine: [
             { id: "1", name: "Tunisian" },
             { id: "2", name: "Algerian" },
@@ -720,7 +651,7 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        foodDetails: {
+        restaurantProperties: {
           cuisine: [
             { id: "1", name: "Lebanese" },
             { id: "2", name: "Omani" },
@@ -773,7 +704,7 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        foodDetails: {
+        restaurantProperties: {
           cuisine: [
             { id: "1", name: "Albanian" },
             { id: "2", name: "Chinese" },
@@ -826,7 +757,7 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        foodDetails: {
+        restaurantProperties: {
           cuisine: [
             { id: "1", name: "Afghan" },
             { id: "2", name: "Iranian" },
@@ -879,7 +810,7 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        foodDetails: {
+        restaurantProperties: {
           cuisine: [
             { id: "1", name: "Sindhi" },
             { id: "2", name: "Mughal" },
@@ -1005,14 +936,14 @@ export function getRawalpindiRestaurants() {
 // Afghan
 export function getAfghanRestaurants() {
   let afghanRestaurants = restaurants.filter(res => {
-    return res.foodDetails.cuisine.includes("Afghan");
+    return res.restaurantProperties.cuisine.includes("Afghan");
   });
   return afghanRestaurants;
 }
 
 export function getGermanRestaurants() {
   let germanRestaurants = restaurants.filter(res => {
-    return res.foodDetails.cuisine.includes("German");
+    return res.restaurantProperties.cuisine.includes("German");
   });
   return germanRestaurants;
 }

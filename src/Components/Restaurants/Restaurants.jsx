@@ -102,41 +102,30 @@ class Restaurants extends Component {
 
     // pagination lesson 13: Filtering implementation before PAGINATION
 
-    const { selectedItem } = this.state;
+    const { selectedItem, selectedSideBar } = this.state;
 
-    const filtered = selectedItem
-      ? allRestaurants.filter(restaurant => {
-          const { name, foodDetails } = restaurant;
-        })
-      : allRestaurants;
+    const filtered =
+      selectedSideBar && selectedItem
+        ? allRestaurants.filter(restaurants => {
+            const sel1 = selectedSideBar;
+            const sel2 = selectedItem;
 
-    //1
-    const sideBar1 = Object.keys(this.state.sidebars);
-    //  console.log("rendering sidebar names", sideBar1);
-
-    // 2
-
-    const data = this.state.restaurants.map(restaurant => {
-      const { name, foodDetails } = restaurant;
-      return {
-        name,
-        foodDetails
-      };
-    });
-
-    filterMe(sideBar1, data);
-
-    function filterMe(sideBar1, data) {
-      const mapping = data.map(d => d.foodDetails);
-      //  return console.log(mapping);
-    }
-
-    // console.log("DB Res Names and foods in DB", data);
+            return console.log(
+              "r",
+              restaurants.restaurantProperties,
+              "sel1",
+              sel1,
+              "sel2",
+              sel2
+            );
+          })
+        : allRestaurants._id;
 
     const restaurants = paginate(allRestaurants, currentPage, pageSize);
 
     return (
       <React.Fragment>
+        <div> {this.filtered}</div>
         <Slider
           title="THE BEST RESTAURANTS IN TOWN"
           subtitle="Select the desired filters and find out your best restaurant"
@@ -170,13 +159,13 @@ class Restaurants extends Component {
                   <li style={{ listStyle: "none" }}> {restaurant.name}</li>
                   <li style={{ listStyle: "none" }}>
                     Cuisines : /
-                    {restaurant.foodDetails.cuisine.map(m => {
+                    {restaurant.restaurantProperties.cuisine.map(m => {
                       return m.name;
                     })}
                   </li>
                   <li style={{ listStyle: "none" }}>
                     Meals Offered : /
-                    {restaurant.foodDetails.meals.map(m => {
+                    {restaurant.restaurantProperties.meals.map(m => {
                       return m.name;
                     })}
                   </li>

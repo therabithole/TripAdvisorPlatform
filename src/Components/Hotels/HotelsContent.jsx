@@ -63,13 +63,13 @@ class HotelsContent extends Component {
                       Featured Offerings
                     </div>
                     <div className="hotel-features-content-1">
-                      {hotel.hotelOptions.amenities[0]}
+                      {hotel.hotelProperties.amenities[0]}
                     </div>
                     <div className="hotel-features-content-2">
-                      {hotel.hotelOptions.amenities[1]}
+                      {hotel.hotelProperties.amenities[1]}
                     </div>
                     <div className="hotel-features-content-3">
-                      {hotel.hotelOptions.amenities[2]}
+                      {hotel.hotelProperties.amenities[2]}
                     </div>
                     <div className="hotel-features-content-4">
                       {hotel.reviews} Reviews
