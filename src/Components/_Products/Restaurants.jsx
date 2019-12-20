@@ -13,8 +13,8 @@ import Picker from "../_commonUI/Picker"
 import Bookmark from "../_commonFuncs/Bookmark";
 
 // Pagination Components //
-import Pagination from "../Common/Pagination";
-import { paginate } from "../Common/paginate";
+import Pagination from "../_commonFuncs/Pagination";
+import { paginate } from "../_commonFuncs/paginate";
 
 // Restaurant Data
 import { getRestaurants } from "../db/fakeSupplierService";

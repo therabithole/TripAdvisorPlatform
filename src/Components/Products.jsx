@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { paginate } from "./Common/paginate";
-import Pagination from "./Common/Pagination";
+import { paginate } from "./_commonFuncs/paginate";
+import Pagination from "./_commonFuncs/Pagination";
 class Products extends Component {
   state = {
     products: [],

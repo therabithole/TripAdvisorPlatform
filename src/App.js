@@ -11,7 +11,7 @@ import HomePage from "./Components/HomePage";
 
 import Hotels from "./Components/_Products/Hotels";
 import Restaurants from "./Components/_Products/Restaurants";
-
+import ThingsToDo from "./Components/_Products/ThingsToDo";
 
 // Logins
 import UserLogin from "./Components/Logins/UserLogin";
@@ -40,7 +40,7 @@ function App() {
         />
 
         <Route path="/restaurants" component={Restaurants} />
-        <Route path="/things-to-do" component={Restaurants} />
+        <Route path="/things-to-do" component={ThingsToDo} />
         <Route path="/users/login" component={UserLogin} />
         <Route path="/users/register" component={UserRegister} />
         <Route path="/Users" component={Users} />

@@ -18,7 +18,7 @@ const SideBars = props => {
           <li 
             
             // sideBar === selectedSideBar
-            className={{ listStyle: "none" }}
+            style={{ listStyle: "none" }}
             onClick={() => handleSelectedSideBar(sideBar)}
           >
             <ul >

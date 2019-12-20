@@ -574,15 +574,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
+          ],   
+          paymentOptions: [
+             { id: "1", name: "Cash only" },
+            { id: "1", name: "Credit Cards Accepted" },
+               { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-        features: {
-          acceptCreditCards: true,
-          hotelSecondFacility: "Airport Transportation",
-          deliverySerice: true,
-          parkingAvailable: true,
-          television: true
-        },
+       
         bookmarked: false
       },
       {
@@ -628,15 +627,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
+          ],
+          paymentOptions: [
+             { id: "1", name: "Cash only" },
+            { id: "1", name: "Credit Cards Accepted" },
+               { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-        features: {
-          acceptCreditCards: true,
-          hotelSecondFacility: "Airport Transportation",
-          deliverySerice: true,
-          parkingAvailable: true,
-          television: true
-        },
+        
         bookmarked: false
       },
       {
@@ -681,15 +679,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
+          ], 
+            paymentOptions: [
+             { id: "1", name: "Cash only" },
+            { id: "1", name: "Credit Cards Accepted" },
+               { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-        features: {
-          acceptCreditCards: true,
-          hotelSecondFacility: "Airport Transportation",
-          deliverySerice: true,
-          parkingAvailable: true,
-          television: true
-        },
+      
         bookmarked: false
       },
       {
@@ -734,15 +731,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
+          ],  
+          paymentOptions: [
+             { id: "1", name: "Cash only" },
+            { id: "1", name: "Credit Cards Accepted" },
+               { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-        features: {
-          acceptCreditCards: true,
-          hotelSecondFacility: "Airport Transportation",
-          deliverySerice: true,
-          parkingAvailable: true,
-          television: true
-        },
+      
         bookmarked: false
       },
       {
@@ -787,15 +783,17 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
+          ],
+          paymentOptions: [
+             { id: "1", name: "Cash only" },
+            { id: "1", name: "Credit Cards Accepted" },
+               { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-        features: {
-          acceptCreditCards: true,
-          hotelSecondFacility: "Airport Transportation",
-          deliverySerice: true,
-          parkingAvailable: true,
-          television: true
-        },
+       
+   
+    
+       
         bookmarked: false
       },
       {
@@ -842,15 +840,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Gluten Free" }
+          ], 
+          paymentOptions: [
+             { id: "1", name: "Cash only" },
+            { id: "1", name: "Credit Cards Accepted" },
+               { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-        features: {
-          acceptCreditCards: true,
-          hotelSecondFacility: "Airport Transportation",
-          deliverySerice: true,
-          parkingAvailable: true,
-          television: true
-        },
+       
         bookmarked: false
       }
     ]
@@ -895,7 +892,7 @@ export function getRestaurants() {
   return restaurants;
 }
 
-export function getThingstoDo() {
+export function getThingsToDo() {
   return thingsToDo;
 }
 

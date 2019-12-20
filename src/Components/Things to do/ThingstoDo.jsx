@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../_Products/node_modules/bootstrap/dist/css/bootstrap.css";
 
 // Common Components
-import Slider from "./../Common/Slider";
+import Slider from "./../_commonFuncs/Slider";
 import SideBars from "../_commonFuncs/SideBars";
 
 // Restaurant Database : Restaurant List
