@@ -574,14 +574,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
-          ],   
+          ],
           paymentOptions: [
-             { id: "1", name: "Cash only" },
+            { id: "1", name: "Cash only" },
             { id: "1", name: "Credit Cards Accepted" },
-               { id: "1", name: "Cash and Credit Cards Accepted" }
+            { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-       
+
         bookmarked: false
       },
       {
@@ -629,12 +629,12 @@ let suppliers = [
             { id: "1", name: "Kosher" }
           ],
           paymentOptions: [
-             { id: "1", name: "Cash only" },
+            { id: "1", name: "Cash only" },
             { id: "1", name: "Credit Cards Accepted" },
-               { id: "1", name: "Cash and Credit Cards Accepted" }
+            { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-        
+
         bookmarked: false
       },
       {
@@ -679,14 +679,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
-          ], 
-            paymentOptions: [
-             { id: "1", name: "Cash only" },
+          ],
+          paymentOptions: [
+            { id: "1", name: "Cash only" },
             { id: "1", name: "Credit Cards Accepted" },
-               { id: "1", name: "Cash and Credit Cards Accepted" }
+            { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-      
+
         bookmarked: false
       },
       {
@@ -731,14 +731,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Kosher" }
-          ],  
+          ],
           paymentOptions: [
-             { id: "1", name: "Cash only" },
+            { id: "1", name: "Cash only" },
             { id: "1", name: "Credit Cards Accepted" },
-               { id: "1", name: "Cash and Credit Cards Accepted" }
+            { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-      
+
         bookmarked: false
       },
       {
@@ -785,15 +785,12 @@ let suppliers = [
             { id: "1", name: "Kosher" }
           ],
           paymentOptions: [
-             { id: "1", name: "Cash only" },
+            { id: "1", name: "Cash only" },
             { id: "1", name: "Credit Cards Accepted" },
-               { id: "1", name: "Cash and Credit Cards Accepted" }
+            { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-       
-   
-    
-       
+
         bookmarked: false
       },
       {
@@ -840,14 +837,14 @@ let suppliers = [
           dietaryRestrictions: [
             { id: "1", name: "Halal" },
             { id: "1", name: "Gluten Free" }
-          ], 
+          ],
           paymentOptions: [
-             { id: "1", name: "Cash only" },
+            { id: "1", name: "Cash only" },
             { id: "1", name: "Credit Cards Accepted" },
-               { id: "1", name: "Cash and Credit Cards Accepted" }
+            { id: "1", name: "Cash and Credit Cards Accepted" }
           ]
         },
-       
+
         bookmarked: false
       }
     ]
@@ -856,23 +853,31 @@ let suppliers = [
     thingsTodoData: [
       {
         tourOperatorName: "Pakistan Guided Tours",
-        tourPackages: [
-          "Demanchi Naran",
-          "Peshawar City Tour",
-          "Historical Sindh"
-        ],
-        category: [
-          "Sights & Landmarks",
-          "Architectural Buildings",
-          "Museums",
-          "Shopping Malls",
-          "Cultural & Theme Tours"
-        ]
+        tourPackages: ["Desert Safari, ", "Sand boarding", "Camel Ride,"],
+        tourOperatorProperaties: {
+          type: [
+            { id: "1", name: "Food Tours" },
+            { id: "1", name: "City Sightseeing & Landmarks" },
+            { id: "1", name: "Museums" },
+            { id: "1", name: "Shopping Malls" },
+            { id: "1", name: "Cultural & Theme Tours" },
+            { id: "1", name: "Architectural Buildings" }
+          ]
+        }
       },
       {
         tourOperatorName: "Sassy Holidays Ltd",
         tourPackages: ["Desert Safari, ", "Sand boarding", "Camel Ride,"],
-        category: ["Sights & Landmarks", "Cultural & Theme Tours"]
+        tourOperatorProperaties: {
+          type: [
+            { id: "1", name: "Food Tours" },
+            { id: "1", name: "City Sightseeing & Landmarks" },
+            { id: "1", name: "Museums" },
+            { id: "1", name: "Shopping Malls" },
+            { id: "1", name: "Cultural & Theme Tours" },
+            { id: "1", name: "Architectural Buildings" }
+          ]
+        }
       }
     ]
   }

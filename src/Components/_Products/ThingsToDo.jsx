@@ -19,7 +19,7 @@ import { paginate } from "../_commonFuncs/paginate";
 import { getThingsToDo } from "../db/fakeSupplierService";
 
 class ThingsToDo extends Products {
-    state = {
+  state = {
     products: [],
     sidebars: [],
     selectedHotel: [],
@@ -69,7 +69,9 @@ class ThingsToDo extends Products {
               {/* we are NOT using restaurants.length BUT> this.state because that is original array/amount without pagination method*/}
             </div>
             <div>
-              {products.map(product => (console.log("dus")))}
+              {products.map(product => (
+                <div> product.tourOperatorName </div>
+              ))}
             </div>
             {/* <div> Dinner in Lahore</div>
             <div> Lunch in Lahore</div>
@@ -95,5 +97,5 @@ class ThingsToDo extends Products {
     );
   }
 }
- 
+
 export default ThingsToDo;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "../../scss/NavBar.css"
 import Logo from "./Logo";
 class NavBar extends Component {
   state = {};
@@ -8,7 +8,7 @@ class NavBar extends Component {
       <header>
         <Logo />
         <nav className="main-navigation">
-          <ul className="main-menu">
+          <ul className="main-menu" >
             {/*1) use Link to insted of anchor tag 
               2)  use window.location.href or this.props.history.push
             */}
