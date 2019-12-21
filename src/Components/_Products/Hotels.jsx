@@ -68,7 +68,14 @@ class Hotels extends Products {
     const filteredProducts =
       selectedSideBar && selectedItem
         ? allHotels.filter(hotel => {
-            // hotel.hotelProperties[/*here i need updated sidebar.name*/].[/* here i need updated selectedsidebaritem*/]
+            hotel.hotelProperties.filter(hp => {
+              console.log(selectedItemName, "clicked Item");
+              console.log(selectedSideBarName, "Clicked Sidebar");
+
+              hp.items.filter(result => {
+                //
+              });
+            });
           })
         : allHotels;
 
@@ -121,13 +128,13 @@ class Hotels extends Products {
                             Featured Offerings
                           </div>
                           <div className="hotel-features-content-1">
-                            {product.hotelProperties.amenities[0]}
+                            {/* {product.hotelProperties.amenities[0]} */}
                           </div>
                           <div className="hotel-features-content-2">
-                            {product.hotelProperties.amenities[1]}
+                            {/*  {product.hotelProperties.amenities[1]} */}
                           </div>
                           <div className="hotel-features-content-3">
-                            {product.hotelProperties.amenities[2]}
+                            {/*  {product.hotelProperties.amenities[2]} */}
                           </div>
                           <div className="hotel-features-content-4">
                             {product.reviews} Reviews
@@ -174,7 +181,8 @@ class Hotels extends Products {
                       </div>
                     </div>
                   </div>
-                ))}
+                ))}{" "}
+                */}
               </div>
             </div>
             <div className="">

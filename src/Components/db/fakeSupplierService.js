@@ -15,25 +15,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: [
-            "Breakfast",
-            "Restaurant",
-            "Swimming Pool",
-            " Non-Smoking Rooms",
-            "Air Conditioning"
-          ]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 500,
         starRatings: 5,
         bookmarked: true,
@@ -56,26 +84,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: [
-            "Free Breakfast",
-            "Restaurant",
-            "Swimming Pool",
-            "Non-Smoking Rooms",
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
 
-            "Air Conditioning"
-          ]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
         reviews: 269,
         starRatings: 5,
         bookmarked: true,
@@ -98,19 +153,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 100,
         starRatings: 5,
         bookmarked: true,
@@ -133,19 +222,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: ["Room Service", "Meeting Rooms", "Swimming Pool"]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 80,
         starRatings: 5,
         bookmarked: true,
@@ -168,23 +291,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: [
-            "Free Breakfast",
-            "Meeting Rooms",
-            "Business Centre with Internet Access"
-          ]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 247,
         starRatings: 5,
         bookmarked: true,
@@ -207,19 +360,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: ["Breakfast", "TV Lounge", "Swimming Pool"]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 248,
         starRatings: 5,
         bookmarked: true,
@@ -242,19 +429,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: ["Free Breakfast", "Restaurant", "Swimming Pool"]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 10,
         starRatings: 5,
         bookmarked: true,
@@ -277,23 +498,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: [
-            "Free Internet",
-            "Restaurant",
-            "Business Centre with Internet Access"
-          ]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 44,
         starRatings: 5,
         bookmarked: true,
@@ -316,23 +567,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: [
-            "Room Service",
-            "Facilities for disabled guests",
-            "Swimming Pool"
-          ]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 468,
         starRatings: 5,
         bookmarked: true,
@@ -355,23 +636,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: [
-            "Room Service",
-            "Facilities for disabled guests",
-            "Swimming Pool"
-          ]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 22,
         starRatings: 5,
         bookmarked: true,
@@ -394,19 +705,52 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: ["Free Internet", "Facilities for disabled guests"]
-        },
-        adminSettings: {
-          topselectedHotel: false
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
         reviews: 11,
         starRatings: 5,
         bookmarked: true,
@@ -429,19 +773,52 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: ["Good Breakfast", "Airport Transportation"]
-        },
-        adminSettings: {
-          topselectedHotel: true
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
         reviews: 54,
         starRatings: 5,
         bookmarked: true,
@@ -464,23 +841,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: [
-            "Room Service",
-            "Airport Transportation",
-            "Business Centre with Internet Access"
-          ]
-        },
-        adminSettings: {
-          topselectedHotel: true
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 300,
         starRatings: 5,
         bookmarked: true,
@@ -503,19 +910,53 @@ let suppliers = [
         telephone: "+924236366366",
         website: "http://www.avari.com/",
         featuredPicture: "AvariMain",
-        hotelProperties: {
-          roomType: [
-            "One Bedroom",
-            "Two Bedrooms",
-            "Studio Bedroom",
-            "Detached House",
-            "Terraced House"
-          ],
-          amenities: ["Room Service", "Airport Transportation", "Taxi Service"]
-        },
-        adminSettings: {
-          topselectedHotel: true
-        },
+        hotelProperties: [
+          {
+            name: "roomType",
+            items: [
+              { id: "1", name: "Single" },
+              { id: "2", name: "Double" },
+              { id: "3", name: "Triple" },
+              { id: "4", name: "Quad" },
+              { id: "5", name: "Queen" },
+              { id: "6", name: "Double Double" },
+              { id: "7", name: "Twin" },
+              { id: "8", name: "King" }
+            ]
+          },
+          {
+            name: "amenities",
+            items: [
+              { id: "3", name: "Breakfast" },
+              { id: "3", name: "Free Breakfast" },
+              { id: "3", name: "Restaurant" },
+              { id: "7", name: "Parking" },
+              { id: "5", name: "Free WiFi" },
+              { id: "1", name: "WiFi" },
+              { id: "1", name: "Meeting Rooms" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "5", name: "Air conditioning" },
+              { id: "1", name: "Non-smoking Rooms" },
+              { id: "6", name: "Complimentary luggage storage " },
+              { id: "10", name: "Flexible check-in and check-out" },
+              { id: "11", name: "Airport Transportation" },
+              { id: "12", name: "Taxi Service" },
+              { id: "2", name: "Television" },
+              { id: "7", name: "Business Centre with Internet Access" },
+              { id: "4", name: "Room Service" },
+              { id: "4", name: "TV Lounge" },
+              { id: "1", name: "Fitness Center" },
+              { id: "2", name: "Gym" },
+              { id: "3", name: "Sports Gym" },
+              { id: "4", name: "Swimming Pool" },
+              { id: "7", name: "Facilities for disabled guests" },
+              { id: "8", name: "Recreational facilities" },
+              { id: "9", name: "Spa services" },
+              { id: "7", name: "Pets stay" }
+            ]
+          }
+        ],
+
         reviews: 70,
         starRatings: 5,
         bookmarked: true,
@@ -542,46 +983,47 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        restaurantProperties: {
-          cuisine: [
-            { id: "1", name: "Balochi" },
-            { id: "2", name: "French" },
-            { id: "3", name: "Italian" },
-            { id: "4", name: "Irish" }
-          ],
-          meals: [
-            { id: "1", name: "Lunch" },
-            { id: "1", name: "Dinner" }
-          ],
-          ingredients: [
-            { id: "5", name: "Cheese" },
-            { id: "1", name: "Tomato" },
-            { id: "2", name: "Onion" },
-            { id: "4", name: "Pepper" },
-            { id: "7", name: "Egg" },
-            { id: "9", name: "Spinach" },
-            { id: "3", name: "Eggplant" }
-          ],
-          famousDishes: [
-            { id: "5", name: "Sushi" },
-            { id: "1", name: "Udon" },
-            { id: "2", name: "Onigiri" },
-            { id: "4", name: "Soba" },
-            { id: "7", name: "Ramen" },
-            { id: "9", name: "Tempura" },
-            { id: "19", name: "Okonomiyaki" }
-          ],
-          dietaryRestrictions: [
-            { id: "1", name: "Halal" },
-            { id: "1", name: "Kosher" }
-          ],
-          paymentOptions: [
-            { id: "1", name: "Cash only" },
-            { id: "1", name: "Credit Cards Accepted" },
-            { id: "1", name: "Cash and Credit Cards Accepted" }
-          ]
-        },
-
+        restaurantProperties: [
+          {
+            cuisine: [
+              { id: "1", name: "Balochi" },
+              { id: "2", name: "French" },
+              { id: "3", name: "Italian" },
+              { id: "4", name: "Irish" }
+            ],
+            meals: [
+              { id: "1", name: "Lunch" },
+              { id: "1", name: "Dinner" }
+            ],
+            ingredients: [
+              { id: "5", name: "Cheese" },
+              { id: "1", name: "Tomato" },
+              { id: "2", name: "Onion" },
+              { id: "4", name: "Pepper" },
+              { id: "7", name: "Egg" },
+              { id: "9", name: "Spinach" },
+              { id: "3", name: "Eggplant" }
+            ],
+            famousDishes: [
+              { id: "5", name: "Sushi" },
+              { id: "1", name: "Udon" },
+              { id: "2", name: "Onigiri" },
+              { id: "4", name: "Soba" },
+              { id: "7", name: "Ramen" },
+              { id: "9", name: "Tempura" },
+              { id: "19", name: "Okonomiyaki" }
+            ],
+            dietaryRestrictions: [
+              { id: "1", name: "Halal" },
+              { id: "1", name: "Kosher" }
+            ],
+            paymentOptions: [
+              { id: "1", name: "Cash only" },
+              { id: "1", name: "Credit Cards Accepted" },
+              { id: "1", name: "Cash and Credit Cards Accepted" }
+            ]
+          }
+        ],
         bookmarked: false
       },
       {
@@ -596,45 +1038,46 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        restaurantProperties: {
-          cuisine: [
-            { id: "1", name: "Tunisian" },
-            { id: "2", name: "Algerian" },
-            { id: "3", name: "Bahraini" },
-            { id: "4", name: "Mediterranean" }
-          ],
-          meals: [
-            { id: "1", name: "Tea" },
-            { id: "1", name: "Dinner" }
-          ],
-          ingredients: [
-            { id: "5", name: "Lamb" },
-            { id: "1", name: "Carrot" },
-            { id: "2", name: "Eggplant" },
-            { id: "4", name: "Mutton" },
-            { id: "9", name: "Flour" },
-            { id: "3", name: "Cheese" }
-          ],
-          famousDishes: [
-            { id: "5", name: "Sushi" },
-            { id: "1", name: "Udon" },
-            { id: "2", name: "Onigiri" },
-            { id: "4", name: "Soba" },
-            { id: "7", name: "Ramen" },
-            { id: "9", name: "Tempura" },
-            { id: "19", name: "Okonomiyaki" }
-          ],
-          dietaryRestrictions: [
-            { id: "1", name: "Halal" },
-            { id: "1", name: "Kosher" }
-          ],
-          paymentOptions: [
-            { id: "1", name: "Cash only" },
-            { id: "1", name: "Credit Cards Accepted" },
-            { id: "1", name: "Cash and Credit Cards Accepted" }
-          ]
-        },
-
+        restaurantProperties: [
+          {
+            cuisine: [
+              { id: "1", name: "Tunisian" },
+              { id: "2", name: "Algerian" },
+              { id: "3", name: "Bahraini" },
+              { id: "4", name: "Mediterranean" }
+            ],
+            meals: [
+              { id: "1", name: "Tea" },
+              { id: "1", name: "Dinner" }
+            ],
+            ingredients: [
+              { id: "5", name: "Lamb" },
+              { id: "1", name: "Carrot" },
+              { id: "2", name: "Eggplant" },
+              { id: "4", name: "Mutton" },
+              { id: "9", name: "Flour" },
+              { id: "3", name: "Cheese" }
+            ],
+            famousDishes: [
+              { id: "5", name: "Sushi" },
+              { id: "1", name: "Udon" },
+              { id: "2", name: "Onigiri" },
+              { id: "4", name: "Soba" },
+              { id: "7", name: "Ramen" },
+              { id: "9", name: "Tempura" },
+              { id: "19", name: "Okonomiyaki" }
+            ],
+            dietaryRestrictions: [
+              { id: "1", name: "Halal" },
+              { id: "1", name: "Kosher" }
+            ],
+            paymentOptions: [
+              { id: "1", name: "Cash only" },
+              { id: "1", name: "Credit Cards Accepted" },
+              { id: "1", name: "Cash and Credit Cards Accepted" }
+            ]
+          }
+        ],
         bookmarked: false
       },
       {
@@ -649,44 +1092,45 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        restaurantProperties: {
-          cuisine: [
-            { id: "1", name: "Lebanese" },
-            { id: "2", name: "Omani" },
-            { id: "3", name: "Emirati" },
-            { id: "4", name: "Qatari" }
-          ],
-          meals: [
-            { id: "1", name: "Breakfast" },
-            { id: "1", name: "Dinner" }
-          ],
-          ingredients: [
-            { id: "5", name: "Chicken" },
-            { id: "1", name: "Fish" },
-            { id: "2", name: "Cauliflower" },
-            { id: "9", name: "Egg" },
-            { id: "3", name: "Broccoli" }
-          ],
-          famousDishes: [
-            { id: "5", name: "Sushi" },
-            { id: "1", name: "Udon" },
-            { id: "2", name: "Onigiri" },
-            { id: "4", name: "Soba" },
-            { id: "7", name: "Ramen" },
-            { id: "9", name: "Tempura" },
-            { id: "19", name: "Okonomiyaki" }
-          ],
-          dietaryRestrictions: [
-            { id: "1", name: "Halal" },
-            { id: "1", name: "Kosher" }
-          ],
-          paymentOptions: [
-            { id: "1", name: "Cash only" },
-            { id: "1", name: "Credit Cards Accepted" },
-            { id: "1", name: "Cash and Credit Cards Accepted" }
-          ]
-        },
-
+        restaurantProperties: [
+          {
+            cuisine: [
+              { id: "1", name: "Lebanese" },
+              { id: "2", name: "Omani" },
+              { id: "3", name: "Emirati" },
+              { id: "4", name: "Qatari" }
+            ],
+            meals: [
+              { id: "1", name: "Breakfast" },
+              { id: "1", name: "Dinner" }
+            ],
+            ingredients: [
+              { id: "5", name: "Chicken" },
+              { id: "1", name: "Fish" },
+              { id: "2", name: "Cauliflower" },
+              { id: "9", name: "Egg" },
+              { id: "3", name: "Broccoli" }
+            ],
+            famousDishes: [
+              { id: "5", name: "Sushi" },
+              { id: "1", name: "Udon" },
+              { id: "2", name: "Onigiri" },
+              { id: "4", name: "Soba" },
+              { id: "7", name: "Ramen" },
+              { id: "9", name: "Tempura" },
+              { id: "19", name: "Okonomiyaki" }
+            ],
+            dietaryRestrictions: [
+              { id: "1", name: "Halal" },
+              { id: "1", name: "Kosher" }
+            ],
+            paymentOptions: [
+              { id: "1", name: "Cash only" },
+              { id: "1", name: "Credit Cards Accepted" },
+              { id: "1", name: "Cash and Credit Cards Accepted" }
+            ]
+          }
+        ],
         bookmarked: false
       },
       {
@@ -701,44 +1145,45 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        restaurantProperties: {
-          cuisine: [
-            { id: "1", name: "Albanian" },
-            { id: "2", name: "Chinese" },
-            { id: "3", name: "Korean" },
-            { id: "4", name: "Turkish" }
-          ],
-          meals: [
-            { id: "1", name: "Breakfast" },
-            { id: "1", name: "Lunch" }
-          ],
-          ingredients: [
-            { id: "5", name: "Beef" },
-            { id: "1", name: "Fish" },
-            { id: "2", name: "Chick Peas" },
-            { id: "4", name: "Lamb" },
-            { id: "7", name: "White Lentils" },
-            { id: "9", name: "Red Beans" }
-          ],
-          famousDishes: [
-            { id: "5", name: "Fried Shrimp" },
-            { id: "1", name: "Frid Rice" },
-            { id: "2", name: "Kung Pao Chicken" },
-            { id: "4", name: "Spring Roll" },
-            { id: "7", name: "Dumpling" },
-            { id: "9", name: "Chow Mein" }
-          ],
-          dietaryRestrictions: [
-            { id: "1", name: "Halal" },
-            { id: "1", name: "Kosher" }
-          ],
-          paymentOptions: [
-            { id: "1", name: "Cash only" },
-            { id: "1", name: "Credit Cards Accepted" },
-            { id: "1", name: "Cash and Credit Cards Accepted" }
-          ]
-        },
-
+        restaurantProperties: [
+          {
+            cuisine: [
+              { id: "1", name: "Albanian" },
+              { id: "2", name: "Chinese" },
+              { id: "3", name: "Korean" },
+              { id: "4", name: "Turkish" }
+            ],
+            meals: [
+              { id: "1", name: "Breakfast" },
+              { id: "1", name: "Lunch" }
+            ],
+            ingredients: [
+              { id: "5", name: "Beef" },
+              { id: "1", name: "Fish" },
+              { id: "2", name: "Chick Peas" },
+              { id: "4", name: "Lamb" },
+              { id: "7", name: "White Lentils" },
+              { id: "9", name: "Red Beans" }
+            ],
+            famousDishes: [
+              { id: "5", name: "Fried Shrimp" },
+              { id: "1", name: "Frid Rice" },
+              { id: "2", name: "Kung Pao Chicken" },
+              { id: "4", name: "Spring Roll" },
+              { id: "7", name: "Dumpling" },
+              { id: "9", name: "Chow Mein" }
+            ],
+            dietaryRestrictions: [
+              { id: "1", name: "Halal" },
+              { id: "1", name: "Kosher" }
+            ],
+            paymentOptions: [
+              { id: "1", name: "Cash only" },
+              { id: "1", name: "Credit Cards Accepted" },
+              { id: "1", name: "Cash and Credit Cards Accepted" }
+            ]
+          }
+        ],
         bookmarked: false
       },
       {
@@ -753,44 +1198,45 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        restaurantProperties: {
-          cuisine: [
-            { id: "1", name: "Afghan" },
-            { id: "2", name: "Iranian" },
-            { id: "3", name: "Iraqi" },
-            { id: "4", name: "Syrian" }
-          ],
-          meals: [
-            { id: "1", name: "Breakfast" },
-            { id: "1", name: "Tea" }
-          ],
-          ingredients: [
-            { id: "5", name: "Okra" },
-            { id: "1", name: "Potato" },
-            { id: "4", name: "Gourd" },
-            { id: "7", name: "Artichoke" },
-            { id: "9", name: "Asparagus" }
-          ],
-          famousDishes: [
-            { id: "5", name: "Sushi" },
-            { id: "1", name: "Udon" },
-            { id: "2", name: "Onigiri" },
-            { id: "4", name: "Soba" },
-            { id: "7", name: "Ramen" },
-            { id: "9", name: "Tempura" },
-            { id: "19", name: "Okonomiyaki" }
-          ],
-          dietaryRestrictions: [
-            { id: "1", name: "Halal" },
-            { id: "1", name: "Kosher" }
-          ],
-          paymentOptions: [
-            { id: "1", name: "Cash only" },
-            { id: "1", name: "Credit Cards Accepted" },
-            { id: "1", name: "Cash and Credit Cards Accepted" }
-          ]
-        },
-
+        restaurantProperties: [
+          {
+            cuisine: [
+              { id: "1", name: "Afghan" },
+              { id: "2", name: "Iranian" },
+              { id: "3", name: "Iraqi" },
+              { id: "4", name: "Syrian" }
+            ],
+            meals: [
+              { id: "1", name: "Breakfast" },
+              { id: "1", name: "Tea" }
+            ],
+            ingredients: [
+              { id: "5", name: "Okra" },
+              { id: "1", name: "Potato" },
+              { id: "4", name: "Gourd" },
+              { id: "7", name: "Artichoke" },
+              { id: "9", name: "Asparagus" }
+            ],
+            famousDishes: [
+              { id: "5", name: "Sushi" },
+              { id: "1", name: "Udon" },
+              { id: "2", name: "Onigiri" },
+              { id: "4", name: "Soba" },
+              { id: "7", name: "Ramen" },
+              { id: "9", name: "Tempura" },
+              { id: "19", name: "Okonomiyaki" }
+            ],
+            dietaryRestrictions: [
+              { id: "1", name: "Halal" },
+              { id: "1", name: "Kosher" }
+            ],
+            paymentOptions: [
+              { id: "1", name: "Cash only" },
+              { id: "1", name: "Credit Cards Accepted" },
+              { id: "1", name: "Cash and Credit Cards Accepted" }
+            ]
+          }
+        ],
         bookmarked: false
       },
       {
@@ -805,46 +1251,47 @@ let suppliers = [
           postcode: "75500"
         },
         website: "https://andaazrestaurant.com/",
-        restaurantProperties: {
-          cuisine: [
-            { id: "1", name: "Sindhi" },
-            { id: "2", name: "Mughal" },
-            { id: "3", name: "Malay" },
-            { id: "4", name: "Punjabi" }
-          ],
-          meals: [
-            { id: "1", name: "Brunch" },
-            { id: "1", name: "Lunch" }
-          ],
-          ingredients: [
-            { id: "9", name: "Asparagus" },
-            { id: "1", name: "Yogurt" },
-            { id: "2", name: "Yeast" },
-            { id: "4", name: "Ginger" },
-            { id: "7", name: "Garlic" },
-            { id: "91", name: "Spinach" },
-            { id: "3", name: "Okra" }
-          ],
-          famousDishes: [
-            { id: "5", name: "Sushi" },
-            { id: "1", name: "Udon" },
-            { id: "2", name: "Onigiri" },
-            { id: "4", name: "Soba" },
-            { id: "7", name: "Ramen" },
-            { id: "9", name: "Tempura" },
-            { id: "19", name: "Okonomiyaki" }
-          ],
-          dietaryRestrictions: [
-            { id: "1", name: "Halal" },
-            { id: "1", name: "Gluten Free" }
-          ],
-          paymentOptions: [
-            { id: "1", name: "Cash only" },
-            { id: "1", name: "Credit Cards Accepted" },
-            { id: "1", name: "Cash and Credit Cards Accepted" }
-          ]
-        },
-
+        restaurantProperties: [
+          {
+            cuisine: [
+              { id: "1", name: "Sindhi" },
+              { id: "2", name: "Mughal" },
+              { id: "3", name: "Malay" },
+              { id: "4", name: "Punjabi" }
+            ],
+            meals: [
+              { id: "1", name: "Brunch" },
+              { id: "1", name: "Lunch" }
+            ],
+            ingredients: [
+              { id: "9", name: "Asparagus" },
+              { id: "1", name: "Yogurt" },
+              { id: "2", name: "Yeast" },
+              { id: "4", name: "Ginger" },
+              { id: "7", name: "Garlic" },
+              { id: "91", name: "Spinach" },
+              { id: "3", name: "Okra" }
+            ],
+            famousDishes: [
+              { id: "5", name: "Sushi" },
+              { id: "1", name: "Udon" },
+              { id: "2", name: "Onigiri" },
+              { id: "4", name: "Soba" },
+              { id: "7", name: "Ramen" },
+              { id: "9", name: "Tempura" },
+              { id: "19", name: "Okonomiyaki" }
+            ],
+            dietaryRestrictions: [
+              { id: "1", name: "Halal" },
+              { id: "1", name: "Gluten Free" }
+            ],
+            paymentOptions: [
+              { id: "1", name: "Cash only" },
+              { id: "1", name: "Credit Cards Accepted" },
+              { id: "1", name: "Cash and Credit Cards Accepted" }
+            ]
+          }
+        ],
         bookmarked: false
       }
     ]
@@ -902,10 +1349,7 @@ export function getThingsToDo() {
 }
 
 export function getTopSelectedHotels() {
-  let topSelectedHotels = hotels.filter(hotel => {
-    return hotel.adminSettings.topselectedHotel === true;
-  });
-  return topSelectedHotels;
+  console.log("top selected Hotel");
 }
 
 // City Restaurants

@@ -131,10 +131,15 @@ export const hotelSideBar = [
   },
 
   {
-    name: "pricePerNight",
+    name: "prices",
     items: [
-      { id: "1", name: "price1" },
-      { id: "1", name: "price2" }
+      { id: "1", name: 100 },
+      { id: "1", name: 200 },
+      { id: "1", name: 300 },
+      { id: "1", name: 400 },
+      { id: "1", name: 500 },
+      { id: "1", name: 600 },
+      { id: "1", name: 700 }
     ]
   }
 ];

@@ -77,15 +77,15 @@ class Restaurants extends Products {
                   <li style={{ listStyle: "none" }}> {product.name}</li>
                   <li style={{ listStyle: "none" }}>
                     Cuisines : /
-                    {product.restaurantProperties.cuisine.map(m => {
+                    {/* {product.restaurantProperties.cuisine.map(m => {
                       return m.name;
-                    })}
+                    })} /*}
                   </li>
                   <li style={{ listStyle: "none" }}>
                     Meals Offered : /
-                    {product.restaurantProperties.meals.map(m => {
+                   {/*  {product.restaurantProperties.meals.map(m => {
                       return m.name;
-                    })}
+                    })} */}
                   </li>
                   <li style={{ listStyle: "none" }}>
                     Visit their website: {product.website}

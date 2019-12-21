@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 
-import { getTopSelectedHotels } from "../../db/fakeSupplierService";
+import { getHotels } from "./../../db/fakeSupplierService";
 
 class TopHotels extends Component {
   state = {
-    topSelectedHotels: []
+    hotels: []
   };
   componentDidMount() {
     this.setState({
-      topSelectedHotels: getTopSelectedHotels()
+      hotels: getHotels()
     });
   }
   render() {
-    const { topSelectedHotels } = this.state;
+    const { hotels } = this.state;
     return (
       <section>
         <h1> TOP SELECTED HOTELS</h1>
@@ -21,16 +21,11 @@ class TopHotels extends Component {
         </p>
         <div> Select your season</div>
         <button> Search Now</button>
-        {topSelectedHotels.map(topSelectedHotel => (
+        {hotels.map(hotel => (
           <div className="topSelectedHotels-content-container">
             <div className="topSelectedHotels-information">
-              <div className="topSelectedHotels-name">
-                {topSelectedHotel.name}
-              </div>
-              <div className="topSelectedHotels-address">
-                {topSelectedHotel.address.streetAddress} <span>, </span>
-                {topSelectedHotel.address.city}
-              </div>
+              <div className="topSelectedHotels-name"></div>
+              <div className="topSelectedHotels-address"></div>
               <div className="topSelectedHotels-amenities-features"> </div>
               <div className="topSelectedHotels-food-features"> </div>
               <div className="topSelectedHotels-special-quality"> </div>
