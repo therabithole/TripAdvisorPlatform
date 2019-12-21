@@ -15,7 +15,7 @@ class Products extends Component {
 
   handleSelectedSideBar = name => {
     this.setState({ selectedSideBar: name }, () => {
-      // console.log(this.state.selectedSideBar, "Selected Sidebar");
+      console.log(this.state.selectedSideBar, "Selected Sidebar");
     });
   };
 
@@ -23,7 +23,7 @@ class Products extends Component {
 
   handleSelectedItems = item => {
     this.setState({ selectedItem: item }, () => {
-      //  console.log(this.state.selectedItem, "Selected item");
+      console.log(this.state.selectedItem, "Selected item");
     });
   };
 

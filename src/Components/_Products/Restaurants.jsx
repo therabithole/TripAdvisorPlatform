@@ -9,7 +9,7 @@ import { restaurantSideBar } from "../db/sideBarService";
 
 /* Products Functions */
 import Slider from "../_commonFuncs/Slider";
-import Picker from "../_commonUI/Picker"
+import Picker from "../_commonUI/Picker";
 import Bookmark from "../_commonFuncs/Bookmark";
 
 // Pagination Components //
@@ -24,6 +24,7 @@ class Restaurants extends Products {
     products: [],
     sidebars: [],
     selectedHotel: [],
+    selectedSideBar: [],
     pageSize: 5,
     currentPage: 1
   };
@@ -35,8 +36,9 @@ class Restaurants extends Products {
         sidebars: restaurantSideBar
       },
       () => {
-        console.log("Display Sidebar", this.state.sidebars);
+        console.log("all states", this.state);
         console.log("actual data", this.state.products);
+        console.log("Display Sidebar", this.state.sidebars);
       }
     );
   }

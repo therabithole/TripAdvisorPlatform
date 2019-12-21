@@ -8,7 +8,7 @@ import { hotelSideBar } from "../db/sideBarService";
 
 /* Products Functions */
 import Slider from "../_commonFuncs/Slider";
-import Picker from "../_commonUI/Picker"
+import Picker from "../_commonUI/Picker";
 import Bookmark from "../_commonFuncs/Bookmark";
 
 // Pagination Components //
@@ -23,7 +23,8 @@ class Hotels extends Products {
   state = {
     products: [],
     sidebars: [],
-    selectedHotel: [],
+    selectedItem: [],
+    selectedSideBar: [],
     pageSize: 5,
     currentPage: 1
   };
@@ -34,18 +35,48 @@ class Hotels extends Products {
         sidebars: hotelSideBar
       },
       () => {
+        console.log("all states", this.state);
         console.log("Display Sidebar", this.state.sidebars);
         console.log("actual data", this.state.products);
       }
     );
   }
 
+  componentDidUpdate() {
+    this.handleSelectedSideBar = name => {
+      this.setState({ selectedSideBar: name }, () => {
+        console.log(this.state.selectedSideBar, "Selected Sidebar");
+      });
+    };
+
+    this.handleSelectedItems = item => {
+      this.setState({ selectedItem: item }, () => {
+        console.log(this.state.selectedItem, "Selected item");
+      });
+    };
+  }
+
   render() {
     const { length: count } = this.state.products;
 
     const { pageSize, currentPage, products: allHotels } = this.state;
+    const { selectedItem, selectedSideBar } = this.state;
 
-    const products = paginate(allHotels, currentPage, pageSize);
+    const { name: selectedSideBarName } = this.state.selectedSideBar;
+    const { name: selectedItemName } = this.state.selectedItem;
+
+    const filteredProducts =
+      selectedSideBar && selectedItem
+        ? allHotels.filter(hotel => {
+            // hotel.hotelProperties[/*here i need updated sidebar.name*/].[/* here i need updated selectedsidebaritem*/]
+          })
+        : allHotels;
+
+    const products /* const will be replaced by filetedProducts*/ = paginate(
+      allHotels,
+      currentPage,
+      pageSize
+    );
 
     return (
       <React.Fragment>

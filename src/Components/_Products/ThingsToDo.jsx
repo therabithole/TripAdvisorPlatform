@@ -22,7 +22,8 @@ class ThingsToDo extends Products {
   state = {
     products: [],
     sidebars: [],
-    selectedHotel: [],
+    selectedThingsToDo: [],
+    selectedSideBar: [],
     pageSize: 5,
     currentPage: 1
   };
@@ -34,8 +35,9 @@ class ThingsToDo extends Products {
         sidebars: thingsToDoSideBar
       },
       () => {
-        console.log("Display Sidebar", this.state.sidebars);
+        console.log("all states", this.state);
         console.log("actual data", this.state.products);
+        console.log("Display Sidebar", this.state.sidebars);
       }
     );
   }
@@ -70,7 +72,7 @@ class ThingsToDo extends Products {
             </div>
             <div>
               {products.map(product => (
-                <div> product.tourOperatorName </div>
+                <div> {product.tourOperatorName} </div>
               ))}
             </div>
             {/* <div> Dinner in Lahore</div>

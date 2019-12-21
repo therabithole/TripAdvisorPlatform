@@ -141,7 +141,6 @@ export const hotelSideBar = [
 
 // Things To Do SideBar
 
-
 export const thingsToDoSideBar = [
   {
     name: "roomType",

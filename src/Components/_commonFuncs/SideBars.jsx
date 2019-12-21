@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import ReusableSideBars from "./ReusableSideBars";
 
 const SideBars = props => {
@@ -15,13 +14,12 @@ const SideBars = props => {
     <React.Fragment>
       <ul>
         {sideBars.map(sideBar => (
-          <li 
-            
+          <li
             // sideBar === selectedSideBar
             style={{ listStyle: "none" }}
             onClick={() => handleSelectedSideBar(sideBar)}
           >
-            <ul >
+            <ul>
               <div>Filtering {sideBar.name}</div>
               {sideBar.items.map(item => (
                 <li
