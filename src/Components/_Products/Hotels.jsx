@@ -62,21 +62,18 @@ class Hotels extends Products {
     const { pageSize, currentPage, products: allHotels } = this.state;
     const { selectedItem, selectedSideBar } = this.state;
 
-    const { name: selectedSideBarName } = this.state.selectedSideBar;
-    const { name: selectedItemName } = this.state.selectedItem;
+    const { name: nameOfSelectedSideBar } = this.state.selectedSideBar;
+    const { name: nameofSelectedItem } = this.state.selectedItem;
 
     const filteredProducts =
       selectedSideBar && selectedItem
-        ? allHotels.filter(hotel => {
-            hotel.hotelProperties.filter(hotelDBSideBar => {
-              console.log(selectedItemName, "clicked Item");
-              console.log(selectedSideBarName, "Clicked Sidebar");
-              if (hotelDBSideBar.name === selectedSideBar.name) {
-                hotelDBSideBar.items.filter(item => {
-                  item.name === selectedItem.name;
-                });
-              }
-            });
+        ? allHotels.hotelProperties.selectedSideBar.filter(h => {
+            console.log(h);
+
+            // hotel.hotelProperties.filter(hotelDBSideBar => {
+            // console.log(selectedItemName, "clicked Item");
+            //  console.log(selectedSideBarName, "Clicked Sidebar");
+            //  });
           })
         : allHotels;
 
