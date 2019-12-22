@@ -68,13 +68,14 @@ class Hotels extends Products {
     const filteredProducts =
       selectedSideBar && selectedItem
         ? allHotels.filter(hotel => {
-            hotel.hotelProperties.filter(hp => {
+            hotel.hotelProperties.filter(hotelDBSideBar => {
               console.log(selectedItemName, "clicked Item");
               console.log(selectedSideBarName, "Clicked Sidebar");
-
-              hp.items.filter(result => {
-                //
-              });
+              if (hotelDBSideBar.name === selectedSideBar.name) {
+                hotelDBSideBar.items.filter(item => {
+                  item.name === selectedItem.name;
+                });
+              }
             });
           })
         : allHotels;
