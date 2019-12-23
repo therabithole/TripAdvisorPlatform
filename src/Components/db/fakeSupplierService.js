@@ -17,19 +17,6 @@ let suppliers = [
         featuredPicture: "AvariMain",
         hotelProperties: [
           {
-            name: "roomType",
-            items: [
-              { id: "1", name: "Single" },
-              { id: "2", name: "Double" },
-              { id: "3", name: "Triple" },
-              { id: "4", name: "Quad" },
-              { id: "5", name: "Queen" },
-              { id: "6", name: "Double Double" },
-              { id: "7", name: "Twin" },
-              { id: "8", name: "King" }
-            ]
-          },
-          {
             name: "amenities",
             items: [
               { id: "3", name: "Breakfast" },

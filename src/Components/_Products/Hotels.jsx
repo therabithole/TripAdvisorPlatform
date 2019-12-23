@@ -62,18 +62,17 @@ class Hotels extends Products {
     const { pageSize, currentPage, products: allHotels } = this.state;
     const { selectedItem, selectedSideBar } = this.state;
 
+    const passingName = selectedSideBar => {
+      return {
+        selectedSideBar
+      };
+    };
     const filteredProducts =
       selectedSideBar && selectedItem
-        ? allHotels.filter(h => {
-            h.hotelProperties.filter(p => {
-              const fetching = this.state.selectedSideBar.name;
-              console.log(p);
+        ? allHotels.map(hotel => {
+            hotel.hotelProperties.reduce(passingName, hotelSidebarProperty => {
+              return console.log(passingName);
             });
-
-            // hotel.hotelProperties.filter(hotelDBSideBar => {
-            // console.log(selectedItemName, "clicked Item");
-            //  console.log(selectedSideBarName, "Clicked Sidebar");
-            //  });
           })
         : allHotels;
 
