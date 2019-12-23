@@ -70,17 +70,32 @@ class Hotels extends Products {
     const filteredProducts =
       selectedSideBar && selectedItem
         ? allHotels.map(hotel => {
-            hotel.hotelProperties.reduce(passingName, hotelSidebarProperty => {
-              return console.log(passingName);
-            });
+            hotel.hotelProperties.reduce(
+              (passedCallBack, reducedhotel) => {
+                return console.log(reducedhotel);
+              },
+              [selectedSideBar.name]
+            );
+            return console.log(hotel);
           })
         : allHotels;
+
+    console.log(filteredProducts);
 
     const products /* const will be replaced by filetedProducts*/ = paginate(
       allHotels,
       currentPage,
       pageSize
     );
+
+    const filter = (predicate, array) =>
+      array.reduce((newArray, item) => {
+        if (predicate(item) === true) {
+          newArray.push(item);
+        }
+
+        return newArray;
+      }, []);
 
     return (
       <React.Fragment>
