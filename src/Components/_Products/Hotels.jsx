@@ -68,7 +68,9 @@ class Hotels extends Products {
       arrayItems.hotelProperties.filter(hotelProp => {
         return hotelProp.name === selectedSideBar.name;
       });
-      return newArray.push("arrayItems");
+      console.log(newArray);
+      newArray.push(arrayItems);
+      return newArray;
     };
 
     const filteredProducts =
