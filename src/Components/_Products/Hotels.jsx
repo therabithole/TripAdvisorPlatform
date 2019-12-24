@@ -62,13 +62,13 @@ class Hotels extends Products {
     const { pageSize, currentPage, products: allHotels } = this.state;
     const { selectedItem, selectedSideBar } = this.state;
 
-    const reference = selectedSideBar;
+    const reference = [selectedSideBar];
 
     const callBackFunction = (newArray, arrayItems) => {
       arrayItems.hotelProperties.filter(hotelProp => {
         return hotelProp.name === selectedSideBar.name;
       });
-      console.log(newArray);
+
       newArray.push(arrayItems);
       return newArray;
     };
@@ -77,7 +77,7 @@ class Hotels extends Products {
       selectedSideBar && selectedItem
         ? allHotels.reduce(callBackFunction, reference)
         : allHotels;
-
+    console.log(filteredProducts);
     /* ? allHotels.map(hotel => {
             const onClickSelectedSideBar = selectedSideBar.name;
             const onClickSelectedItem = selectedItem;
@@ -113,8 +113,6 @@ const returnResult = array.reduce(callBack, reference)
 console.log(returnResult)
 
 */
-
-    console.log(filteredProducts);
 
     const products /* const will be replaced by filetedProducts*/ = paginate(
       allHotels,
