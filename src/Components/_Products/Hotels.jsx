@@ -62,23 +62,55 @@ class Hotels extends Products {
     const { pageSize, currentPage, products: allHotels } = this.state;
     const { selectedItem, selectedSideBar } = this.state;
 
-    const passingName = selectedSideBar => {
-      return {
-        selectedSideBar
-      };
+    const reference = selectedSideBar;
+
+    const callBackFunction = (newArray, arrayItems) => {
+      arrayItems.hotelProperties.filter(hotelProp => {
+        return hotelProp.name === selectedSideBar.name;
+      });
+      return newArray.push("arrayItems");
     };
+
     const filteredProducts =
       selectedSideBar && selectedItem
-        ? allHotels.map(hotel => {
-            hotel.hotelProperties.reduce(
-              (passedCallBack, reducedhotel) => {
-                return console.log(reducedhotel);
-              },
-              [selectedSideBar.name]
-            );
-            return console.log(hotel);
-          })
+        ? allHotels.reduce(callBackFunction, reference)
         : allHotels;
+
+    /* ? allHotels.map(hotel => {
+            const onClickSelectedSideBar = selectedSideBar.name;
+            const onClickSelectedItem = selectedItem;
+            return hotel.hotelProperties.map(props => props);
+          }) */
+
+    /*   allHotels.reduce(
+            function(acc, initialValue) {
+              return console.log(acc);
+            },
+            { selectedSideBar }
+          )
+        : allHotels;
+
+        */
+
+    // https://www.freecodecamp.org/news/10-js-util-functions-in-reduce/
+    // https://alligator.io/js/finally-understand-reduce/
+
+    /* const array = [{name: 1}, {name: 2}, {name: 3}, {name: 4}, {name: 5}]
+
+const reference = []
+
+const callBack = (newArray, arrayItems) => {
+  if (arrayItems.name > 3) { 
+    newArray.push(arrayItems)
+}
+
+  return newArray
+}
+
+const returnResult = array.reduce(callBack, reference)
+console.log(returnResult)
+
+*/
 
     console.log(filteredProducts);
 

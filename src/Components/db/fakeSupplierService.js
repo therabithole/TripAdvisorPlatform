@@ -127,8 +127,8 @@ let suppliers = [
           singleRoom: 150,
           doubleRoom: 200
         }
-      },
-      {
+      }
+      /* {
         _id: "1b21ca3eeb7f6fbccd471815",
         name: "The Motel Royal Fantasy",
         address: {
@@ -953,7 +953,7 @@ let suppliers = [
           singleRoom: 900,
           doubleRoom: 500
         }
-      }
+      } */
     ]
   },
   {
