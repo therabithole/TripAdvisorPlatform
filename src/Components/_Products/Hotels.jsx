@@ -62,14 +62,11 @@ class Hotels extends Products {
     const { pageSize, currentPage, products: allHotels } = this.state;
     const { selectedItem, selectedSideBar } = this.state;
 
-    const reference = [selectedSideBar];
+    const reference = [selectedSideBar, selectedItem];
 
-    const callBackFunction = (newArray, arrayItems) => {
-      arrayItems.hotelProperties.filter(hotelProp => {
-        return hotelProp.name === selectedSideBar.name;
-      });
-
+    const callBackFunction = (newArray, arrayItems, index) => {
       newArray.push(arrayItems);
+
       return newArray;
     };
 
@@ -78,47 +75,11 @@ class Hotels extends Products {
         ? allHotels.reduce(callBackFunction, reference)
         : allHotels;
     console.log(filteredProducts);
-    /* ? allHotels.map(hotel => {
-            const onClickSelectedSideBar = selectedSideBar.name;
-            const onClickSelectedItem = selectedItem;
-            return hotel.hotelProperties.map(props => props);
-          }) */
-
-    /*   allHotels.reduce(
-            function(acc, initialValue) {
-              return console.log(acc);
-            },
-            { selectedSideBar }
-          )
-        : allHotels;
-
-        */
 
     // https://www.freecodecamp.org/news/10-js-util-functions-in-reduce/
     // https://alligator.io/js/finally-understand-reduce/
 
-    /* const array = [{name: 1}, {name: 2}, {name: 3}, {name: 4}, {name: 5}]
-
-const reference = []
-
-const callBack = (newArray, arrayItems) => {
-  if (arrayItems.name > 3) { 
-    newArray.push(arrayItems)
-}
-
-  return newArray
-}
-
-const returnResult = array.reduce(callBack, reference)
-console.log(returnResult)
-
-*/
-
-    const products /* const will be replaced by filetedProducts*/ = paginate(
-      allHotels,
-      currentPage,
-      pageSize
-    );
+    const products = paginate(allHotels, currentPage, pageSize);
 
     const filter = (predicate, array) =>
       array.reduce((newArray, item) => {
